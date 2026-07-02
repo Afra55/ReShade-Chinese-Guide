@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="zh-CN">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Setting up reshade - FRAMED. Screenshot Community</title>
+    <title>安装与配置 ReShade - FRAMED. Screenshot Community</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/theme_20250102.css" type="text/css" />
     <link rel="stylesheet" href="../css/theme_colors_20220814.css" type="text/css" />
@@ -28,13 +28,13 @@
                 <a href="https://framedsc.com/index.htm"><i class="fa fa-home"></i> FRAMED. Screenshot Community</a>
                 <div role="search">
                     <form id="search-form" class="form" action="https://framedsc.com/Docnet_search.htm" method="get">
-                        <input type="text" name="q" placeholder="Search docs" />
+                        <input type="text" name="q" placeholder="搜索文档" />
                     </form>
                 </div>
             </div>
             <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 <ul>
-<li class="tocentry"><a href="https://framedsc.com/index.htm">Home</a>
+<li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
 
 <li class="tocentry"><a href="https://framedsc.com/basics.htm">The Basics</a>
@@ -50,9 +50,9 @@
 </li>
 <li class="tocentry">
 <ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="index.htm">Reshade guides</a></span></li>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="index.htm">ReShade 指南</a></span></li>
 
-<li class="tocentry current"><a class="current" href="setupreshade.htm">Setting up reshade</a>
+<li class="tocentry current"><a class="current" href="setupreshade.htm">安装与配置 ReShade</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="setupreshade.htm">Video</a></li>
 
@@ -77,21 +77,21 @@
 
 
 </ul>
-<li class="tocentry"><a href="shaderscatalogue.htm">Shaders Catalogue</a>
+<li class="tocentry"><a href="shaderscatalogue.htm">着色器目录</a>
 </li>
-<li class="tocentry"><a href="lutgenguide.htm">LUT Generation</a>
+<li class="tocentry"><a href="lutgenguide.htm">LUT 生成</a>
 </li>
-<li class="tocentry"><a href="reshadeuwp.htm">Injecting ReShade in UWP games</a>
+<li class="tocentry"><a href="reshadeuwp.htm">向 UWP 游戏注入 ReShade</a>
 </li>
-<li class="tocentry"><a href="depthguide.htm">Exporting Depth Buffers with Reshade</a>
+<li class="tocentry"><a href="depthguide.htm">使用 ReShade 导出深度缓冲</a>
 </li>
-<li class="tocentry"><a href="RealLongExposure.htm">Using RLE to hide temporal issues</a>
-</li>
-<li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesShaderguides.htm">Shader guides</a></span>
+<li class="tocentry"><a href="RealLongExposure.htm">使用 RLE 隐藏时序问题</a>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesAddonguides.htm">Addon guides</a></span>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesShaderguides.htm">着色器指南</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesAddonguides.htm">插件指南</a></span>
 </li>
 </ul>
 </li>
@@ -135,7 +135,7 @@
 				<div class="toc-footer">
 					<span class="text-small">
 						<hr/>
-						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">由 <i class="fa fa-github"></i> DocNet 生成</a>
 					</span>
 				</div>	
 			</div>
@@ -149,106 +149,70 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="https://framedsc.com/index.htm">Home</a></li> / <li><a href="index.htm">Reshade guides</a></li> / <li><a href="setupreshade.htm">Setting up reshade</a></li></ul>
+<ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="setupreshade.htm">安装与配置 ReShade</a></li></ul>
 					
                     </div>
                     <hr />
                 </div>
                 <div role="main">
                     <div class="section">
-<h1 id="setting-up-reshade">Setting up Reshade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>Reshade is a powerful post-processing system with a lot of features. To get the most out of Reshade, it's key to set it up 
-properly for the game you're using it with. This guide is written for Reshade v4.2. If you're using an older version, some
-information might still apply, but that's not guaranteed. </p>
-<p>This guide is written for screenshotting. This means it doesn't really go into topics like performance mode as the game is likely
-paused when you're going to set up your shot and the Reshade configuration you want to use for it. </p>
-<h2 id="video">Video<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>If you prefer video guidance, Framed member TheGordinho Ochinchin <a href="https://www.youtube.com/watch?v=hYUiWfvyafQ" target="_blank">made a video guiding you through the basic steps</a> </p>
-<h2 id="setting-up-reshade-for-the-game">Setting up Reshade for the game<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>To set up Reshade for a game, and not having the game running, we first have to <a href="https://reshade.me/" target="_blank">download it from the Reshade website</a>. 
-After you've downloaded the .exe and started it, it will open a small program that will guide you through the process. Simply pick the game's .exe file as 
-the first step. </p>
-<p>After that it should pick the right rendering API. If it fails to do so, simply pick DirectX 11 if it's a rather new game. The last step
-is that it will ask you to download a set of shaders. If you're new to Reshade and don't have anything configured yet, it's best to download
-all shaders <a href="https://github.com/crosire/reshade-shaders" target="_blank">from the main repository on GitHub</a>. If you decide not to download any shaders, at least download
-the <strong>DisplayDepth</strong> shader as it helps with setting up Reshade properly.</p>
-<p>After this, Reshade is ready to roll. Starting the game will show a banner at the top that Reshade is active. It also shows which key combination
-to press to open the menu, which you'll need for the next section.</p>
-<h2 id="configuring-reshade">Configuring Reshade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>When Reshade is setup and running in the game, you can open its menu. Newer Reshade versions use the <code>HOME</code> key to open the menu. If you copied a 
-Reshade configuration you might have to use <code>Shift-F2</code>. </p>
-<p>After opening the menu it might first show you the tutorial if you're new. The tutorial will set you up with a preset and tell you what all the parts 
-are for. If you decided to download shaders when setting up Reshade you'll see all the <em>techniques</em> these shaders contain listed in a nice order on the 
-<strong>Home</strong> tab. You can assign hotkeys for each technique by right-clicking the name and clicking in the textbox next to <em>Toggle Key</em>. </p>
-<p>Pressing the toggle key will then activate/deactivate the technique. To activate/deactivate a technique, e.g. DisplayDepth, you can also check the checkbox in front of 
-the technique name with the mouse. When a technique is active, its controls are listed at the bottom of the <em>Home</em> tab. You can drag the horizontal blue bar 
-upwards to make some space. </p>
-<h3 id="undock-the-menu">Undock the menu<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>By default the menu is docked at the left side of the screen. This might be problematic if you want to look at a part that's covered by the menu. To be able to 
-move the menu, you can drag a tab (like the <strong>DX11</strong> tab) off the menu and then add all other tabs to that tab to create a floating menu. Be sure not to dock a tab 
-to the side of the screen. So when an icon appears to dock the tab to one side of the screen be sure to avoid dropping the tab on that icon. </p>
-<p>You can re-arrange the tabs in the floating menu by dragging the tab headers to the left or right. This way you can create a floating menu with the tabs in the order
-you want. You can move the menu around by clicking anywhere in the menu and simply dragging it to some point.</p>
-<p>When you now disable and enable the menu again, it will stay a floating menu and you can drag it around to any spot you want. </p>
-<h3 id="order-of-execution">Order of execution<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>The techniques on the <em>Home</em> tab seem to be listed in a random order, but that's not the case. The order of execution is from top to bottom. This means that 
-if you have the techniques CinematicDOF and LumaSharpen active and listed in that order from top to bottom, Reshade will first execute CinematicDOF and after that
-LumaSharpen. This has the effect that the result of CinematicDOF will be used as input for LumaSharpen. </p>
-<p>What the right order is for you depends on your taste, however in general the rule of thumb is that any color oriented technique should be executed before
-any lens oriented technique (like a Depth of Field shader, or a filmgrain or overlay shader). </p>
-<h3 id="setting-up-global-preprocessor-definitions.">Setting up global preprocessor definitions.<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>Reshade uses a couple of global preprocessor definitions which have an impact on how techniques work. E.g. how the depth buffer looks like. You can 
-edit these definitions by clicking the blue 'Edit global preprocessor definitions' button right at the top of the technique parameters on the <em>Home</em> tab. 
-What these settings mean is explained in the section <a href="setupreshade.htm">Checking depth buffer access</a>.</p>
-<h3 id="reshade-settings">Reshade settings<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>You can configure the various settings of Reshade on its Settings tab. For us screenshotters the <em>Screenshots</em> section is particularly important. 
-The key to use shouldn't interfere with other overlays you're using, e.g. Steam, UPlay and the like, and you should pick a file format that works for you best,
-e.g. png is lossless and you can upload it everywhere. It's fairly self-explainatory.</p>
-<h2 id="changing-a-techniques-parameters">Changing a technique's parameters<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>So you're all set, ready to rock but how to change a technique's settings? To do so, first activate the shader by either pressing the Toggle key you defined or 
-by checking the checkbox in front of the technique's name on the <em>Home</em> tab. You'll see that Reshade will display all settings for a shader below the blue splitter bar
-on the <em>Home</em> tab. </p>
-<p>When you see a slider, you can drag these by using your mouse. If you see a numeric textbox you can change that value also with the mouse, by simply clicking in the 
-textbox, holding left-mousebutton and dragging the mouse either left or right. When you hold <code>shift</code> while dragging these sliders and dragboxes, the value will 
-increase/decrease faster. When you hold <code>ctrl</code> and click, you'll get a textbox which allows you to type in the value. This can be beneficial if you want to 
-specify a value that's higher or lower than the range set for the control. </p>
-<h2 id="checking-depth-buffer-access">Checking depth buffer access<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>To make sure you have setup the depth buffer properly, it's key to have the <strong>DisplayDepth</strong> shader installed. Activating the DisplayDepth shader will show you
-a proper overview of how the depth buffer looks and whether or not you have picked the right preprocessor definition values. There's 
-<a href="https://reshade.me/forum/shader-discussion/4810-about-the-changes-in-displaydepth-fx" target="_blank">a great tutorial over on the Reshade forums</a> 
-of how to use the DisplayDepth shader to setup the depth buffer properly, so it's recommended to read it and setup your
-Reshade configuration properly. You have to do this only once per game. </p>
-<h3 id="picking-the-right-depth-buffer">Picking the right depth buffer<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>It might be the game uses multiple depth buffers that might be useful, or it switches depth buffers on the fly for the final image and therefore it looks like the
-depth buffer isn't available. To tell Reshade which depth buffer to use, you have to go into an additional tab in the Reshade overlay. It depends on which version
-of Reshade you're using, which tab that is. </p>
-<p><strong>For Reshade v4.x or lower:</strong> If you're using a Reshade version of v4.x or lower, the Reshade menu/overlay contains an additional tab, which is either called <strong>D3D9</strong>, <strong>D3D10</strong>, <strong>D3D11</strong> or <strong>D3D12</strong>.<br />
-<strong>For Reshade v5.x or higher:</strong> If you're using Reshade version 5.x, Reshade contains an additional tab called <strong>Add-ons</strong>. </p>
-<p>This additional tab shows all currently active depth buffers. To see which one you should select, first enable the <em>DisplayDepth</em> shader. You likely either see a white or a black screen. When you go to the additional tab mentioned above in the Reshade menu/overlay you can then pick the right depth buffer by checking its checkbox (or by trying the <em>Copy depth before clearing</em> checkbox). If the screen becomes what it should be, you picked the right depth buffer and you can use it with the techniques that depend on it. </p>
-<h2 id="shader-duplication">Shader duplication<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>There are cases where you would want to use one shader more than once (CanvasFog and StageDepthPlus shaders are popular in that regard). With most shaders all you need to do is replace the technique name in the shader code to a different one, but some shaders will need to change the name of a <code>namespace</code> or a texture name, so be aware of that. Be sure to check the shaders code for comments regarding duplicating the shader.</p>
-<h2 id="depth-buffer-on-online-games">Depth buffer on online games<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>When the game is an online game or actively performs network access, the depth buffer is disabled. Access to the depth buffer is often required as a lot of effects use the depth buffer of the game. Reshade actively disables access to the depth buffer if it
-detects the game to be an online game (so there's network traffic on a regular basis). If the depth buffer isn't available in the game, because of this, the shaders that depend on that will likely fail.</p>
-<p>So if you are trying to use reshade in a game which uses the internet connection constantly (because of the DRM or because it's always online like The Division or Steep) you will have to use custom reshade .dlls builds to get depth buffer access, otherwise reshade will block it. Alternatively you can still use reshade without depth buffer access, but some shaders that use it like CinematicDof won't work.</p>
-<p>Keep in mind that the official version of reshade is whitelisted by some games anti-cheat software, so by using a custom .dll you may get banned depending on the game, so do your research beforehand.</p>
-<h2 id="using-reshade-alongisde-other-injectable-mods">Using reshade alongisde other injectable mods<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>Sometimes you may encounter that you can't use reshade alongside another mod that also injects itself into the process. One way of avoiding this is using <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases" target="_blank">ASI Loader</a> to put the extra mods in a scripts folder. Read the <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/blob/master/readme.md" target="_blank">README file on the ASI Loader repo</a> for more information on how to use it.</p>
-<h2 id="further-information">Further information<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h1 id="setting-up-reshade">安装与配置 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>ReShade 是一款功能强大的后期处理系统，拥有丰富的功能。要充分发挥 ReShade 的潜力，关键在于针对所用游戏进行正确配置。本指南基于 ReShade v4.2 编写。如果您使用的是旧版本，部分内容可能仍然适用，但不做保证。</p>
+<p>本指南面向截图用途。这意味着它不会深入介绍性能模式等话题，因为在设置截图画面及所需 ReShade 配置时，游戏通常处于暂停状态。</p>
+<h2 id="video">视频教程<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>如果您更喜欢视频教程，FRAMED 成员 TheGordinho Ochinchin <a href="https://www.youtube.com/watch?v=hYUiWfvyafQ" target="_blank">制作了一段视频，引导您完成基本步骤</a>。</p>
+<h2 id="setting-up-reshade-for-the-game">为游戏安装 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>要在游戏未运行的情况下为其安装 ReShade，首先需要<a href="https://reshade.me/" target="_blank">从 ReShade 官网下载安装程序</a>。下载并运行 .exe 后，将打开一个小程序引导您完成安装流程。第一步只需选择游戏的 .exe 文件即可。</p>
+<p>之后程序应会自动识别正确的渲染 API。如未能自动识别，对于较新的游戏请手动选择 DirectX 11。最后一步是下载一组着色器。如果您是第一次使用 ReShade 且尚未做任何配置，建议<a href="https://github.com/crosire/reshade-shaders" target="_blank">从 GitHub 上的主仓库</a>下载所有着色器。如果您决定不下载任何着色器，至少请下载 <strong>DisplayDepth</strong> 着色器，因为它有助于正确配置 ReShade。</p>
+<p>完成以上步骤后，ReShade 即已准备就绪。启动游戏时，屏幕顶部将显示一个横幅，提示 ReShade 已激活，并显示打开菜单所需的快捷键组合，下一节将用到它。</p>
+<h2 id="configuring-reshade">配置 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>当 ReShade 在游戏中运行后，您可以打开其菜单。较新版本的 ReShade 使用 <code>HOME</code> 键打开菜单。如果您复制了别人的 ReShade 配置，可能需要使用 <code>Shift-F2</code>。</p>
+<p>打开菜单后，如果您是第一次使用，可能会先显示教程。教程将为您设置一个预设，并介绍各部分的用途。如果您在安装 ReShade 时下载了着色器，将在<strong>主页</strong>选项卡上看到这些着色器包含的所有<em>效果技法</em>，按照一定顺序整齐列出。您可以右键单击技法名称，然后单击<em>切换快捷键</em>旁边的文本框，为每个效果技法设置快捷键。</p>
+<p>按下切换快捷键即可启用或停用该效果技法。要启用/停用效果技法（例如 DisplayDepth），也可以用鼠标勾选技法名称前面的复选框。当某个效果技法处于激活状态时，其控件会显示在<em>主页</em>选项卡底部。您可以向上拖动水平蓝色分隔条来扩大显示区域。</p>
+<h3 id="undock-the-menu">将菜单解锁为浮动窗口<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>默认情况下，菜单停靠在屏幕左侧。如果您想查看被菜单遮挡的区域，这可能会造成不便。要使菜单可移动，您可以将某个选项卡（例如 <strong>DX11</strong> 选项卡）从菜单中拖出，然后将其他所有选项卡合并到该选项卡，从而创建一个浮动菜单。注意不要将选项卡停靠到屏幕边缘——当出现将选项卡停靠到某侧的图标时，请注意避免将选项卡拖放到该图标上。</p>
+<p>您可以通过向左或向右拖动选项卡标题来重新排列浮动菜单中的选项卡，从而按照您希望的顺序排列各选项卡。单击菜单中的任意位置并拖动，即可移动菜单。</p>
+<p>此后关闭并重新打开菜单，它将保持浮动状态，您可以将其拖动到任意位置。</p>
+<h3 id="order-of-execution">执行顺序<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><em>主页</em>选项卡上的效果技法看似随机排列，但实际并非如此。执行顺序为从上到下。这意味着，如果您同时启用了 CinematicDOF 和 LumaSharpen，且按从上到下的顺序排列，ReShade 将先执行 CinematicDOF，再执行 LumaSharpen。这样的效果是：CinematicDOF 的输出结果将作为 LumaSharpen 的输入。</p>
+<p>最佳顺序取决于您的个人偏好，但一般规律是：任何偏向色彩处理的效果技法应在偏向镜头模拟的效果技法（例如景深着色器、胶片颗粒或叠加层着色器）之前执行。</p>
+<h3 id="setting-up-global-preprocessor-definitions.">设置全局预处理器定义<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>ReShade 使用若干全局预处理器定义，这些定义会影响效果技法的工作方式，例如深度缓冲的显示效果。您可以单击<em>主页</em>选项卡上效果技法参数顶部的蓝色"编辑全局预处理器定义"按钮来编辑这些定义。这些设置的含义在<a href="setupreshade.htm">检查深度缓冲访问</a>一节中有详细说明。</p>
+<h3 id="reshade-settings">ReShade 设置<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>您可以在 ReShade 的设置选项卡中配置各种设置。对于截图爱好者而言，<em>截图</em>部分尤为重要。所用快捷键不应与您正在使用的其他覆盖层（如 Steam、UPlay 等）冲突，同时您应选择最适合自己的文件格式，例如 PNG 是无损格式，且可上传至任何平台。这部分内容相当浅显易懂。</p>
+<h2 id="changing-a-techniques-parameters">调整效果技法的参数<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>一切准备就绪后，如何调整效果技法的设置？首先，通过按下您设定的切换快捷键，或勾选<em>主页</em>选项卡上技法名称前面的复选框来激活该着色器。您将看到 ReShade 在<em>主页</em>选项卡的蓝色分隔条下方显示该着色器的所有设置。</p>
+<p>看到滑块时，可以用鼠标拖动进行调整。对于数值输入框，同样可以用鼠标操作：单击输入框后按住鼠标左键并向左或向右拖动即可改变数值。拖动滑块或输入框时按住 <code>shift</code>，数值的变化速度将加快。按住 <code>ctrl</code> 并单击，将弹出一个文本框，允许您直接输入数值。当您需要输入超出控件默认范围的数值时，此功能非常有用。</p>
+<h2 id="checking-depth-buffer-access">检查深度缓冲访问<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>为确保正确设置深度缓冲，关键是要安装 <strong>DisplayDepth</strong> 着色器。激活 DisplayDepth 着色器后，您将看到深度缓冲的完整预览，以及您所选择的预处理器定义值是否正确。ReShade 论坛上有<a href="https://reshade.me/forum/shader-discussion/4810-about-the-changes-in-displaydepth-fx" target="_blank">一篇关于如何使用 DisplayDepth 着色器正确设置深度缓冲的精彩教程</a>，建议阅读并正确配置您的 ReShade。每款游戏只需完成一次此设置。</p>
+<h3 id="picking-the-right-depth-buffer">选择正确的深度缓冲<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>游戏可能使用多个深度缓冲，或者在渲染最终画面时动态切换深度缓冲，从而导致深度缓冲看起来不可用。要告知 ReShade 使用哪个深度缓冲，您需要进入 ReShade 覆盖层中的一个额外选项卡。具体是哪个选项卡取决于您使用的 ReShade 版本。</p>
+<p><strong>ReShade v4.x 及更低版本：</strong>如果您使用的是 ReShade v4.x 或更低版本，ReShade 菜单/覆盖层包含一个额外选项卡，名称为 <strong>D3D9</strong>、<strong>D3D10</strong>、<strong>D3D11</strong> 或 <strong>D3D12</strong> 之一。<br />
+<strong>ReShade v5.x 及更高版本：</strong>如果您使用的是 ReShade v5.x，ReShade 包含一个名为 <strong>Add-ons</strong> 的额外选项卡。</p>
+<p>此额外选项卡显示所有当前活动的深度缓冲。要确定应选择哪个，请先启用 <em>DisplayDepth</em> 着色器。您可能会看到白屏或黑屏。进入 ReShade 菜单/覆盖层中上述额外选项卡后，可以通过勾选复选框来选择正确的深度缓冲（或尝试勾选<em>在清除前复制深度</em>复选框）。如果屏幕显示恢复正常，则说明您选择了正确的深度缓冲，可以将其用于依赖深度缓冲的效果技法了。</p>
+<h2 id="shader-duplication">着色器复制<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>有时您可能需要多次使用同一个着色器（CanvasFog 和 StageDepthPlus 着色器在这方面尤为常见）。对于大多数着色器，只需将着色器代码中的效果技法名称替换为另一个不同的名称即可，但某些着色器还需要更改 <code>namespace</code> 或纹理名称，请注意这一点。务必查看着色器代码中关于复制着色器的注释说明。</p>
+<h2 id="depth-buffer-on-online-games">联网游戏中的深度缓冲<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>当游戏是联网游戏或持续进行网络访问时，深度缓冲将被禁用。由于许多效果都需要访问游戏的深度缓冲，ReShade 一旦检测到游戏为联网游戏（即存在持续的网络流量），便会主动禁用深度缓冲访问权限。如果因此导致深度缓冲不可用，依赖深度缓冲的着色器很可能将无法正常工作。</p>
+<p>因此，如果您尝试在持续使用网络连接的游戏中使用 ReShade（无论是出于 DRM 保护，还是因为游戏本身需要始终在线，例如《全境封锁》或《Steep》），您将需要使用自定义 ReShade .dll 版本才能获得深度缓冲访问权限，否则 ReShade 将阻止访问。当然，您也可以在没有深度缓冲访问权限的情况下使用 ReShade，但依赖深度缓冲的着色器（如 CinematicDof）将无法使用。</p>
+<p>请注意，部分游戏的反作弊系统已将官方版本的 ReShade 列入白名单，因此使用自定义 .dll 可能会导致您被封号，具体情况因游戏而异，请事先做好调查研究。</p>
+<h2 id="using-reshade-alongisde-other-injectable-mods">与其他可注入模组同时使用 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>有时您可能会遇到无法将 ReShade 与另一个同样注入进程的模组同时使用的情况。解决此问题的一种方法是使用 <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases" target="_blank">ASI Loader</a>，将额外的模组放入 scripts 文件夹。请阅读 <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/blob/master/readme.md" target="_blank">ASI Loader 仓库中的 README 文件</a>，了解更多使用方法。</p>
+<h2 id="further-information">延伸阅读<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
-<li><a href="https://reshade.me/" target="_blank">Reshade website</a></li>
-<li><a href="https://reshade.me/forum/index" target="_blank">Reshade forums</a></li>
-<li><a href="https://reshade.me/forum/troubleshooting/5227-introducing-easy-troubleshooting#33088" target="_blank">Easy troubleshooting guide</a></li>
-<li><a href="https://www.pcgamingwiki.com/wiki/ReShade" target="_blank">PC Gaming wiki guide</a></li>
+<li><a href="https://reshade.me/" target="_blank">ReShade 官网</a></li>
+<li><a href="https://reshade.me/forum/index" target="_blank">ReShade 论坛</a></li>
+<li><a href="https://reshade.me/forum/troubleshooting/5227-introducing-easy-troubleshooting#33088" target="_blank">简易故障排除指南</a></li>
+<li><a href="https://www.pcgamingwiki.com/wiki/ReShade" target="_blank">PC Gaming Wiki 指南</a></li>
 </ul>
-<h2 id="custom-shader-repositories">Custom shader repositories<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="custom-shader-repositories">自定义着色器仓库<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
-<li><a href="https://github.com/Fubaxiusz/fubax-shaders" target="_blank">Fu-Bama's shaders</a></li>
+<li><a href="https://github.com/Fubaxiusz/fubax-shaders" target="_blank">Fu-Bama 着色器集</a></li>
 <li><a href="https://github.com/FransBouma/OtisFX" target="_blank">OtisFX</a></li>
 <li><a href="https://github.com/martymcmodding/qUINT" target="_blank">qUINT</a></li>
-<li><a href="https://github.com/Daodan317081/reshade-shaders" target="_blank">Daodan's shaders</a></li>
-<li><a href="https://github.com/brussell1/Shaders" target="_blank">Brussell's shaders</a></li>
-<li><a href="http://github.com/luluco250/FXShaders" target="_blank">Luluco250's shaders</a></li>
+<li><a href="https://github.com/Daodan317081/reshade-shaders" target="_blank">Daodan 着色器集</a></li>
+<li><a href="https://github.com/brussell1/Shaders" target="_blank">Brussell 着色器集</a></li>
+<li><a href="http://github.com/luluco250/FXShaders" target="_blank">Luluco250 着色器集</a></li>
 </ul>
 
                     </div>
@@ -256,7 +220,7 @@ detects the game to be an online game (so there's network traffic on a regular b
                 <footer>
                     <hr />
                     <div role="contentinfo">
-&copy 2019-2026 FRAMED. All rights reserved.
+&copy 2019-2026 FRAMED. 保留所有权利。
                     </div>
                 </footer>
             </div>
