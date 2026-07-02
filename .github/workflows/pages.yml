@@ -24,15 +24,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Prepare site files
+        run: |
+          mkdir -p _site
+          cp index.html .nojekyll favicon.ico _site/
+          cp ReshadeGuidesShaderguides.htm ReshadeGuidesAddonguides.htm _site/
+          cp -r ReshadeGuides Images css js fontawesome ShaderTogglers _site/
+          echo "Site size: $(du -sh _site | cut -f1)"
+          echo "File count: $(find _site -type f | wc -l)"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
