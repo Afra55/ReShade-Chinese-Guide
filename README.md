@@ -6,6 +6,16 @@ ReShade 中文指南 — 基于 [FRAMED. Screenshot Community](https://framedsc.
 
 原文来自 [framedsc.com/ReshadeGuides](https://framedsc.com/ReshadeGuides/index.htm)，版权归原作者所有。
 
+## 在线浏览（GitHub Pages）
+
+推送至 `main` 后会自动部署，访问：
+
+**https://afra55.github.io/ReShade-Chinese-Guide/**
+
+指南入口：https://afra55.github.io/ReShade-Chinese-Guide/ReshadeGuides/index.htm
+
+> 首次启用需在仓库 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions** 作为来源。
+
 ## 本地浏览
 
 在仓库根目录启动一个本地 HTTP 服务器后，打开 Reshade 指南首页：
