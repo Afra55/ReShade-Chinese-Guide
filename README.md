@@ -8,13 +8,20 @@ ReShade 中文指南 — 基于 [FRAMED. Screenshot Community](https://framedsc.
 
 ## 在线浏览（GitHub Pages）
 
-推送至 `main` 后会自动部署，访问：
+推送至 `main` 后会自动部署。首次需手动开启（仅需一次）：
 
-**https://afra55.github.io/ReShade-Chinese-Guide/**
+1. 打开仓库 [Settings → Pages](https://github.com/Afra55/ReShade-Chinese-Guide/settings/pages)
+2. **Build and deployment → Source** 选择 **GitHub Actions**
+3. 到 [Actions](https://github.com/Afra55/ReShade-Chinese-Guide/actions/workflows/pages.yml) 页面，点击 **Run workflow** 重新部署
 
-指南入口：https://afra55.github.io/ReShade-Chinese-Guide/ReshadeGuides/index.htm
+部署完成后访问：
 
-> 首次启用需在仓库 **Settings → Pages → Build and deployment** 中选择 **GitHub Actions** 作为来源。
+| 页面 | 地址 |
+|------|------|
+| 首页（自动跳转） | https://afra55.github.io/ReShade-Chinese-Guide/ |
+| 指南入口 | https://afra55.github.io/ReShade-Chinese-Guide/ReshadeGuides/index.htm |
+
+之后每次推送到 `main` 都会自动更新网站。
 
 ## 本地浏览
 
