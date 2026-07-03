@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -103,7 +103,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -113,10 +113,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -131,12 +131,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="../index.htm">ReShade 指南</a></li> / <li><a href="../../ReshadeGuidesShaderguides.htm">着色器指南</a></li> / <li><a href="heightfog.htm">高度雾</a></li></ul>
 					
@@ -154,17 +154,17 @@
 <p>本指南假设你已<a href="../setupreshade.htm">在 ReShade 中正确配置了深度缓冲</a>。高度雾是一款在游戏 3D 世界中插入一个无限大<em>平面</em>并在该平面上应用雾效的着色器。本指南将介绍如何控制这个平面，以在你的场景中营造大气雾效。</p>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>需要注意的是，高度雾着色器对你的 3D 场景中的上/下/左/右方向毫无概念，它所知道的只是摄像机正在观察的场景。这意味着当你在 ReShade 覆盖层中启用该着色器时，高度雾是相对于摄像机的——当你移动摄像机时，高度雾也会随之移动。</p>
 <p>因此，它对于视频拍摄的用处并不大。</p>
-</div><h2 id="aligning-the-fog">对齐雾效<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+</div><h2 id="aligning-the-fog">对齐雾效<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>默认设置效果如下：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/Heightfog/hf_default.jpg" alt="默认设置" title="高度雾的默认设置效果" class="shadowed autosize" width="1024" height="577" />
 <p>高度雾的默认设置效果</p>
 </div>
 <p>初看可能有些奇怪，但请记住，雾效是相对于摄像机的，它不知道上下方向，因此也不知道摄像机是以一定角度俯视场景的。不过，高度雾的控制参数允许你旋转和移动雾效平面，使其看起来像是漂浮在我们正在观看的神殿地板上。</p>
-<h3 id="fog-plane-z">雾效平面 Z 值<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="fog-plane-z">雾效平面 Z 值<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>首先需要调整的参数是 <strong>Fog Plane Z</strong>（雾效平面 Z 值）。要向下移动雾效，需要将该值调小（即更负）。默认值为 -0.001，若将其调小至 -0.021，雾效会向下移动（仍然是相对于摄像机！），同时雾层顶部空间增大，雾效也会变得更为蓬松。</p>
 <p>不断向下调整 Z 值并不总是有效。特别是在我们上面的示例中，由于是以一定角度俯视地板，因此需要旋转雾效平面。</p>
-<h3 id="fog-plane-orientation">雾效平面朝向<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="fog-plane-orientation">雾效平面朝向<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>要旋转雾效元素，可以使用 <strong>Fog plane orientation</strong>（雾效平面朝向）设置中的两个值。第一个值是"滚转"值，使雾效图层沿摄像机的观察方向旋转；第二个值是"俯仰"值，基本上使雾效平面沿水平轴旋转。</p>
 <p>在上面的示例中，如果我们稍微降低 Z 值，然后调整第二个朝向值（俯仰），就可以将雾效图层与地板对齐，效果如下所示：</p>
 <div class="figure">
@@ -172,10 +172,10 @@
 <p>雾效图层与地板对齐的效果</p>
 </div>
 <p>另一个可能需要调整的参数是 <strong>FoV</strong>（视野）值。默认设置为 60，但如果你使用的是非常宽的窗口，可能需要稍作调整，以使平面朝向参数能够更准确地对齐。</p>
-<h2 id="tweaking-the-fog">调整雾效<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<h3 id="color">颜色<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h2 id="tweaking-the-fog">调整雾效<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="color">颜色<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>要更改雾效的颜色，调整 <strong>Fog color</strong>（雾效颜色）参数即可，操作非常直观。</p>
-<h3 id="density-control">密度控制<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="density-control">密度控制<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>将雾效与地板对齐后，就可以进行微调了。相关参数为 <strong>Fog density</strong>（雾效密度）、<strong>Fog start</strong>（雾效起始距离）和 <strong>Fog curve</strong>（雾效曲线）。这三个参数共同控制场景中雾效的厚度。着色器会根据这些值计算厚度，因此观察的雾效越多，其表现就越厚。雾效密度和雾效曲线本质上控制的是同一事物，但雾效密度对雾效曲线值提供了更精细的控制。雾效起始距离定义了雾效从摄像机开始出现的距离，0.0 表示摄像机处，1.0 表示地平线处。</p>
 <p>以下是一种浓雾效果</p>
 <div class="figure">
@@ -187,7 +187,7 @@
 <img src="../../Images/ShaderGuides/Heightfog/hf_thin.jpg" alt="薄雾" title="起始距离更远的薄雾变体效果" class="shadowed autosize" width="1024" height="577" />
 <p>起始距离更远的薄雾变体效果</p>
 </div>
-<h3 id="cloud-control">云层控制<a class="headerlink" href="heightfog.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="cloud-control">云层控制<a class="headerlink" href="heightfog.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>高度雾使用雾效纹理来创造蓬松的云雾效果。你可以通过 <strong>Cloud configuration</strong>（云层配置）下的参数来控制云雾效果。勾选 <strong>Moving fog</strong>（流动雾效）复选框将使雾效缓慢移动，你可以通过调整 <strong>Cloud movement speed</strong>（云层移动速度）来控制速度。</p>
 <p>雾效的蓬松/云状效果有两个参数：<strong>Cloud scale (vertical)</strong>（云层比例·垂直）和 <strong>Cloud scale (horizontal)</strong>（云层比例·水平）。垂直值控制云层的"波动"程度，值越高越波动。水平值控制雾效图层在水平方向上的变化。两者结合，你可以创造出场景所需的独特雾效。以下是几组示例。</p>
 <p>首先，水平和垂直比例系数均为 0：</p>

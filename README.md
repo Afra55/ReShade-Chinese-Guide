@@ -73,9 +73,20 @@ python3 scripts/mirror_assets.py
 ## 汉化进度
 
 - [x] 13 篇 ReShade 指南页面正文汉化
-- [x] 侧栏导航与面包屑汉化
-- [x] 图片说明与提示框汉化
-- [ ] 着色器目录内个别着色器名称保留英文（专有名词）
-- [ ] 持续校对与术语统一
+- [x] 侧栏导航、面包屑、提示框、图片说明汉化
+- [x] 最终校对：修复外链、术语统一、无障碍标签
+- [x] GitHub Pages 在线发布
 
-在线阅读（GitHub Pages）：https://afra55.github.io/ReShade-Chinese-Guide/ReshadeGuides/index.htm
+**在线阅读：** https://afra55.github.io/ReShade-Chinese-Guide/ReshadeGuides/index.htm
+
+### 术语约定
+
+| 英文 | 中文 |
+|------|------|
+| shader | 着色器 |
+| technique | 效果技法 |
+| depth buffer | 深度缓冲 |
+| LUT | LUT（查找表） |
+| addon | 插件 |
+
+专有名词（ReShade、着色器名、游戏名）保留英文。

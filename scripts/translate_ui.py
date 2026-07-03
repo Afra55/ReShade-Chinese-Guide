@@ -87,6 +87,19 @@ REPLACEMENTS = [
      '<span class="alert-title"><i class="fa fa-warning"></i> 警告</span>'),
     ('<span class="alert-title"><i class="fa fa-info-circle"></i> Note</span>',
      '<span class="alert-title"><i class="fa fa-info-circle"></i> 说明</span>'),
+    ('<i class="fa fa-info-circle"></i> Info</span>', '<i class="fa fa-info-circle"></i> 信息</span>'),
+    ('title="Permalink to this headline"', 'title="永久链接至标题"'),
+    ('>LUTs</a>', '>LUT</a>'),
+    ('ReShade 仓库', 'ReShade 资源库'),
+    ('href="../HallOfFramed"', 'href="https://framedsc.com/HallOfFramed/"'),
+    ('href="../HOFWallpaper"', 'href="https://framedsc.com/HOFWallpaper/"'),
+    ('href="../framed-wrapped"', 'href="https://framedsc.com/framed-wrapped/"'),
+    ('href="../../HallOfFramed"', 'href="https://framedsc.com/HallOfFramed/"'),
+    ('href="../../HOFWallpaper"', 'href="https://framedsc.com/HOFWallpaper/"'),
+    ('href="../../framed-wrapped"', 'href="https://framedsc.com/framed-wrapped/"'),
+    ('href="/HallOfFramed/"', 'href="https://framedsc.com/HallOfFramed/"'),
+    ('href="/HOFWallpaper/"', 'href="https://framedsc.com/HOFWallpaper/"'),
+    ('href="/framed-wrapped/"', 'href="https://framedsc.com/framed-wrapped/"'),
 ]
 
 

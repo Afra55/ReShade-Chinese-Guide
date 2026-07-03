@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -107,7 +107,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -117,10 +117,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -135,12 +135,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="../index.htm">ReShade 指南</a></li> / <li><a href="../../ReshadeGuidesShaderguides.htm">着色器指南</a></li> / <li><a href="cinematicdof.htm">电影感景深</a></li></ul>
 					
@@ -160,8 +160,8 @@
 本指南将帮助你理解各参数的含义，并指导你如何充分发挥这个着色器的潜力。</p>
 <p>电影感景深着色器中的所有设置均为拖动滑块，即点击后按住鼠标左键向左或向右拖动，分别对应减小和增大数值。按住 <code>shift</code> 键拖动可加快调整速度。按住
 <code>ctrl</code> 键点击可直接输入所需数值。</p>
-<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>以下截图使用电影感景深 v1.2.5 拍摄，发布于 2022 年 3 月 28 日。</p>
-</div><h2 id="focusing">对焦<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> 信息</span><p>以下截图使用电影感景深 v1.2.5 拍摄，发布于 2022 年 3 月 28 日。</p>
+</div><h2 id="focusing">对焦<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>景深着色器最重要的功能之一，就是聚焦于三维世界中的正确元素。默认情况下，
 着色器的对焦模式设置为<em>自动对焦</em>和<em>鼠标驱动自动对焦</em>。这意味着当你在场景中移动鼠标时，
 鼠标指针下方的元素将成为着色器的焦点，其前方和后方的一切都将被模糊处理。</p>
@@ -169,10 +169,10 @@
 就会失去焦点。在这种情况下，最好切换到<em>手动对焦</em>。只需在 Reshade 菜单的电影感景深设置中<strong>取消勾选</strong> <em>Use auto-focus</em>（使用自动对焦）选项即可。</p>
 <p>切换到<em>手动对焦</em>后，着色器将聚焦于距摄像机一定<em>距离</em>的位置。该距离由
 <strong>Manual-focus plane</strong>（手动对焦平面）滑块指定。拖动文本框直至达到所需数值。</p>
-<h3 id="distance-to-the-camera">与摄像机的距离<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="distance-to-the-camera">与摄像机的距离<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>焦点元素与摄像机之间有一定距离。<em>对焦平面</em>距摄像机越近，
 焦外区域的模糊效果就越强。</p>
-<h3 id="focusing-overlay">对焦辅助覆盖层<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="focusing-overlay">对焦辅助覆盖层<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>电影感景深具有一个重要的对焦辅助功能——<em>焦外平面覆盖层</em>。勾选 <strong>Show out-of-focus plane overlay on mouse down</strong>（按下鼠标时显示焦外平面覆盖层）后，
 每次按住鼠标左键时着色器都会显示覆盖层。覆盖层由三种颜色组成：白色表示远景平面
 （焦点后方区域）的焦外元素，红色表示近景平面（焦点前方区域）的焦外元素，
@@ -181,7 +181,7 @@
 但会逐渐过渡到"焦外"状态。启用<em>自动对焦</em>时，按下鼠标左键会显示准星，
 自动对焦点位于准星中心。</p>
 <p>建议在设置对焦内容时使用此选项。</p>
-<h3 id="focal-length-and-aperture">焦距与光圈<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="focal-length-and-aperture">焦距与光圈<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>电影感景深的对焦系统基于三个要素：焦点元素（对焦平面）到摄像机的距离、镜头长度（焦距）和
 光圈。摄像机与被摄体的距离可以通过移动摄像机靠近被摄体来控制（同时需要重新聚焦三维世界中要对焦的元素）。剩下的就是焦距和光圈。</p>
 <p>就镜头长度而言，通常镜头越长，视野（FoV）越窄，焦外区域的模糊效果越强。就光圈而言，
@@ -211,10 +211,10 @@
 </div>
 <p>与光圈 5.6 相比，模糊效果略微更明显。你可以自由选择合适的模糊系数。通常只需调整焦距<em>或</em>光圈其中一个即可，无需同时调整两者。建议先将光圈保持在 2.8，仅调整焦距——数值越小模糊越少，数值越大模糊越多。</p>
 <div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>将摄像机移近焦点元素也会使模糊效果更加明显（使用手动对焦时还需调整手动对焦平面数值）</p>
-</div><h2 id="blur-tweaking">模糊调节<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+</div><h2 id="blur-tweaking">模糊调节<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>设置好对焦、焦距和光圈后，你可以进一步调节近景平面（焦点前方）和远景平面（焦点后方）的模糊效果。此外，还可以更改模糊质量并应用后处理模糊平滑系数，以消除可能出现的欠采样瑕疵。</p>
 <p>让我们来看看这些效果。以下使用默认的焦距 100mm 和光圈 2.8。</p>
-<h3 id="far-plane-blur">远景平面模糊<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="far-plane-blur">远景平面模糊<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>首先是<em>远景平面最大模糊值</em>（Far plane max blur）。在此可以调节由焦距 + 光圈 + 距离组合产生的模糊强度。值为 1.0 时产生该组合的默认模糊效果；值为 0 时完全关闭远景平面的模糊。若设置为较高的值（如 3.0），将产生如下所示的过度模糊效果。</p>
 <p>远景平面最大模糊值设为 3.0：</p>
 <div class="figure">
@@ -227,14 +227,14 @@
 <p>远景平面模糊值为 0.5</p>
 </div>
 <p>这看起来可能与使用更短焦距（如 50mm）的效果相似，但实际并非如此：使用 50mm 镜头时，模糊从三维世界更深处、距对焦平面更远的地方开始；而使用 100mm 时，模糊从雕像翅膀处就已开始。由于模糊系数设置较低，模糊效果非常细腻。</p>
-<h3 id="near-plane-blur">近景平面模糊<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="near-plane-blur">近景平面模糊<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>此外，还可以调节<em>近景平面</em>的模糊效果。近景平面的模糊带有柔和边缘以增强真实感。近景平面模糊的规则与远景平面相同：设为 0 则关闭，设为较高值则使模糊效果极为突出。</p>
 <p>以下示例中，焦点在雕像上，远景模糊已禁用，使用默认近景平面模糊系数 1.0。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_np.jpg" alt="near plane blur 1.0" title="Near plane blur with blur set to 1.0" class="shadowed autosize" width="1024" height="576" />
 <p>近景平面模糊值为 1.0</p>
 </div>
-<h3 id="overall-blur-quality-and-smoothing-factor.">整体模糊质量与平滑系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="overall-blur-quality-and-smoothing-factor.">整体模糊质量与平滑系数<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>整体模糊质量默认设为 5。这是着色器为每个像素生成基于圆盘模糊时使用的光环数量。数值越高，光环越多，对近景和远景区域进行模糊处理时每个像素的采样数越多。默认值 5 在质量和性能之间取得了良好平衡，但如果需要更高质量，最高可调至 12。数值越高，着色器消耗的性能越多。</p>
 <p>较高的质量值通常只在处理高光时才有必要。在没有焦外（散景）高光的普通模糊区域中，4 和 9 之间的差异并不明显。
 然而在含有大量焦外/散景高光的场景中，如果模糊系数足够高，低质量设置下会在高光处出现<em>点状</em>瑕疵。这是一种被称为<em>欠采样</em>的现象所导致的副作用。</p>
@@ -257,16 +257,16 @@
 <p>模糊质量设为 5，启用平滑处理</p>
 </div>
 <p>并非所有瑕疵都能消除：亮度较低的焦外/散景效果会被跳过，以避免模糊非高光区域。这是一种权衡，具体使用哪种方案取决于特定场景的需求。</p>
-<h2 id="highlight-tweaking">高光调节<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="highlight-tweaking">高光调节<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>景深效果会产生焦外（散景）高光，前一章节中我们已见过示例。
 电影感景深提供了多种设置，帮助着色器生成理想的焦外/散景高光。</p>
-<h3 id="busy-bokeh-factor">繁忙散景系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="busy-bokeh-factor">繁忙散景系数<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>散景高光通常是颜色均匀的圆形高光。然而，你可以将圆形高光改为中心比边缘更透明的圆环形状。为此，将<strong>繁忙散景系数</strong>（Busy bokeh factor）调高至大于 0 的值。下图展示了系数为 0.5 时的高光效果。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_bf.jpg" alt="Busy bokey factor 0.5" title="Busy bokey factor of 0.5" class="shadowed autosize" width="1024" height="574" />
 <p>繁忙散景系数为 0.5</p>
 </div>
-<h3 id="highlight-boost-factor">高光增益系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="highlight-boost-factor">高光增益系数<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>还有一个<strong>高光增益系数</strong>（Highlight boost factor）设置，可以稍微增强高光效果。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_hg0.jpg" alt="Highlight boost factor off" title="Highlight boost factor of 0.0" class="shadowed autosize" width="1024" height="575" />
@@ -278,29 +278,29 @@
 <p>高光增益系数为 1.0</p>
 </div>
 <p>此外还有一个伽马系数，可以稍微提亮所有像素。通常保持默认值 2.2 即可，但在较暗的场景中可能有所帮助。</p>
-<h2 id="anamorphism-control">变形宽银幕控制<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="anamorphism-control">变形宽银幕控制<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>电影中有多种镜头效果，其中之一是变形宽银幕散景形状——散景不形成完美的圆形，而是呈椭圆形。这种效果是由使用镜头将较宽的图像投影到较窄的镜头开口上造成的，结果形成垂直椭圆形。电影感景深支持这一特性，并提供了额外选项来扭曲椭圆形以模拟边缘畸变。这三个设置集中在着色器控制面板的"变形宽银幕控制"部分。</p>
-<h3 id="anamorphic-factor">变形宽银幕系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="anamorphic-factor">变形宽银幕系数<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>第一个系数是控制散景形状变形程度的<strong>变形宽银幕系数</strong>（Anamorphic factor）。默认值为 1.0，即所有散景形状均为标准圆形。将数值降低至 0.0，圆形会逐渐变为椭圆形。下图展示了变形宽银幕系数为 0.7 时的场景效果。
 边缘处可见轻微形变，但靠近中心的形状仍保持圆形。这可用于模拟鱼眼镜头的边缘畸变效果。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana07.jpg" alt="Anamorphic factor" title="Anamorphic factor of 0.7" class="shadowed autosize" width="1024" height="575" />
 <p>变形宽银幕系数为 0.7</p>
 </div>
-<h3 id="anamorphic-spread-factor">变形宽银幕扩散系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="anamorphic-spread-factor">变形宽银幕扩散系数<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>默认的扩散系数使变形宽银幕效果仅出现在边缘而非中心。要使其在画面各处均匀显示，可以将<strong>变形宽银幕扩散系数</strong>（Anamorphic spread factor）调高至大于 0.0 的值，1.0 表示变形宽银幕效果均匀应用于整个画面。以下是相应示例。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana07sp1.jpg" alt="Anamorphic spread factor" title="Anamorphic factor of 0.7 with spread factor of 1.0" class="shadowed autosize" width="1024" height="576" />
 <p>变形宽银幕系数为 0.7，扩散系数为 1.0</p>
 </div>
-<h3 id="anamorphic-alignment-factor">变形宽银幕对齐系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="anamorphic-alignment-factor">变形宽银幕对齐系数<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><strong>变形宽银幕对齐系数</strong>（Anamorphic alignment factor）可实现经典变形宽银幕效果——垂直椭圆形：将值设为 1.0 时，椭圆形像经典变形宽银幕镜头一样垂直排列。若使用小于 1.0 的值，椭圆形会绕中心旋转，
 值为 0.0 时呈现前几张截图中的排列方式。以下是将设置调至 1.0 以获得经典变形宽银幕镜头效果的示例。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana06sp1al1.jpg" alt="Anamorphic spread factor" title="Anamorphic factor of 0.6 with spread factor of 1.0 and alignment factor of 1.0" class="shadowed autosize" width="1024" height="575" />
 <p>变形宽银幕系数为 0.6，扩散系数为 1.0，对齐系数为 1.0</p>
 </div>
-<h3 id="go-wild">尽情发挥<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="go-wild">尽情发挥<a class="headerlink" href="cinematicdof.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>你甚至可以创造出漩涡效果：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana01sp1.jpg" alt="Go wild" title="Anamorphic factor of 0.01 with spread factor of 1.0" class="shadowed autosize" width="1024" height="576" />

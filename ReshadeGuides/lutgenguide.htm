@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -102,7 +102,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -112,10 +112,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -130,12 +130,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="lutgenguide.htm">LUT 生成</a></li></ul>
 					
@@ -147,17 +147,17 @@
 <p><img src="../Images/lutg_header.png" alt="LUT 生成!" class="shadowed autosize" width="896" height="180" /></p>
 <p>LUT（查找表）是一种强大的工具，可以彻底改变任何图片的外观。本指南专注于为 ReShade 生成 LUT 的方法。</p>
 <hr />
-<h2 id="why-would-i-want-to-use-a-lut">为什么我要使用 LUT？<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="why-would-i-want-to-use-a-lut">为什么我要使用 LUT？<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>LUT（查找表）是一种低成本且简便的色彩变更方式，无需依赖大量消耗性能的着色器堆叠。你可以用它让游戏内色彩看起来更自然（色彩校正），或为游戏打造特定的风格化外观（色彩分级）。</p>
 <p><img src="../Images/lutguide/lutg_comp.png" alt="LUT example" class="shadowed autosize" width="1280" height="540" />
 <em>Mass Effect: Andromeda</em></p>
-<h3 id="how-do-i-use-a-lut">如何使用 LUT？<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="how-do-i-use-a-lut">如何使用 LUT？<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>你需要这样一张贴图：</p>
 <p><img src="../Images/lutguide/lut_neutral.png" alt="This is a Neutral LUT" class="shadowed autosize" width="1024" height="32" /></p>
 <p>这张贴图就是 LUT。具体来说，这是一个<strong>中性</strong> LUT。它本身什么效果都不产生，但却是你能用 LUT 做到<em>一切</em>的起点。</p>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p><strong>这张贴图极为重要！</strong>毕竟它就是 LUT 本身。请务必保存好它！你可以下载上方的贴图，也可以在标准 <code>reshade-shaders</code> 的 Textures 文件夹中找到名为 <code>lut.png</code> 的文件。请<strong>备份</strong>好它，你会需要多份副本。</p>
 </div><p>ReShade 使用 <code>LUT.fx</code> 着色器来加载并应用 LUT。注意 <code>LUT.fx</code> 只能处理<strong>一个</strong>（1）LUT，我强烈建议将这唯一的 LUT 用于色彩校正。你可以通过 <code>MultiLUT.fx</code> 着色器加载多个 LUT 并在它们之间切换。</p>
-<h3 id="how-can-i-make-one">如何制作一个 LUT？<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="how-can-i-make-one">如何制作一个 LUT？<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>本指南介绍使用以下工具生成 LUT 的方法：</p>
 <ul>
 <li>ReShade</li>
@@ -168,7 +168,7 @@
 <em>通过侧边栏导航到各个章节。</em></p>
 <p>本指南不涉及 GIMP，因为<a href="https://reshade.me/forum/shader-discussion/3179-lut-s-powerful-color-correction-the-guide" target="_blank">旧版 LUT 指南</a>仍然适用。</p>
 <hr />
-<h2 id="reshade">ReShade<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="reshade">ReShade<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>所需工具：</p>
 <ul>
 <li>你选择的游戏（已安装 ReShade）</li>
@@ -176,12 +176,12 @@
 <li>任何可更改色彩的 ReShade 着色器</li>
 </ul>
 <p><em>本文使用 ReShade 4.3.0，并假定你已熟悉 ReShade 的配置方法。</em></p>
-<h4 id="step-1-setting-up">第一步：准备工作<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-1-setting-up">第一步：准备工作<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p><code>qUINT_lightroom.fx</code> <strong>不</strong>包含在标准着色器集合中。请从 <a href="https://github.com/martymcmodding/qUINT" target="_blank">qUINT 框架</a>中下载。</p>
 </div><p>虽然 qUINT Lightroom 本身已足够实现非常广泛的色彩调整，但本指南还将把其他色彩分级/校正着色器（如 <code>FilmicPass.fx</code>、<code>LevelsPlus.fx</code>、<code>Technicolor.fx</code> 等）的效果融入 LUT 中。</p>
 <p>将这些着色器"烘焙"到单个 LUT 中是有意义的，因为每个着色器都会带来少量性能开销。这些开销虽然微小，但累积起来不容忽视。相比之下，<code>LUT.fx</code> 着色器的性能影响要小得多，可以为你节省帧数。</p>
 <p>此外，保存这些 LUT 还能在未来 ReShade 更新导致着色器异常时，保留你的预设效果。</p>
-<h4 id="step-2-configuring-reshade">第二步：配置 ReShade<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-2-configuring-reshade">第二步：配置 ReShade<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>我们将利用 qUINT Lightroom 在屏幕上生成 LUT 的功能。<strong>该着色器必须位于列表最顶部</strong>，如下所示：</p>
 <p><img src="../Images/lutguide/lutg_rs-list.png" alt="A ReShade Hierarchy" class="shadowed autosize" width="583" height="215" /></p>
 <p>将其置于顶部后，其下方的所有着色器都会在其之上加载，意味着它们的效果将被记录到 LUT 中。</p>
@@ -191,14 +191,14 @@
 <p>qUINT Lightroom 设置完成后，我们就可以开始施展魔法了。如果不想让 LUT 覆盖层妨碍编辑，可以禁用该着色器或 LUT 覆盖层。启用你喜欢的着色器，然后尽情调整。</p>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p><strong>此处使用的着色器必须只影响色彩。</strong>添加泛光、颗粒感、暗角、镜头效果及其他视觉效果（包括 AO 和景深等深度着色器）的着色器只会破坏你的 LUT。</p>
 </div><p>对结果满意后，就可以进行导出了。</p>
-<h4 id="step-3-exporting">第三步：导出<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-3-exporting">第三步：导出<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>最后一步是对游戏进行截图，最好使用 ReShade 内置的截图工具。截图中必须包含 qUINT Lightroom 生成的 LUT 覆盖层。如果操作正确，由于你添加了所有色彩效果，LUT 看起来应该与原来不同。</p>
 <p>从截图中精确裁剪出 LUT 部分。裁剪必须精确到像素。将其保存为 PNG 格式。<strong>不要</strong>以 JPG 等有损格式导出，LUT 中不能有压缩失真。</p>
 <p>建议将此文件导出为 <code>lut.png</code>，直接保存到 Textures 文件夹中，替换原有的 <code>lut.png</code>。这样你就可以立即通过 <code>LUT.fx</code> 使用你的 LUT 了。</p>
-<h4 id="extra-lut-precision">补充：LUT 精度<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="extra-lut-precision">补充：LUT 精度<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>调整 <code>LUT tile size</code> 和 <code>LUT tile count</code> 可以改变 LUT 的精度。通常情况下无需修改，32 的图块尺寸和数量已足够精确。如果你将这些值修改为不同于 32 的数值，则需要修改 <code>LUT.fx</code> 才能正确显示 LUT。如需修改着色器，请跳至底部 MultiLUT 章节的 <code>LUT 变体与更换图集</code> 部分。</p>
 <hr />
-<h2 id="adobe-photoshop">Adobe Photoshop<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="adobe-photoshop">Adobe Photoshop<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>所需工具：  
 </p>
 <ul>
@@ -207,9 +207,9 @@
 <li>Adobe Photoshop CS4 或更高版本 <em>（需要调整图层功能）</em></li>
 </ul>
 <p><em>本文使用 Photoshop CC 2019，游戏截图来自 GreedFall。</em></p>
-<h4 id="step-0-screenshot-collage">第零步：截图拼贴<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-0-screenshot-collage">第零步：截图拼贴<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>虽然并非必须，但制作多张截图的拼贴可以确保你的 LUT 效果在不同场景下仍然出色。截图应涵盖不同的时间段和地点！如果你正在制作校正型 LUT，这一点尤为重要。</p>
-<h4 id="step-1-adjustment-layers">第一步：调整图层<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-1-adjustment-layers">第一步：调整图层<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>将截图加载到 Photoshop 后，就可以开始工作了。我将专注于对所加载截图进行色彩分级。我们将使用调整图层。调整图层是一种无损的图像编辑方式，其效果可以复制到不同文档。   
 </p>
 <p>首先从"调整"面板添加调整图层。</p>
@@ -223,18 +223,18 @@
 </p>
 <p><img src="../Images/lutguide/mask.png" alt="Masks!" class="shadowed autosize" width="50" height="40" /> </p>
 <p><strong>忽略它们。</strong>这些是调整图层的蒙版。<strong>调整蒙版</strong>（显然）<strong>不会迁移到 LUT 中。</strong></p>
-<h4 id="step-2-the-lut">第二步：处理 LUT<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-2-the-lut">第二步：处理 LUT<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>接下来，你需要将之前提到的中性 LUT 贴图作为单独的文档加载。<strong>请确保使用的是中性 LUT。</strong>否则完成后你会得到非常奇怪的色彩。</p>
 <p>你只需将截图文档中的调整图层复制到新的 LUT 文档即可。可以使用传统的 Ctrl+C / Ctrl+V，也可以选中所有调整图层，右键点击，选择 <code>复制图层...</code>，然后选择 LUT 文档。</p>
 <p><img src="../Images/lutguide/lutg_ps-lut.png" alt="Photoshop LUT" class="shadowed autosize" width="1034" height="531" /></p>
 <p>根据调整幅度的大小，LUT 看起来可能有些奇怪。上图中我的 LUT 在图像左侧开始显得很不正常，这是因为我将绿色完全去饱和了。如果操作正确，这里无需担心。</p>
-<h4 id="step-3-exporting-1">第三步：导出<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-3-exporting-1">第三步：导出<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>最后一步是将图像导出为 <strong>PNG</strong> 格式。<strong>不要</strong>以 JPG 等有损格式导出，LUT 中不能有压缩失真。除非你想要一种奇异的损坏效果。</p>
 <p>建议将此文件导出为 <code>lut.png</code>，直接保存到 Textures 文件夹中，替换原有的 <code>lut.png</code>。这样你就可以立即通过 <code>LUT.fx</code> 使用你的 LUT 了。</p>
-<h4 id="extra-.cube-.3dl-and-other-3dlut-formats">补充：.CUBE、.3DL 及其他 3DLUT 格式<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="extra-.cube-.3dl-and-other-3dlut-formats">补充：.CUBE、.3DL 及其他 3DLUT 格式<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>网上找到的 LUT 通常是 .CUBE、.3DL、.CSP、.ICC 等非图像文件格式。如需使用，可以通过"颜色查找"调整图层将其应用到中性 LUT 上。</p>
 <hr />
-<h2 id="adobe-lightroom">Adobe Lightroom<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="adobe-lightroom">Adobe Lightroom<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>所需工具：</p>
 <ul>
 <li>至少一张游戏截图  
@@ -242,9 +242,9 @@
 <li>Adobe Lightroom <em>（任意版本）</em></li>
 </ul>
 <p><em>本文使用 Lightroom CC 2019（非 Lightroom Classic）。除少数界面差异外，整体步骤完全相同。游戏截图来自 Mass Effect: Andromeda。</em></p>
-<h4 id="step-0-screenshot-collage-1">第零步：截图拼贴<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-0-screenshot-collage-1">第零步：截图拼贴<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>虽然并非必须，但制作多张截图的拼贴可以确保你的 LUT 效果在不同场景下仍然出色。截图应涵盖不同的时间段和地点！如果你正在制作校正型 LUT，这一点尤为重要。</p>
-<h4 id="step-1-making-the-preset">第一步：制作预设<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-1-making-the-preset">第一步：制作预设<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>将截图导入 Lightroom。如果你从未使用过 Lightroom，不用担心，它相当直观。右侧是所有工具（在 Lightroom Classic 中位于"修改照片"模块），尽情调整，看看效果如何！</p>
 <p><img src="../Images/lutguide/lutg_lr-adj1.png" alt="Lightroom Import" class="shadowed autosize" width="1280" height="620" /></p>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>本文<strong>不是</strong>使用 Lightroom 编辑图像的指南。网上有大量介绍 Lightroom 功能的教程。</p>
@@ -252,25 +252,25 @@
 <p><img src="../Images/lutguide/lutg_lr-adj2.png" alt="Lightroom Adjusted" class="shadowed autosize" width="1280" height="620" /></p>
 <p>对结果满意后，将其保存为预设。</p>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p><strong>不要在预设中包含"纹理"、"清晰度"、"去朦胧"、"晕影"、"颗粒"、"锐化"、"降噪"以及任何镜头校正选项。</strong>这些设置会完全破坏你的 LUT。</p>
-</div><h4 id="step-2-the-lut-1">第二步：处理 LUT<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+</div><h4 id="step-2-the-lut-1">第二步：处理 LUT<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>导入之前提到的中性 LUT 贴图。<strong>请确保使用的是中性 LUT。</strong>否则完成后你会得到非常奇怪的色彩。</p>
 <p>将保存好的预设应用到中性 LUT 上。</p>
 <p><img src="../Images/lutguide/lutg_lr-lut.png" alt="Lightroom LUT" class="shadowed autosize" width="1715" height="831" /></p>
 <p>根据调整幅度的大小，LUT 看起来可能有些奇怪。上图中我的 LUT 看起来相当褪色且过曝，这是因为我对其进行了大幅度的调整。不过我并不担心，因为这些变化是有意为之的。</p>
-<h4 id="step-3-exporting-2">第三步：导出<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="step-3-exporting-2">第三步：导出<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>最后一步是将图像导出为 <strong>PNG</strong> 格式。<strong>不要</strong>以 JPG 等有损格式导出，LUT 中不能有压缩失真。除非你想要一种奇异的损坏效果。</p>
 <p>如果你<em>不</em>使用 Lightroom Classic，在保存为 PNG 之前还有一个额外步骤，需要用到 Photoshop。在"文件"菜单下，选择 <code>在 Photoshop 中编辑...</code>。这将自动启动 Photoshop 并加载好你的 LUT，然后像往常一样导出为 PNG 即可。</p>
 <p>建议将此文件导出为 <code>lut.png</code>，直接保存到 Textures 文件夹中，替换原有的 <code>lut.png</code>。这样你就可以立即通过 <code>LUT.fx</code> 使用你的 LUT 了。</p>
-<h4 id="extra-lightroom-presets">补充：Lightroom 预设<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="extra-lightroom-presets">补充：Lightroom 预设<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>如果你是 Lightroom 的忠实用户，很可能已经有了自己制作或下载的预设。只需从第二步继续，使用手头的预设即可。</p>
 <hr />
-<h2 id="multilut">MultiLUT<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="multilut">MultiLUT<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p><code>MultiLUT.fx</code> 是一个着色器，顾名思义，它允许你加载多个 LUT 并在它们之间切换。它通过将所有 LUT 收集到一个图集中来实现这一功能。</p>
 <p><img src="../Images/lutguide/multilut.png" alt="MultiLUT Atlas" class="shadowed autosize" width="1024" height="544" /></p>
 <p>这是默认的 MultiLUT 图集。看到这里，你应该已经知道 LUT 长什么样了——这堆方块中的每一行都是一个独立的 LUT。</p>
 <p>你可以直接使用这个着色器，也可以<em>对其进行修改</em>。</p>
 <p>修改方法很简单，只需将每行 LUT 替换为你迄今制作的众多 LUT 之一即可。建议保留顶部第一行的 LUT 不变；它是一个中性 LUT。</p>
-<h3 id="renaming-the-luts">重命名 LUT<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="renaming-the-luts">重命名 LUT<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>你可能不希望你的 LUT 被命名为 <code>Color 1</code>、<code>Color 2</code>、<code>Color 3 (Blue oriented)</code> 等，下面介绍如何修改着色器文件以自定义名称。</p>
 <div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p><strong>修改着色器文件时，请使用 ReShade 图形界面</strong>（ReShade 4.0+，在"统计"选项卡下）。绑定一个重载 ReShade 的快捷键后，你可以实时查看修改效果，这有助于检查语法是否正确。</p>
 </div><p>打开着色器文件后，找到第 31 行：</p>
@@ -281,11 +281,11 @@
 <pre class="nocode">ui_items=&quot;Neutral\0Alfa\0Bravo\0Charlie\0Delta\0&quot;;
 </pre><p>我们删除了多余的名称，因为我们只想使用自己的 LUT。不用担心，ReShade 会自动忽略多余的名称，不会有任何问题。</p>
 <p>你可以根据需要继续修改名称。如果 LUT 名称中需要使用引号，请不要用 <code>&quot;</code>，这会终止该行并导致错误。应改用 <code>'</code>。</p>
-<h3 id="adding-more-luts">添加更多 LUT<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="adding-more-luts">添加更多 LUT<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>默认图集包含 17 个 LUT，但如果你制作了更多并想添加进去，需要再次修改着色器文件来适配。待你的图集完全编辑好后，修改第 20 行：</p>
 <pre class="nocode">#define fLUT_LutAmount 17
 </pre><p>将 17 改为你现有的 LUT 数量。记得为它们命名，以便 ReShade 能找到并加载它们。</p>
-<h3 id="lut-variants-and-changing-the-atlas">LUT 变体与更换图集<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="lut-variants-and-changing-the-atlas">LUT 变体与更换图集<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>有时你可能会遇到图块数量更多或图块尺寸不同的 LUT，例如使用修改了图块设置的 qUINT Lightroom 生成的 LUT，或者你可能找到了一个想要使用的不同 MultiLUT 图集。  
 </p>
 <pre class="nocode">#define fLUT_TextureName &quot;MultiLut_Atlas.png&quot;
@@ -295,7 +295,7 @@
 <pre class="nocode">#define fLUT_TileAmount 32
 </pre><p>第 17 行控制图块数量。如果你找到的 LUT 精度更高（或更低），这个数值可能不同。你需要数出图块数量（或用 LUT 总宽度除以其高度）。</p>
 <hr />
-<h3 id="extras">补充说明<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="extras">补充说明<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>在本指南带有主观色彩的非官方部分，我将介绍上述三种 LUT 生成方法的个人优缺点总结。</p>
 <table class="table table-bordered-all table-responsive">
 <thead>
@@ -330,7 +330,7 @@
 <p><code>:(</code> 并非评分；尽管看起来如此，我个人还是更偏爱 Lightroom。一切都取决于个人喜好。<br />
 模块化是指效果之间相互影响的方式。由于 ReShade 着色器可以有不同的顺序来改变相互影响，我认为它是模块化的。Photoshop 在此基础上更进一步，你可以无限叠加相同的调整图层。<br />
 总体而言，我觉得 Lightroom 比 Photoshop 更好用，它拥有专用的色温和分离色调控制（Photoshop 没有专用的调整图层来实现这些功能，这令人费解）。</p>
-<h4 id="on-the-old-gimp-guide">关于旧版 GIMP 指南<a class="headerlink" href="lutgenguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<h4 id="on-the-old-gimp-guide">关于旧版 GIMP 指南<a class="headerlink" href="lutgenguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>我将本指南视为旧版指南的延伸，涵盖了更多可用于生成 LUT 的技术。你也可以采用旧版指南中将 LUT 直接叠加到截图上的方法，但我认为这种方法有几个缺点：LUT 始终显示在屏幕上，之后需要裁剪，而且很难用预设快速批量生成 LUT。不过这只是我个人的看法。¯\_(ツ)_/¯</p>
 <div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>请始终记住，视觉效果是主观的！你的 LUT 没有对错之分，重要的是它对你有用。</p>
 </div><hr />

@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -106,7 +106,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -116,10 +116,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -134,12 +134,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="reshadeuwp.htm">向 UWP 游戏注入 ReShade</a></li></ul>
 					
@@ -150,11 +150,11 @@
                     <div class="section">
 <p><img src="../Images/MiscGuides/uwp_reshade_header.png" alt="页眉" class="shadowed autosize" width="896" height="180" /></p>
 <p>本指南将帮助你向大多数通用 Windows 平台（UWP）游戏注入 ReShade，即 Windows 商店和 PC Game Pass 游戏。请注意，并非所有 UWP 游戏都支持此操作，部分游戏受到保护（如《极限竞速：地平线 4》，注入 .dll 后会强制退出）。</p>
-<h2 id="tools">工具<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="tools">工具<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>你需要 <a href="https://reshade.me/downloads/inject64.exe" target="_blank">crosire 的 DLL 注入器</a>。</p>
 <p>或</p>
 <p>你可以使用<a href="https://reshade.me/" target="_blank">官方网站的 ReShade 安装程序</a>。</p>
-<h3 id="using-reshade-with-xbox-appgame-pass-installs">在 Xbox 应用/Game Pass 中使用 ReShade<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="using-reshade-with-xbox-appgame-pass-installs">在 Xbox 应用/Game Pass 中使用 ReShade<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>过去，要让 ReShade 与 UWP 协同工作需要多个难度不一的步骤，但微软此后修改了其流程，默认允许所有用户直接访问游戏文件。因此，在 Game Pass 游戏中使 ReShade 正常工作所需的步骤大大简化了。</p>
 <p>具体步骤可能略有不同，但基本流程保持一致：</p>
 <ol>
@@ -170,10 +170,10 @@
 <p>成功部署 ReShade 后，启动游戏，即可像往常一样正常使用。</p>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>你可能需要进行手动安装，因为 Windows 有可能不允许你在安装 ReShade 时选择游戏的 .exe。此时，请用 WinRAR 打开 ReShade 安装程序，取出 ReShade64.dll，将其重命名为可注入游戏 exe 的名称（如 dxgi.dll），然后将其放入游戏文件夹（具体来说，与游戏 .exe 位于同一路径下）。</p>
 </div><div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>请注意，ReShade 在 UWP 游戏中存在一些已知的小兼容性问题，最典型的是 ReShade 界面的输入会发生重复（点击会被响应两次，在输入框中输入会重复录入等）。这些问题较为轻微且容易规避，但确实会发生。</p>
-</div><h3 id="reshadeforuwp-tool">ReshadeForUWP 工具<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+</div><h3 id="reshadeforuwp-tool">ReshadeForUWP 工具<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>此外，<a href="https://github.com/MilkyDeveloper/ReshadeForUWP" target="_blank">这款带有 GUI 界面的工具</a>可以帮助你以更少的手动操作将 ReShade 注入 UWP / PC Game Pass 游戏。它会询问你软件包名称（以及自定义进程名称，如有），并通过 <code>appxmanifest.xml</code> 文件获取游戏的元数据，然后生成一个 BAT 文件，用于将 ReShade 注入游戏并启动它。此外，它还可以选择性地通过下载/解压所有 FX 文件并生成 Reshade.ini 文件来自动配置一个可用的 ReShade 环境。</p>
 <div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> 说明</span><p>以下内容在某些情况下可能仍然有效，但总体上已被视为过时。在尝试为 UWP 游戏配置 ReShade 时，我们建议按照上方的说明操作。我们保留以下指引，以备需要备用方法时参考。</p>
-</div><h2 id="how-to-inject-reshade-into-an-uwp-game">如何向 UWP 游戏注入 ReShade<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+</div><h2 id="how-to-inject-reshade-into-an-uwp-game">如何向 UWP 游戏注入 ReShade<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li>将包含 UWP 注入器的 zip 文件解压到桌面或驱动器上的某个文件夹（例如：ReShadeUWP）。</li>
 <li>启动你想使用 ReShade 的游戏。</li>
@@ -184,15 +184,15 @@
 <li>启动游戏。</li>
 </ul>
 <p>ReShade 现在应该已被注入。</p>
-<h1 id="advanced-uwp-reshade-injection">高级 UWP ReShade 注入<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<h1 id="advanced-uwp-reshade-injection">高级 UWP ReShade 注入<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p>如果你觉得上述流程过于繁琐——因为每次启动游戏都要重复这些操作——你可以按照以下步骤制作一个能自动启动游戏并注入 ReShade 的脚本。</p>
-<h2 id="preparation">准备工作<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="preparation">准备工作<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li>将包含 UWP 注入器的 zip 文件解压到桌面或驱动器上的某个文件夹（例如：ReShadeUWP）。</li>
 <li>新建一个文件夹，以游戏名称命名（例如：ReShade-DeliverUsTheMoon），将之前解压的内容复制进去。</li>
-<li>如果你此前曾在某个 Steam 游戏中安装过 ReShade，可以将着色器和纹理复制到指定文件夹（详见 ReShade 仓库部分）。</li>
+<li>如果你此前曾在某个 Steam 游戏中安装过 ReShade，可以将着色器和纹理复制到指定文件夹（详见 ReShade 资源库部分）。</li>
 </ul>
-<h2 id="find-the-game-executable-and-application-id">查找游戏可执行文件和应用程序 ID<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="find-the-game-executable-and-application-id">查找游戏可执行文件和应用程序 ID<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li>通过 Windows 商店或 XBOX Game Pass 应用下载游戏</li>
 <li>如果桌面上有快捷方式，右键点击并记录目标路径（例如：WiredProductions.DeliverUsTheMoon...）</li>
@@ -226,7 +226,7 @@ Status            : Ok
 <li>记录 exe -&gt; MoonMan-Win64-Shipping.exe</li>
 </ul>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>如果你发现文件上有小锁图标，则说明该游戏受内存保护，无法进行注入。</p>
-</div><h2 id="create-your-powershell-injection-script">创建 PowerShell 注入脚本<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+</div><h2 id="create-your-powershell-injection-script">创建 PowerShell 注入脚本<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li>启动 PowerShell ISE</li>
 <li>在脚本部分先输入 <code>CD\</code> 并按回车</li>
@@ -245,8 +245,8 @@ Start-Process -filepath explorer.exe shell:appsFolder\WiredProductions.DeliverUs
 </pre><ul>
 <li>将其保存至安全位置</li>
 </ul>
-<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>要执行脚本，请右键点击并选择「使用 PowerShell 运行」。</p>
-</div><h2 id="reshade-repository">ReShade 仓库<a class="headerlink" href="reshadeuwp.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> 说明</span><p>要执行脚本，请右键点击并选择「使用 PowerShell 运行」。</p>
+</div><h2 id="reshade-repository">ReShade 资源库<a class="headerlink" href="reshadeuwp.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>由于无法在 UWP 游戏文件夹中安装或复制文件，以下是我们将所有着色器和纹理统一存放在单一文件夹中的方法。</p>
 <ul>
 <li>首先，如果你已将着色器和纹理复制到指定文件夹，并向 UWP 游戏注入了 ReShade，则会在 ReShade UWP 文件夹中生成一个 <code>reshade.ini</code> 文件（例如：<code>D:\ReShade-DeliverUsTheMoon\</code>）</li>

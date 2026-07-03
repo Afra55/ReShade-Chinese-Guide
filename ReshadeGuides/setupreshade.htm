@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -114,7 +114,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -124,10 +124,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -142,12 +142,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="setupreshade.htm">安装与配置 ReShade</a></li></ul>
 					
@@ -156,56 +156,56 @@
                 </div>
                 <div role="main">
                     <div class="section">
-<h1 id="setting-up-reshade">安装与配置 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<h1 id="setting-up-reshade">安装与配置 ReShade<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p>ReShade 是一款功能强大的后期处理系统，拥有丰富的功能。要充分发挥 ReShade 的潜力，关键在于针对所用游戏进行正确配置。本指南基于 ReShade v4.2 编写。如果您使用的是旧版本，部分内容可能仍然适用，但不做保证。</p>
 <p>本指南面向截图用途。这意味着它不会深入介绍性能模式等话题，因为在设置截图画面及所需 ReShade 配置时，游戏通常处于暂停状态。</p>
-<h2 id="video">视频教程<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="video">视频教程<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>如果您更喜欢视频教程，FRAMED 成员 TheGordinho Ochinchin <a href="https://www.youtube.com/watch?v=hYUiWfvyafQ" target="_blank">制作了一段视频，引导您完成基本步骤</a>。</p>
-<h2 id="setting-up-reshade-for-the-game">为游戏安装 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="setting-up-reshade-for-the-game">为游戏安装 ReShade<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>要在游戏未运行的情况下为其安装 ReShade，首先需要<a href="https://reshade.me/" target="_blank">从 ReShade 官网下载安装程序</a>。下载并运行 .exe 后，将打开一个小程序引导您完成安装流程。第一步只需选择游戏的 .exe 文件即可。</p>
 <p>之后程序应会自动识别正确的渲染 API。如未能自动识别，对于较新的游戏请手动选择 DirectX 11。最后一步是下载一组着色器。如果您是第一次使用 ReShade 且尚未做任何配置，建议<a href="https://github.com/crosire/reshade-shaders" target="_blank">从 GitHub 上的主仓库</a>下载所有着色器。如果您决定不下载任何着色器，至少请下载 <strong>DisplayDepth</strong> 着色器，因为它有助于正确配置 ReShade。</p>
 <p>完成以上步骤后，ReShade 即已准备就绪。启动游戏时，屏幕顶部将显示一个横幅，提示 ReShade 已激活，并显示打开菜单所需的快捷键组合，下一节将用到它。</p>
-<h2 id="configuring-reshade">配置 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="configuring-reshade">配置 ReShade<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>当 ReShade 在游戏中运行后，您可以打开其菜单。较新版本的 ReShade 使用 <code>HOME</code> 键打开菜单。如果您复制了别人的 ReShade 配置，可能需要使用 <code>Shift-F2</code>。</p>
 <p>打开菜单后，如果您是第一次使用，可能会先显示教程。教程将为您设置一个预设，并介绍各部分的用途。如果您在安装 ReShade 时下载了着色器，将在<strong>主页</strong>选项卡上看到这些着色器包含的所有<em>效果技法</em>，按照一定顺序整齐列出。您可以右键单击技法名称，然后单击<em>切换快捷键</em>旁边的文本框，为每个效果技法设置快捷键。</p>
 <p>按下切换快捷键即可启用或停用该效果技法。要启用/停用效果技法（例如 DisplayDepth），也可以用鼠标勾选技法名称前面的复选框。当某个效果技法处于激活状态时，其控件会显示在<em>主页</em>选项卡底部。您可以向上拖动水平蓝色分隔条来扩大显示区域。</p>
-<h3 id="undock-the-menu">将菜单解锁为浮动窗口<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="undock-the-menu">将菜单解锁为浮动窗口<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>默认情况下，菜单停靠在屏幕左侧。如果您想查看被菜单遮挡的区域，这可能会造成不便。要使菜单可移动，您可以将某个选项卡（例如 <strong>DX11</strong> 选项卡）从菜单中拖出，然后将其他所有选项卡合并到该选项卡，从而创建一个浮动菜单。注意不要将选项卡停靠到屏幕边缘——当出现将选项卡停靠到某侧的图标时，请注意避免将选项卡拖放到该图标上。</p>
 <p>您可以通过向左或向右拖动选项卡标题来重新排列浮动菜单中的选项卡，从而按照您希望的顺序排列各选项卡。单击菜单中的任意位置并拖动，即可移动菜单。</p>
 <p>此后关闭并重新打开菜单，它将保持浮动状态，您可以将其拖动到任意位置。</p>
-<h3 id="order-of-execution">执行顺序<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="order-of-execution">执行顺序<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><em>主页</em>选项卡上的效果技法看似随机排列，但实际并非如此。执行顺序为从上到下。这意味着，如果您同时启用了 CinematicDOF 和 LumaSharpen，且按从上到下的顺序排列，ReShade 将先执行 CinematicDOF，再执行 LumaSharpen。这样的效果是：CinematicDOF 的输出结果将作为 LumaSharpen 的输入。</p>
 <p>最佳顺序取决于您的个人偏好，但一般规律是：任何偏向色彩处理的效果技法应在偏向镜头模拟的效果技法（例如景深着色器、胶片颗粒或叠加层着色器）之前执行。</p>
-<h3 id="setting-up-global-preprocessor-definitions.">设置全局预处理器定义<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="setting-up-global-preprocessor-definitions.">设置全局预处理器定义<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>ReShade 使用若干全局预处理器定义，这些定义会影响效果技法的工作方式，例如深度缓冲的显示效果。您可以单击<em>主页</em>选项卡上效果技法参数顶部的蓝色"编辑全局预处理器定义"按钮来编辑这些定义。这些设置的含义在<a href="setupreshade.htm">检查深度缓冲访问</a>一节中有详细说明。</p>
-<h3 id="reshade-settings">ReShade 设置<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="reshade-settings">ReShade 设置<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>您可以在 ReShade 的设置选项卡中配置各种设置。对于截图爱好者而言，<em>截图</em>部分尤为重要。所用快捷键不应与您正在使用的其他覆盖层（如 Steam、UPlay 等）冲突，同时您应选择最适合自己的文件格式，例如 PNG 是无损格式，且可上传至任何平台。这部分内容相当浅显易懂。</p>
-<h2 id="changing-a-techniques-parameters">调整效果技法的参数<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="changing-a-techniques-parameters">调整效果技法的参数<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>一切准备就绪后，如何调整效果技法的设置？首先，通过按下您设定的切换快捷键，或勾选<em>主页</em>选项卡上技法名称前面的复选框来激活该着色器。您将看到 ReShade 在<em>主页</em>选项卡的蓝色分隔条下方显示该着色器的所有设置。</p>
 <p>看到滑块时，可以用鼠标拖动进行调整。对于数值输入框，同样可以用鼠标操作：单击输入框后按住鼠标左键并向左或向右拖动即可改变数值。拖动滑块或输入框时按住 <code>shift</code>，数值的变化速度将加快。按住 <code>ctrl</code> 并单击，将弹出一个文本框，允许您直接输入数值。当您需要输入超出控件默认范围的数值时，此功能非常有用。</p>
-<h2 id="checking-depth-buffer-access">检查深度缓冲访问<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="checking-depth-buffer-access">检查深度缓冲访问<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>为确保正确设置深度缓冲，关键是要安装 <strong>DisplayDepth</strong> 着色器。激活 DisplayDepth 着色器后，您将看到深度缓冲的完整预览，以及您所选择的预处理器定义值是否正确。ReShade 论坛上有<a href="https://reshade.me/forum/shader-discussion/4810-about-the-changes-in-displaydepth-fx" target="_blank">一篇关于如何使用 DisplayDepth 着色器正确设置深度缓冲的精彩教程</a>，建议阅读并正确配置您的 ReShade。每款游戏只需完成一次此设置。</p>
-<h3 id="picking-the-right-depth-buffer">选择正确的深度缓冲<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="picking-the-right-depth-buffer">选择正确的深度缓冲<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>游戏可能使用多个深度缓冲，或者在渲染最终画面时动态切换深度缓冲，从而导致深度缓冲看起来不可用。要告知 ReShade 使用哪个深度缓冲，您需要进入 ReShade 覆盖层中的一个额外选项卡。具体是哪个选项卡取决于您使用的 ReShade 版本。</p>
 <p><strong>ReShade v4.x 及更低版本：</strong>如果您使用的是 ReShade v4.x 或更低版本，ReShade 菜单/覆盖层包含一个额外选项卡，名称为 <strong>D3D9</strong>、<strong>D3D10</strong>、<strong>D3D11</strong> 或 <strong>D3D12</strong> 之一。<br />
 <strong>ReShade v5.x 及更高版本：</strong>如果您使用的是 ReShade v5.x，ReShade 包含一个名为 <strong>Add-ons</strong> 的额外选项卡。</p>
 <p>此额外选项卡显示所有当前活动的深度缓冲。要确定应选择哪个，请先启用 <em>DisplayDepth</em> 着色器。您可能会看到白屏或黑屏。进入 ReShade 菜单/覆盖层中上述额外选项卡后，可以通过勾选复选框来选择正确的深度缓冲（或尝试勾选<em>在清除前复制深度</em>复选框）。如果屏幕显示恢复正常，则说明您选择了正确的深度缓冲，可以将其用于依赖深度缓冲的效果技法了。</p>
-<h2 id="shader-duplication">着色器复制<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="shader-duplication">着色器复制<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>有时您可能需要多次使用同一个着色器（CanvasFog 和 StageDepthPlus 着色器在这方面尤为常见）。对于大多数着色器，只需将着色器代码中的效果技法名称替换为另一个不同的名称即可，但某些着色器还需要更改 <code>namespace</code> 或纹理名称，请注意这一点。务必查看着色器代码中关于复制着色器的注释说明。</p>
-<h2 id="depth-buffer-on-online-games">联网游戏中的深度缓冲<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="depth-buffer-on-online-games">联网游戏中的深度缓冲<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>当游戏是联网游戏或持续进行网络访问时，深度缓冲将被禁用。由于许多效果都需要访问游戏的深度缓冲，ReShade 一旦检测到游戏为联网游戏（即存在持续的网络流量），便会主动禁用深度缓冲访问权限。如果因此导致深度缓冲不可用，依赖深度缓冲的着色器很可能将无法正常工作。</p>
 <p>因此，如果您尝试在持续使用网络连接的游戏中使用 ReShade（无论是出于 DRM 保护，还是因为游戏本身需要始终在线，例如《全境封锁》或《Steep》），您将需要使用自定义 ReShade .dll 版本才能获得深度缓冲访问权限，否则 ReShade 将阻止访问。当然，您也可以在没有深度缓冲访问权限的情况下使用 ReShade，但依赖深度缓冲的着色器（如 CinematicDof）将无法使用。</p>
 <p>请注意，部分游戏的反作弊系统已将官方版本的 ReShade 列入白名单，因此使用自定义 .dll 可能会导致您被封号，具体情况因游戏而异，请事先做好调查研究。</p>
-<h2 id="using-reshade-alongisde-other-injectable-mods">与其他可注入模组同时使用 ReShade<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="using-reshade-alongisde-other-injectable-mods">与其他可注入模组同时使用 ReShade<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>有时您可能会遇到无法将 ReShade 与另一个同样注入进程的模组同时使用的情况。解决此问题的一种方法是使用 <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases" target="_blank">ASI Loader</a>，将额外的模组放入 scripts 文件夹。请阅读 <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/blob/master/readme.md" target="_blank">ASI Loader 仓库中的 README 文件</a>，了解更多使用方法。</p>
-<h2 id="further-information">延伸阅读<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="further-information">延伸阅读<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><a href="https://reshade.me/" target="_blank">ReShade 官网</a></li>
 <li><a href="https://reshade.me/forum/index" target="_blank">ReShade 论坛</a></li>
 <li><a href="https://reshade.me/forum/troubleshooting/5227-introducing-easy-troubleshooting#33088" target="_blank">简易故障排除指南</a></li>
 <li><a href="https://www.pcgamingwiki.com/wiki/ReShade" target="_blank">PC Gaming Wiki 指南</a></li>
 </ul>
-<h2 id="custom-shader-repositories">自定义着色器仓库<a class="headerlink" href="setupreshade.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="custom-shader-repositories">自定义着色器仓库<a class="headerlink" href="setupreshade.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><a href="https://github.com/Fubaxiusz/fubax-shaders" target="_blank">Fu-Bama 着色器集</a></li>
 <li><a href="https://github.com/FransBouma/OtisFX" target="_blank">OtisFX</a></li>

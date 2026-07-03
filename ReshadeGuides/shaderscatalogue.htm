@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -82,7 +82,7 @@
 
 <li class="tocentry"><a href="shaderscatalogue.htm">附加</a></li>
 
-<li class="tocentry"><a href="shaderscatalogue.htm">LUTs</a></li>
+<li class="tocentry"><a href="shaderscatalogue.htm">LUT</a></li>
 
 
 
@@ -122,7 +122,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -132,10 +132,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -150,12 +150,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="shaderscatalogue.htm">着色器目录</a></li></ul>
 					
@@ -164,16 +164,16 @@
                 </div>
                 <div role="main">
                     <div class="section">
-<h1 id="shaders-catalogue">着色器目录<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<h1 id="shaders-catalogue">着色器目录<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p>本指南旨在介绍 <a href="https://framedsc.github.io/GeneralGuides/basics.htm#reshade" target="_blank">ReShade</a> 中各类可用的功能，并说明为何选择使用 ReShade 进行后期处理，而非借助常规编辑软件。</p>
 <p>我整理了所有能找到的代码仓库中的效果，并附上了一些（希望通俗易懂的）说明。由于我对每个着色器并非都有深入了解，如果你认为某个说明可以写得更好、有更多技巧，或想深入介绍某个着色器的工作原理，欢迎提交 pull request 或联系 Framed 的成员来更新本指南。如果列表中有过时的着色器、链接并非最新版本，或者你希望添加更多着色器，同样欢迎贡献。</p>
 <p>如果你不熟悉 ReShade，想了解其使用方法、着色器排序、着色器复制以及其他技巧，请务必查阅 <a href="https://framedsc.github.io/ReshadeGuides/setupreshade.htm" target="_blank">安装与配置 ReShade 指南</a>。</p>
 <p>本指南以筛选在截图后期处理中有用的着色器为目标，因此未收录 CRT 着色器或手电筒着色器等。此外，由于大量曲线、饱和度、对比度等着色器功能大同小异（少数使用了特定算法的除外），我也未将其全部收入。如果你认为某个着色器值得添加，欢迎提交贡献。与此同时，针对上述类型的着色器，我已收录了 prod 的大部分作品。</p>
 <p>如需进一步了解各着色器的工作原理或使用技巧，可查阅着色器代码中的注释、所在代码仓库的 readme 文件，或 ReShade 论坛上关于该着色器的介绍帖。</p>
 <p>如果你计划单独下载每个着色器，请确保同时下载必要的文件（如 <code>.fxh</code> 头文件）以及配套的纹理资源。</p>
-<h2 id="essentials">基础必备<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="essentials">基础必备<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>这些是我认为截图不可或缺的着色器。如果你只能从本列表中带走一些收获，那一定在这里。</p>
-<h3 id="depth-of-field">景深<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="depth-of-field">景深<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>相比其他后期处理软件，使用 ReShade 的优势之一（除显而易见的实时后期处理外）在于能够利用深度缓冲。借助深度缓冲，景深等效果可以轻松实现；而如果使用其他软件来实现同样的效果，不仅耗时更长，效果也可能不如 ReShade。</p>
 <ul>
 <li><a href="https://github.com/FransBouma/OtisFX/blob/master/Shaders/CinematicDOF.fx" target="_blank"><strong>CinematicDOF</strong></a>：基于多篇科学论文，是最"真实"且使用最广泛的景深着色器。具备近景溢色、可配置的高光效果、高性能、易用的对焦代码以及出色的散景效果。请参阅 <a href="Shaders/cinematicdof.htm">本站完整指南</a>。</li>
@@ -181,12 +181,12 @@
 <li><a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_dof.fx" target="_blank"><strong>quintDoF</strong></a>：一款致力于为电子游戏带来电影级散景模糊的景深着色器。提供极高质量的景深效果，具备艺术化控制选项，非常适合截图和游戏体验。其散景光斑可呈多边形、圆形或介于两者之间的任意形状，还具备光斑遮蔽功能（使散景光斑看起来像两个圆形的布尔交集）以及散景边缘的色差效果。这些都通过独特的基于梯度的算法实现，计算开销极低，与场景复杂度或模糊设置无关。为防止对焦区域的颜色渗入模糊区域，该着色器采用了高度精密的解决方案，能够彻底消除此类瑕疵，同时避免了常见方案的性能开销。</li>
 <li><a href="https://www.patreon.com/mcflypg" target="_blank"><strong>qUINTPhysical DoF</strong></a>：Marty 的新款景深着色器，具备非常出色的散景高光效果。</li>
 </ul>
-<h3 id="deband">去色带<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="deband">去色带<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/crosire/reshade-shaders" target="_blank"><strong>Deband</strong></a>：你是否见过渐变无法平滑过渡的情况？这被称为色带。它发生在可用色调不足以重现平滑渐变时。这个着色器正是为了解决这一问题。请务必下载链接中的版本，因为它有一个选项可以调整着色器作用的深度范围（通常应仅应用于背景）。Deband 是官方 ReShade 着色器的一部分，ReShade 安装程序始终会为你安装。</li>
 <li><a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_deband.fx" target="_blank"><strong>qUINT_deband.fx</strong></a>：修复块状色彩渐变，还原被压缩的纹理细节。</li>
 </ul>
-<h3 id="lighting-shaders">光照着色器<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="lighting-shaders">光照着色器<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>将这些着色器称为"必备"可能不太准确，但我发现，如果使用得当，它们能大幅提升构图效果。它们的基本作用是在场景中模拟点光源，在照亮场景的同时绘制阴影。对于为人像增添层次感极为有用，但请注意，由于它使用深度缓冲来"理解"场景和光照，其表现与游戏原生光照并不完全相同：</p>
 <ul>
 <li><a href="https://github.com/mj-ehsan/NiceGuy-Shaders/blob/main/Shaders/NiceGuy_Lamps.fx" target="_blank"><strong>NiceGuy Lamps</strong></a>：最多可添加 4 个点光源，颜色、亮度、位置均可自定义，并可选配雾效和屏幕空间阴影（支持自定义软阴影）。雾效强度、镜面反射强度和镜面反射粗糙度均完全可调。反射使用 GGX 模型（归功于 LVutner），漫反射使用 Lambert 模型。雾效为模拟效果。</li>
@@ -223,8 +223,8 @@
   />
 </div>
 <div class="figure"><p>《瘟疫传说：安魂曲》，作者：<i>Dread</i></p></div>
-<h2 id="screenshotting">截图<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<h3 id="composition-stuff">构图工具<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h2 id="screenshotting">截图<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="composition-stuff">构图工具<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>用于构图与裁剪的着色器。</p>
 <ul>
 <li><a href="https://github.com/Daodan317081/reshade-shaders/blob/master/Shaders/AspectRatioComposition.fx" target="_blank"><strong>AspectRatioComposition</strong></a>：添加黑边以模拟所需宽高比，便于后期裁剪。此外，你还可以在黑边内显示分割线，以引导三分法或五分法等构图规则。</li>
@@ -232,28 +232,28 @@
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/AspectRatioSuite.fx" target="_blank"><strong>AspectRatioSuit</strong></a>：与前一个着色器类似，但允许同时显示多个宽高比分隔线，便于一次性对比评估所有选项。屏幕上线条过多时可能难以辨别各宽高比，请务必编辑 <code>ASPECT_RATIO_SUITE_VALUES</code> 定义以删除或添加宽高比。</li>
 <li><a href="https://github.com/Fubaxiusz/fubax-shaders/blob/master/Shaders/AspectRatio.fx" target="_blank"><strong>Aspect Ratio</strong></a>：如果图像出现拉伸，此着色器可以帮助修复。建议使用其他后期处理软件来处理（或通过裁剪而非使用游戏不支持的宽高比），但如有需要，此选项也可使用。</li>
 </ul>
-<h3 id="histograms">直方图<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="histograms">直方图<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>如果你希望在 ReShade 中拍摄和编辑时查看直方图，与在 Photoshop 或 Lightroom 中看到的直方图相同。</p>
 <ul>
 <li><a href="https://github.com/LordOfLunacy/Insane-Shaders/blob/master/Shaders/DevShaders/Histogram.fx" target="_blank"><strong>Histogram</strong></a>：在屏幕上显示直方图。</li>
 <li><a href="https://github.com/LordOfLunacy/Insane-Shaders/blob/master/Shaders/DevShaders/ComputeShaders/HistogramCompute.fx" target="_blank"><strong>HistogramCompute</strong></a>：与前者相同，但速度更快（不支持 DX9）。</li>
 </ul>
-<h3 id="hotsampling">热采样<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="hotsampling">热采样<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><a href="https://framedsc.github.io/GeneralGuides/basics.htm#hotsampling" target="_blank">热采样</a>的副作用是，当游戏以高分辨率渲染时，你的屏幕上只能看到游戏画面的一部分。这些着色器会以缩略图预览/画中画形式渲染游戏，使你可以在显示器上看到完整的游戏窗口。这也有助于将截图作为缩略图来查看，以了解其在较小尺寸下的效果和可读性——这也是大多数人第一次看到你的截图时最可能看到的尺寸。</p>
 <ul>
 <li><a href="https://github.com/Daodan317081/reshade-shaders/blob/master/Shaders/HotsamplingHelper.fx" target="_blank"><strong>HotsamplingHelper</strong></a>：如上所述，将图像的缩小版绘制到屏幕上。叠加层的大小和位置均可配置。</li>
 <li><a href="https://github.com/originalnicodr/CorgiFX/blob/master/Shaders/FreezeShot.fx" target="_blank"><strong>FreezeShot</strong></a>：与前一个着色器类似，但增加了旋转缩略图的功能，因此可用于预览竖向截图旋转后的效果（在不使用竖向宽高比的情况下）。该着色器还有更多与此处目的无关的选项，将在后文介绍。请务必开启 Black Background 选项，并将 Layer Depth 值设为 1，以获得更顺畅的热采样体验。</li>
 </ul>
-<h3 id="magnifyingglass">放大镜<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="magnifyingglass">放大镜<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><a href="https://github.com/originalnicodr/CorgiFX/blob/master/Shaders/MagnifyingGlass.fx" target="_blank"><strong>MagnifyingGlass</strong></a>：有时你可能希望放大屏幕的特定区域，例如检查色带问题。此着色器可以实现这一功能。</p>
-<h2 id="graphics-improvements">"图形改善"<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="graphics-improvements">"图形改善"<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>标题加引号是因为它可能有些误导。我的意思是，这些着色器在大多数情况下都能改善场景的视觉效果，尤其适用于老游戏。
 值得指出的是，这些着色器大多具有场景依赖性，因此你需要自行判断某个着色器是否能为特定场景带来提升。
 在列举这些着色器之前，我先介绍一个可与其余着色器配合使用的着色器。</p>
 <ul>
 <li><a href="https://github.com/LordOfLunacy/Insane-Shaders/blob/master/Shaders/ReVeil.fx" target="_blank"><strong>ReVeil</strong></a>：类似于 Photoshop 中的去雾选项，但还允许事后重新引入雾效。与环境光遮蔽或光线追踪效果配合使用时极为实用，可使其看起来更原生。将不希望显示在烟雾/薄雾上方的着色器放置在 <code>Reveil_Top</code> 和 <code>Reveil_Bottom</code> 效果技法之间。RadiantGI 原生支持 reveil，无需额外配置。</li>
 </ul>
-<h3 id="anti-aliasing">抗锯齿<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="anti-aliasing">抗锯齿<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>你可能已经熟悉这个术语，如果不熟悉——抗锯齿可以帮助减少游戏中看到的"锯齿"。即使游戏本身提供了抗锯齿选项，这些着色器在游戏抗锯齿破坏深度缓冲（如 MSAA）或抗锯齿实现较为老旧的情况下也很有用。这些着色器使用了不同类型的抗锯齿的不同实现方式；SMAA 通常效果出色，但欢迎自行尝试，找到最适合你的方案。</p>
 <ul>
 <li><a href="https://github.com/martymcmodding/iMMERSE/blob/main/Shaders/MartysMods_SMAA.fx" target="_blank"><strong>iMMERSE Anti Aliasing</strong></a>：针对当代硬件进行了大量优化的改良版 SMAA。其设计目标是在视觉输出上与常规 SMAA 保持一致，即这些优化不以牺牲视觉质量为代价。</li>
@@ -274,14 +274,14 @@
 <li><a href="https://github.com/JakobPCoder/ReshadeTFAA" target="_blank"><strong>TFAA</strong></a>：请务必按照 readme.md 中的说明操作。</li>
 <li><a href="https://github.com/grebord/Fast-Adaptive-AA/blob/main/FAAA.fx" target="_blank"><strong>FAAA</strong></a>：基于 Timothy Lottes 的 PC FXAA v3。</li>
 </ul>
-<h3 id="raytracing">光线追踪<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="raytracing">光线追踪<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>你可能已经接触过这个术语。光线追踪技术旨在更精确地模拟光线和阴影。尽管游戏内置的此类技术通常比 ReShade 实现更为精准，但大多数游戏并不原生支持光线追踪，因此这些着色器非常有用，尤其适用于老游戏。
 - <a href="https://github.com/AlucardDH/dh-reshade-shaders/blob/master/Shaders/dh_uber_rt.fx" target="_blank"><strong>DH_UBER_RT</strong></a>：一体化光线追踪着色器（全局光照、环境光遮蔽和屏幕空间反射）。
 - <a href="https://github.com/AlucardDH/dh-reshade-shaders/blob/master/Shaders/dh_rtgi.fx" target="_blank"><strong>dh_rtgi</strong></a>
 - <a href="https://www.patreon.com/mcflypg" target="_blank"><strong>Marty's RTGI</strong></a>：耗费了大量心血，是光线追踪全局光照的首选。你可能需要学习如何对其进行配置。
 - <a href="https://github.com/BlueSkyDefender/AstrayFX/blob/master/Shaders/RadiantGI.fx" target="_blank"><strong>RadiantGI</strong></a>：BlueSky 实现的全局光照加次表面散射。可与 Marty 的 RTGI 配合使用，但单独使用效果也非常好。你需要学习<a href="https://www.youtube.com/watch?v=soXozWWV7e0" target="_blank">如何使用它</a>。
 - <a href="https://github.com/mj-ehsan/NiceGuy-Shaders/blob/main/Shaders/NGLighting.fx" target="_blank"><strong>NGLighting</strong></a>：请记得从仓库下载 <code>NGLightingUI.fxh</code> 文件。</p>
-<h3 id="ambient-occlusion">环境光遮蔽<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="ambient-occlusion">环境光遮蔽<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>环境光遮蔽旨在基于场景几何体模拟阴影。与光线追踪一样，它对老游戏尤为有用。</p>
 <ul>
 <li><a href="https://github.com/martymcmodding/iMMERSE/blob/main/Shaders/MartysMods_MXAO.fx" target="_blank"><strong>iMMERSE MXAO</strong></a>：Marty 最新的环境光遮蔽着色器，是 qUINT MXAO 效果的继任者，应当是目前最先进的 SSAO 实现之一。</li>
@@ -294,13 +294,13 @@
 <li><a href="https://github.com/Mortalitas/GShade/blob/master/Shaders/SSAO.fx" target="_blank"><strong>SSAO (HBAO, RayAO, HBAO, SSGI, AO_SAO, SSAO)</strong></a>：SSAO 着色器包含括号中列出的所有环境光遮蔽技术。</li>
 <li><a href="https://github.com/dddfault/reshade-shaders/blob/master/Shaders/PPFX_SSDO.fx" target="_blank"><strong>PPFX_SSDO</strong></a></li>
 </ul>
-<h3 id="reflections">反射<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="reflections">反射<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_ssr.fx" target="_blank"><strong>qUINT_ssr</strong></a>：利用图像中已有的数据为场景添加反射。作为屏幕空间技术，它与所有同类实现一样，存在屏幕外内容无法被反射的局限，也无法区分反射与非反射表面，会对所有内容叠加一层反射效果。</li>
 <li><a href="https://github.com/crosire/reshade-shaders/blob/master/Shaders/ReflectiveBumpMapping.fx" target="_blank"><strong>ReflectiveBumpMapping</strong></a>：qUINT_ssr 的前一版本（据我理解）。收录于此仅供存档参考，如有可能请使用上述着色器（qUINT_ssr）。</li>
 <li><a href="https://github.com/mj-ehsan/NiceGuy-Shaders/blob/main/Scatter.fx" target="_blank"><strong>Scatter</strong></a>：为 qUINT_SSR 添加粗糙度，或对 DH_RTGI 进行降噪处理（<a href="https://imgsli.com/MTAzMzA4" target="_blank">截图对比</a>）。如需同时实现两者，请复制着色器文件，使着色器栈中有两组。已弃用：强烈建议改用 NiceGuy Lighting。</li>
 </ul>
-<h3 id="bloom">泛光<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="bloom">泛光<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>顾名思义，泛光着色器用于在场景中模拟泛光效果。</p>
 <ul>
 <li><a href="https://pastebin.com/Lnmrmb3v" target="_blank"><strong>AmbientLight</strong></a>：将泛光与眼部适应和镜头污垢效果相结合。链接中的着色器版本提供了抖动开关，由于开启抖动可能产生瑕疵，强烈建议关闭。如果着色器更新，此链接中将不再是最新版本。</li>
@@ -316,12 +316,12 @@
 <li><a href="https://github.com/Fubaxiusz/fubax-shaders-dev" target="_blank"><strong>SimpleBloom</strong></a></li>
 <li><a href="https://github.com/papadanku/CShade/blob/master/shaders/cBloom.fx" target="_blank"><strong>KinoBloom</strong></a></li>
 </ul>
-<h3 id="light-rays">丁达尔效应（耶稣光）<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="light-rays">丁达尔效应（耶稣光）<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/dddfault/reshade-shaders/blob/master/Shaders/PPFX_Godrays.fx" target="_blank"><strong>PPFX_Godrays</strong></a>：如果你想在场景中添加丁达尔效应（耶稣光），此着色器可以帮助实现。</li>
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/TrackingRays.fx" target="_blank"><strong>TrackingRays</strong></a>：与前一个着色器类似，但光线方向是自动确定的。</li>
 </ul>
-<h2 id="fun-effects">趣味效果<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="fun-effects">趣味效果<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>如果说"图形改善"部分的着色器属于场景依赖型，这些则更甚。它们可能需要一些调试，但如果你追求<em>非常</em>特定的视觉风格，不妨尝试使用。对于其中一些着色器，我将用截图代替文字说明，因为直接看效果比阅读描述更直观。</p>
 <ul>
 <li><a href="https://github.com/FransBouma/OtisFX/blob/master/Shaders/AdaptiveFog.fx" target="_blank"><strong>AdaptiveFog</strong></a>：最常用于创建纯色背景或将主体置于阴影中，还具备雾效开始时的泛光设置。</li>
@@ -367,12 +367,12 @@
 <li><a href="https://github.com/martymcmodding/qUINT/blob/experimental/Shaders/qUINT_frametool.fx" target="_blank"><strong>qUINT_frametool</strong></a>：如果你希望在热采样时获得类似 DirectionalDepthBlur 的背景模糊效果，此着色器正是你所需要的。</li>
 <li><a href="https://github.com/Radegast-FFXIV/reshade-shaders/blob/master/Shaders/ZigZag.fx" target="_blank"><strong>ZigZag</strong></a>：围绕一个点扭曲图像，可用于创建抽象形状。由于支持动画选项，与 RealLongExposure 配合使用可获得有趣的效果。</li>
 </ul>
-<h2 id="painty-shaders">绘画风着色器<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="painty-shaders">绘画风着色器<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><a href="https://github.com/LordOfLunacy/Insane-Shaders/blob/master/Shaders/Oilify.fx" target="_blank"><strong>Oilify</strong></a>：使用优化方法分别提取图像均值和方差，应用 Kuwahara 油画滤镜效果。</li>
 <li><a href="https://github.com/Mortalitas/GShade/blob/master/Shaders/pkd_Kuwahara.fx" target="_blank"><strong>pkd_kuwahara</strong></a></li>
 </ul>
-<h2 id="outlines">轮廓线<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="outlines">轮廓线<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><a href="https://github.com/LordOfLunacy/Insane-Shaders/blob/master/Shaders/BilateralComic.fx" target="_blank"><strong>BilateralComic</strong></a>：卡通渲染着色器，综合运用双边滤波、色调分离和边缘检测创建漫画风格效果。</li>
 <li><a href="https://github.com/CeeJayDK/SweetFX/blob/master/Shaders/Cartoon.fx" target="_blank"><strong>Cartoon</strong></a>：创建轮廓效果，使图像看起来更具卡通风格。</li>
@@ -382,26 +382,26 @@
 <li><a href="https://github.com/EDCVBNM/ED-shaders/blob/main/Shaders/LumaLines.fx" target="_blank"><strong>LumaLines</strong></a>：根据像素间亮度差异绘制轮廓线。</li>
 <li><a href="https://github.com/papadanku/CShade/blob/main/shaders/kContour.fx" target="_blank"><strong>kContour</strong></a>：等高线效果。</li>
 </ul>
-<h2 id="lens-flare">镜头光晕<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="lens-flare">镜头光晕<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><a href="https://github.com/BlueSkyDefender/AstrayFX/blob/master/Shaders/Flair.fx" target="_blank"><strong>Flair</strong></a>：添加镜头光晕效果。</li>
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/HexLensFlare.fx" target="_blank"><strong>HexLensFlare</strong></a>：更多镜头光晕效果。</li>
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/UnrealLens.fx" target="_blank"><strong>UnrealLens</strong></a></li>
 </ul>
-<h2 id="screenshot-with-alpha-pixels">含透明像素的截图<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="screenshot-with-alpha-pixels">含透明像素的截图<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>根据截图深度使用 alpha 值为 0 的像素进行截图。使用这些着色器可能需要最新版本的 ReShade。</p>
 <ul>
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/DepthAlpha.fx" target="_blank"><strong>DepthAlpha</strong></a></li>
 <li><a href="https://github.com/Mortalitas/GShade/blob/master/Shaders/CuttingTool_Depth.fx" target="_blank"><strong>CuttingTool_Depth</strong></a></li>
 </ul>
-<h2 id="images">图像<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="images">图像<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>用于在游戏中渲染图像（如替换天空）的着色器，可与 DepthAlpha 和 CuttingTool_Depth 等着色器很好地配合使用。</p>
 <ul>
 <li><a href="https://github.com/Fubaxiusz/fubax-shaders/blob/master/Shaders/Image.fx" target="_blank"><strong>Image</strong></a></li>
 <li><a href="https://github.com/Otakumouse/stormshade/blob/master/v4.X/reshade-shaders/Shader%20Library/Recommended/StageDepth.fx" target="_blank"><strong>StageDepth</strong></a></li>
 <li><a href="https://github.com/originalnicodr/CorgiFX/blob/master/Shaders/StageDepthPlus.fx" target="_blank"><strong>StageDepthPlus</strong></a>：允许对图像进行操控，可分别沿 x 轴和 y 轴调整尺寸、定位、旋转，使用深度遮罩，并支持多种混合模式。你还可以在纹理图像旁边使用深度图，与游戏深度进行交互。</li>
 </ul>
-<h2 id="styles">风格<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="styles">风格<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><strong>Posterize</strong>：此着色器只能从 <a href="https://international-gfe.download.nvidia.com/GFE/GFEClient/ReShadeFilters/v1.0/Curated_ReShade_Filters.zip" target="_blank">nvidia 提供的合集</a>中获取。</li>
 </ul>
@@ -422,7 +422,7 @@
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/Sketch.fx" target="_blank"><strong>Sketch</strong></a></li>
 </ul>
 <p><img src="../Images/ShadersCatalog_Sketch.png" class="shadowed autosize" width="840" height="525" /></p>
-<h2 id="masking">遮罩<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="masking">遮罩<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>如果你熟悉 Photoshop 或 Lightroom，应该了解遮罩的概念。简单来说，遮罩是指选择屏幕上哪些部分需要应用编辑效果，通常用黑白像素表示（白色 = CanvasMask 着色器之间的效果在此可见，黑色 = 这些效果不可见）。位于每个遮罩着色器"Before"和"After"效果技法之间的着色器将在场景中被遮罩。</p>
 <ul>
 <li><a href="https://github.com/LordKobra/CobraFX/blob/master/Shaders/Cobra_Mask.fx" target="_blank"><strong>Cobra Mask</strong></a>：专为与 ColorSort 和 Gravity 着色器配合使用而设计的颜色遮罩着色器，可使用相似的设置对场景应用遮罩。</li>
@@ -432,10 +432,10 @@
 <li><a href="https://github.com/crosire/reshade-shaders/blob/slim/Shaders/UIMask.fx" target="_blank"><strong>UIMask</strong></a>：简单地使用图像对效果进行遮罩。</li>
 <li><a href="https://github.com/LordOfLunacy/Insane-Shaders/blob/master/Shaders/UIMaskCreator.fx" target="_blank"><strong>UIMaskCreator</strong></a>：严格来说并非遮罩着色器，但它允许在游戏中直接在界面上绘制，无需使用图片编辑器即可快速创建 UI 遮罩，然后通过截图保存并与 <code>UIMask</code> 等着色器配合使用。</li>
 </ul>
-<h2 id="common-software-editing-tools">常用软件编辑工具<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="common-software-editing-tools">常用软件编辑工具<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>本节收录了与 Lightroom 或 Photoshop Camera Raw 等编辑软件类似的着色器。部分实现方式可能与此类软件有所不同，因此即使乍看之下这些着色器似乎是"截图后再处理也能做到的事情"，仍值得一试。</p>
 <p>如果你想详细了解 prod 大部分着色器的功能，请务必查阅<a href="https://reshade.me/forum/shader-presentation/6167-prod80-s-shader-library" target="_blank">他在 ReShade 论坛的帖子</a>。</p>
-<h3 id="editing">编辑<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="editing">编辑<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/luluco250/FXShaders/blob/master/Shaders/ArtisticVignette.fx" target="_blank"><strong>ArtisticVignette</strong></a></li>
 <li><a href="https://github.com/BlueSkyDefender/AstrayFX/blob/master/Shaders/Clarity.fx" target="_blank"><strong>Clarity</strong></a></li>
@@ -458,10 +458,10 @@
 <li><a href="https://github.com/prod80/prod80-ReShade-Repository/blob/master/Shaders/PD80_04_Selective_Color_v2.fx" target="_blank"><strong>PD80_04_Selective_Color_v2</strong></a></li>
 <li><a href="https://github.com/crabshank/HLSL-Reshade-colour-remappers/blob/main/Selective_hue_rotate_xy.fx" target="_blank"><strong>Selective_hue_rotate_xy</strong></a></li>
 <li><a href="https://www.patreon.com/mcflypg" target="_blank"><strong>qUINTClarity</strong></a>：图像增强着色器，使画面更"清晰"（可能类似于 Camera Raw 或 Lightroom 中的纹理滑块）。</li>
-<li><a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_lightroom.fx" target="_blank"><strong>qUINT_lightroom</strong></a>：功能极为全面的调色滤镜集合，以 Adobe Lightroom、Da Vinci Resolve 等行业应用为蓝本。支持对场景颜色进行细微调整，并可将当前预设嵌入 3D LUT——一个包含所有调色信息的小型图像文件，可由 ReShade 仓库中的 LUT.fx 轻松加载和应用。这既提升了性能（读取 LUT 速度更快），也保护了你的工作成果，只需将 LUT 与预设一同部署即可保持配置私密。</li>
+<li><a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_lightroom.fx" target="_blank"><strong>qUINT_lightroom</strong></a>：功能极为全面的调色滤镜集合，以 Adobe Lightroom、Da Vinci Resolve 等行业应用为蓝本。支持对场景颜色进行细微调整，并可将当前预设嵌入 3D LUT——一个包含所有调色信息的小型图像文件，可由 ReShade 资源库中的 LUT.fx 轻松加载和应用。这既提升了性能（读取 LUT 速度更快），也保护了你的工作成果，只需将 LUT 与预设一同部署即可保持配置私密。</li>
 <li><a href="https://www.patreon.com/mcflypg" target="_blank"><strong>qUINTReGrade</strong></a>：调色套件，qUINT Lightroom 的继任者，包含 Solaris（泛光着色器）和 Insight（图像分析工具）。</li>
 </ul>
-<h3 id="sharpening-and-texture">锐化与纹理<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="sharpening-and-texture">锐化与纹理<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/martymcmodding/iMMERSE/blob/main/Shaders/MartysMods_SHARPEN.fx" target="_blank"><strong>iMMERSE Sharpen</strong></a>：iMMERSE Sharpen 是一款深度感知锐化滤镜，综合利用深度和颜色在目标区域提升局部对比度，同时避免锐化算法中常见的瑕疵，如物体周围的光晕。</li>
 <li><a href="https://github.com/Mortalitas/GShade/blob/master/Shaders/AdaptiveSharpen.fx" target="_blank"><strong>AdaptiveSharpen</strong></a></li>
@@ -477,7 +477,7 @@
 <li><a href="https://github.com/BlueSkyDefender/AstrayFX/blob/master/Shaders/Smart_Sharp.fx" target="_blank"><strong>Smart_Sharp</strong></a>：基于深度的钝化蒙版双边对比度自适应锐化。</li>
 <li><a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_sharp.fx" target="_blank"><strong>qUINT_sharp</strong></a>：仅对纹理细节进行锐化，同时避免强边缘周围的光晕、过度锯齿和闪烁等常见锐化瑕疵。利用深度缓冲增强细节并遮罩否则会产生过度锐化的区域。</li>
 </ul>
-<h3 id="tonemapping-and-color-grading">色调映射与调色<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="tonemapping-and-color-grading">色调映射与调色<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/CeeJayDK/SweetFX/blob/master/Shaders/DPX.fx" target="_blank"><strong>DPX</strong></a>：使图像看起来像从胶片转换为 Cineon DPX 格式。可用于创建"阳光"感效果。</li>
 <li><a href="https://github.com/byxor/thug-pro-reshade/blob/master/THUG%20Pro/reshade-shaders/Shaders/FilmicPass.fx" target="_blank"><strong>FilmicPass</strong></a>：应用一些常见的色彩调整以模拟更具电影感的效果。</li>
@@ -488,7 +488,7 @@
 <li><a href="https://github.com/CeeJayDK/SweetFX/blob/master/Shaders/Technicolor.fx" target="_blank"><strong>Technicolor2</strong></a></li>
 <li><a href="https://github.com/Mortalitas/GShade/blob/master/Shaders/WatchDogs.fx" target="_blank"><strong>WatchDogsTonemapping</strong></a></li>
 </ul>
-<h3 id="film-grain">胶片颗粒<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="film-grain">胶片颗粒<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/papadanku/CShade/blob/main/shaders/cFilmGrain.fx" target="_blank"><strong>cFilmGrain</strong></a>：无需复制纹理的胶片颗粒效果。</li>
 <li><a href="https://github.com/CeeJayDK/SweetFX/blob/master/Shaders/FilmGrain.fx" target="_blank"><strong>FilmGrain</strong></a></li>
@@ -496,7 +496,7 @@
 <li><a href="https://github.com/prod80/prod80-ReShade-Repository/blob/master/Shaders/PD80_06_Film_Grain.fx" target="_blank"><strong>PD80_06_Film_Grain</strong></a></li>
 <li><a href="https://github.com/Fubaxiusz/fubax-shaders/blob/master/Shaders/SimpleGrain.fx" target="_blank"><strong>SimpleGrain</strong></a></li>
 </ul>
-<h3 id="chromatic-aberration">色差<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="chromatic-aberration">色差<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://reshade.me/forum/shader-presentation/2990-ported-reshade-2-x-effects" target="_blank"><strong>CA</strong></a></li>
 <li><a href="https://github.com/papadanku/CShade/blob/main/shaders/cAbberation.fx" target="_blank"><strong>cAbberation</strong></a></li>
@@ -506,12 +506,12 @@
 <li><a href="https://github.com/Fubaxiusz/fubax-shaders/blob/master/Shaders/Prism.fx" target="_blank"><strong>Prism</strong></a></li>
 <li><a href="https://www.patreon.com/mcflypg" target="_blank"><strong>Yet Another Chromatic Aberration</strong></a>：在 HDR 模式下运行，是唯一具有正确光谱渐变的着色器（源于大量 MATLAB 工作），还支持消色差和复消色差像差效果，这正是当代相机镜头所具备的特性。</li>
 </ul>
-<h3 id="emboss">浮雕<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="emboss">浮雕<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <ul>
 <li><a href="https://github.com/guestrr/ReshadeShaders/blob/master/Bumpmapping.fx" target="_blank"><strong>Bumpmapping</strong></a></li>
 <li><a href="https://reshade.me/forum/shader-presentation/2990-ported-reshade-2-x-effects" target="_blank"><strong>Emboss</strong></a></li>
 </ul>
-<h2 id="extra">附加<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="extra">附加<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <ul>
 <li><a href="https://github.com/TreyM/SHADERDECK" target="_blank"><strong>SHADERDECK</strong></a>：一套胶片模拟套件，尝试复现真实世界电影胶片调色的工作流程，从底片扫描、扫描调色到胶片打印。</li>
 <li><a href="https://github.com/FransBouma/OtisFX/blob/master/Shaders/PandaFX.fx" target="_blank"><strong>PandaFX</strong></a>：应用电影镜头效果和调色，例如泛光效果。</li>
@@ -521,7 +521,7 @@
 <li><a href="https://discord.com/channels/217504282109411330/805488617643835402/958093194820739132" target="_blank"><strong>LensDiffusion</strong></a>：如需下载，请前往 <a href="https://discord.treym.us" target="_blank">TreyM Discord 服务器</a>。</li>
 <li><a href="https://discord.com/channels/586242553746030596/804451693853016085/1103197689576968262" target="_blank"><strong>vort_MegaShader</strong></a>：单一效果技法通过多个不同渲染通道高效实现多种效果，兼顾性能与质量。如需下载，请前往 <a href="https://discord.gg/PrwndfH" target="_blank">ReShade Discord 服务器</a>。</li>
 </ul>
-<h2 id="luts">LUT<a class="headerlink" href="shaderscatalogue.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="luts">LUT<a class="headerlink" href="shaderscatalogue.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>LUT 是截图后期处理或游戏过程中非常重要的一环。如需深入了解 LUT 的概念及制作方法，请前往<a href="https://framedsc.github.io/ReshadeGuides/lutgenguide.htm" target="_blank">本指南</a>。如果你需要优质 LUT 资源，可前往 <a href="https://github.com/TheGordinho/MLUT" target="_blank">gordinho MLUT 着色器仓库</a>。以下列出我的一些个人最爱。</p>
 <ul>
 <li>MultiLUTFaustus</li>

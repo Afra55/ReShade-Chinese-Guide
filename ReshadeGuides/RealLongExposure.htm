@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -100,7 +100,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -110,10 +110,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -128,12 +128,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="RealLongExposure.htm">使用 RLE 隐藏时序问题</a></li></ul>
 					
@@ -146,10 +146,10 @@
 <img src="../Images/reallongexposure_header.png" alt="RealLongExposure.fx" title="由 barkar_b 拍摄" class="shadowed autosize" width="896" height="180" />
 <p>由 barkar_b 拍摄</p>
 </div>
-<h1 id="using-reallongexposure.fx-to-hide-temporal-issues-in-games">使用 RealLongExposure.fx 隐藏游戏中的时序问题<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<h1 id="using-reallongexposure.fx-to-hide-temporal-issues-in-games">使用 RealLongExposure.fx 隐藏游戏中的时序问题<a class="headerlink" href="RealLongExposure.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p><a href="https://github.com/LordKobra/CobraFX/blob/master/Shaders/RealLongExposure.fx" target="_blank">RealLongExposure.fx</a>（RLE）由 LordKobra 创作，是一款 ReShade 着色器，通过混合多帧画面来实现长曝光效果。此外，它也可用于消除由 TAA（时域抗锯齿）等时序"抖动"效果以及一些现代毛发着色器所产生的瑕疵，还可以用来遮盖其他令人分心的元素，例如粒子特效（参见示例 #3）。</p>
 <p>本指南的目标是捕获一帧静止画面，因此你需要固定镜头角度，并且游戏通常需要处于时停状态。</p>
-<h2 id="recommended-shader-settings">推荐着色器设置<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="recommended-shader-settings">推荐着色器设置<a class="headerlink" href="RealLongExposure.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <pre class="nocode">Exposure Time: 3-5+ Seconds¹
 ShowGreenOnFinish: Off
 
@@ -158,7 +158,7 @@ Gamma: Default
 Delay: Default
 </pre><p>¹ - 曝光时间可以设置为任意不过短的时长，因为拍摄只需在问题被混合消除后进行即可。</p>
 <p>强烈建议将 <code>StartExposure</code> 绑定到快捷键，以便在热采样时更方便地激活。</p>
-<h2 id="example-usage">使用示例<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="example-usage">使用示例<a class="headerlink" href="RealLongExposure.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p><strong>场景 1：TAA 次像素</strong>  
 </p>
 <p><img src="../Images/RealLongExposure/eg1-taa.png" alt="示例1" class="shadowed autosize" width="800" height="400" /></p>
@@ -173,7 +173,7 @@ Delay: Default
 </p>
 <p><img src="../Images/RealLongExposure/eg3-particles.png" alt="示例3" class="shadowed autosize" width="800" height="400" /></p>
 <p>RLE 可以平均化时停状态下仍在运动的细微粒子特效（如尘埃）。请观看下方视频，以获取更直观的效果演示。</p>
-<h2 id="video-example">视频示例<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="video-example">视频示例<a class="headerlink" href="RealLongExposure.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p align="left">
 <a href="https://www.youtube.com/watch?v=np7rKbDEphs" target="_blank">
   <img src="https://i.ytimg.com/vi_webp/np7rKbDEphs/maxresdefault.webp" width="800">

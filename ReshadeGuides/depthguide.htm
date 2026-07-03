@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </div>
-            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="主导航">
 <ul>
 <li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
@@ -100,7 +100,7 @@
 								<span class="navigationgroup">画廊</span>
 							</li>
 							<li class="tocentry">
-								<a href="../HallOfFramed" target="_blank">FRAMED 名人堂</a>
+								<a href="https://framedsc.com/HallOfFramed/" target="_blank">FRAMED 名人堂</a>
 							</li>
 						</ul>
 					</li>
@@ -110,10 +110,10 @@
 								<span class="navigationgroup">项目</span>
 							</li>
                             <li class="tocentry">
-                                <a href="../HOFWallpaper" target="_blank">名人堂壁纸</a>
+                                <a href="https://framedsc.com/HOFWallpaper/" target="_blank">名人堂壁纸</a>
                             </li>
                             <li class="tocentry">
-                                <a href="../framed-wrapped" target="_blank">FRAMED 年度回顾</a>
+                                <a href="https://framedsc.com/framed-wrapped/" target="_blank">FRAMED 年度回顾</a>
                             </li>
 						</ul>
 					</li>
@@ -128,12 +128,12 @@
             &nbsp;
         </nav>
         <section data-toggle="nav-shift" class="nav-content-wrap">
-            <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <nav class="nav-top" role="navigation" aria-label="顶部导航">
                 <i data-toggle="nav-top" class="fa fa-bars"></i>
                 <a href="https://framedsc.com/index.htm">FRAMED 截图社区</a>
             </nav>
             <div class="nav-content">
-                <div role="navigation" aria-label="breadcrumbs navigation">
+                <div role="navigation" aria-label="面包屑导航">
                     <div class="breadcrumbs">
 <ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="depthguide.htm">使用 ReShade 导出深度缓冲</a></li></ul>
 					
@@ -147,7 +147,7 @@
 <p>虽然 ReShade 通过其<a href="shaderscatalogue.htm">丰富的着色器目录</a>提供了上述所有功能，但部分用户更倾向于在后期制作中完成这些调整。后期处理的优势在于：可以在"离线"状态下稳定工作（游戏不运行就不会崩溃！），使用自己更熟悉的工具，以及实现 ReShade 目前尚不支持的效果。</p>
 <p>本指南将介绍使用 ReShade 导出深度缓冲的三种不同方式，均借助不同着色器实现，其核心原理是对 ReShade 效果进行截图。此外，指南末尾还附有一个简短的教程，演示如何利用导出的深度缓冲添加简单的雾效。</p>
 <hr />
-<h2 id="depth-slice">深度切片<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="depth-slice">深度切片<a class="headerlink" href="depthguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>如果你只需要对深度缓冲进行简单切片，prod80 的 <a href="https://github.com/prod80/prod80-ReShade-Repository/blob/master/Shaders/" target="_blank">Depth Slicer</a> 就是你需要的着色器。<strong>使用 prod80 的着色器需要先下载仓库顶部列出的 4 个 FXH 文件并添加到你的着色器目录中。</strong>你还需要一个能将整个场景变为纯黑的颜色调整着色器，例如将黑色色阶拉满的 <a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_lightroom.fx" target="_blank">qUINT_Lightroom</a>。目标是生成一张黑白图像，方便用作蒙版。</p>
 <p>将场景变为纯黑后，确保 Depth Slicer 在 ReShade 界面中排列在 Lightroom（或你所使用的着色器）<strong>下方</strong>，以便 Depth Slicer 能够作用于纯黑图像。按下图所示配置 Depth Slicer。</p>
 <p><img src="../Images/depthguide/ds_depthslicer1.png" alt="1" class="shadowed autosize" width="568" height="263" /></p>
@@ -171,7 +171,7 @@
 <div class="figure"><p><i><a href="https://framedsc.com/ReshadeGuides/GameGuides/Bugsnax.htm">Bugsnax</a></i></p></div>  
 <p>你现在可以截取这张图，并在你喜欢的图像编辑器中将其用作蒙版。此方法与 <code>Chromakey.fx</code> 的效果非常相似。遮罩通常比绿幕抠图的结果更干净，最适合用于静态图像。</p>
 <hr />
-<h2 id="graded-depth-range">分级深度范围<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="graded-depth-range">分级深度范围<a class="headerlink" href="depthguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>此方法可以导出深度缓冲的特定范围。由于 .png/.bmp 格式的截图存在 8 位灰度限制，最多只能使用 256 个深度层。当这 256 层被拉伸得过于分散时，可能会出现色带问题。通过使用 <code>DisplayDepth.fx</code> 的调试功能，我们可以高亮显示深度缓冲中仅包含我们所需深度层的特定切片。由于深度图一旦截取便难以进行大幅调整，因此使用此方法前需明确用途。</p>
 <p>启用 <code>DisplayDepth.fx</code> 后，将 <em>Present type</em>（呈现类型）设置为 <em>Depth map</em>（深度图），然后进入高级设置。这里有两个关键参数：<em>Far Plane</em>（远平面）和 <em>Multiplier</em>（倍增器）。<em>Far Plane</em> 将远平面（白点）向镜头方向靠近；<em>Multiplier</em> 则类似近平面，将黑点向远离镜头的方向推移。</p>
 <div class="figure">
@@ -183,7 +183,7 @@
 <p>设置完成后，使用你喜欢的截图工具截图即可。</p>
 <div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p><code>DisplayDepth.fx</code> 会对其深度层进行抖动混合，以避免输出结果出现色带。这种抖动在某些深度效果中可能表现为瑕疵。可在<a href="../Images/depthguide/DisplayDepth.fx">此处</a>下载包含抖动开关的修改版 <code>DisplayDepth.fx</code>。</p>
 </div><hr />
-<h2 id="high-range-depth-export">高范围深度导出<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="high-range-depth-export">高范围深度导出<a class="headerlink" href="depthguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>此方法已基本被 ReShade 5.0 发布后的 <a href="https://github.com/murchalloo/reshade-addons" target="_blank">murchalloo 的 Frame Capture 插件</a>所取代。该插件可通过 <code>F10</code> 键捕获并处理 32 位深度 .EXR 文件，同时还会捕获颜色缓冲和法线缓冲。</p>
 </div><p>这最后一种方法可以让我们尽可能地还原 ReShade 深度效果所使用的全范围原始深度缓冲。通过将深度信息打包进三个 RGB 通道，可以将其解包并合并为一个 24 位通道，其深度层数远多于 8 位方案。此方法依赖 <a href="https://github.com/BlueSkyDefender" target="_blank">BlueSkyDefender</a> 的 <code>Depth_Tool.fx</code> 以及 <a href="https://twitter.com/murchalloo" target="_blank">murchalloo</a> 编写的工具（用于将截图转换为 32 位 EXR 文件），两者均可在<a href="https://github.com/stillseven/depth_converter" target="_blank">此处</a>下载。</p>
 <p>将 <code>Depth_Tool.fx</code> 添加到着色器目录并构图完成后，只需启用该着色器并确保 ReShade 的截图格式设置为 BMP 即可，无需对着色器进行任何调整。</p>
@@ -194,7 +194,7 @@
 <p>你现在就拥有了一张完美可用的高位深深度图，可在任何支持 EXR 格式的程序中使用！</p>
 <div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>如果要将 PNG 转换为 BMP，<strong>请确保转换为每像素 24 位</strong>。BMP 支持多种位深度，转换工具可能默认使用其他位深度。</p>
 </div><hr />
-<h2 id="tutorial-adding-fog-using-a-depth-map">教程：使用深度图添加雾效<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="tutorial-adding-fog-using-a-depth-map">教程：使用深度图添加雾效<a class="headerlink" href="depthguide.htm" title="永久链接至标题"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>在本指南的最后一部分，我们将介绍如何在 Photoshop 中利用导出的深度缓冲完成一个简单的后期处理教程。通过复制原始图像、进行适当的编辑，再以深度图作为蒙版，我们可以模拟出场景中浓厚雾气的视觉效果。</p>
 <p>本教程需要 Photoshop CS4 或更高版本，但也可以轻松移植到其他图像编辑器中。我将以《求生之路 2》的一张截图为例进行演示。</p>
 <p><strong>第一步</strong><br />
