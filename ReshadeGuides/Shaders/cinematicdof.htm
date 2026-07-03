@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="zh-CN">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cinematic DOF - FRAMED. Screenshot Community</title>
+    <title>电影感景深 - FRAMED. Screenshot Community</title>
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../css/theme_20250102.css" type="text/css" />
     <link rel="stylesheet" href="../../css/theme_colors_20220814.css" type="text/css" />
@@ -28,13 +28,13 @@
                 <a href="https://framedsc.com/index.htm"><i class="fa fa-home"></i> FRAMED. Screenshot Community</a>
                 <div role="search">
                     <form id="search-form" class="form" action="https://framedsc.com/Docnet_search.htm" method="get">
-                        <input type="text" name="q" placeholder="Search docs" />
+                        <input type="text" name="q" placeholder="搜索文档" />
                     </form>
                 </div>
             </div>
             <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 <ul>
-<li class="tocentry"><a href="https://framedsc.com/index.htm">Home</a>
+<li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
 
 <li class="tocentry"><a href="https://framedsc.com/basics.htm">The Basics</a>
@@ -50,41 +50,41 @@
 </li>
 <li class="tocentry">
 <ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../index.htm">Reshade guides</a></span></li>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../index.htm">ReShade 指南</a></span></li>
 
-<li class="tocentry"><a href="../setupreshade.htm">Setting up reshade</a>
+<li class="tocentry"><a href="../setupreshade.htm">安装与配置 ReShade</a>
 </li>
-<li class="tocentry"><a href="../shaderscatalogue.htm">Shaders Catalogue</a>
+<li class="tocentry"><a href="../shaderscatalogue.htm">着色器目录</a>
 </li>
-<li class="tocentry"><a href="../lutgenguide.htm">LUT Generation</a>
+<li class="tocentry"><a href="../lutgenguide.htm">LUT 生成</a>
 </li>
-<li class="tocentry"><a href="../reshadeuwp.htm">Injecting ReShade in UWP games</a>
+<li class="tocentry"><a href="../reshadeuwp.htm">向 UWP 游戏注入 ReShade</a>
 </li>
-<li class="tocentry"><a href="../depthguide.htm">Exporting Depth Buffers with Reshade</a>
+<li class="tocentry"><a href="../depthguide.htm">使用 ReShade 导出深度缓冲</a>
 </li>
-<li class="tocentry"><a href="../RealLongExposure.htm">Using RLE to hide temporal issues</a>
+<li class="tocentry"><a href="../RealLongExposure.htm">使用 RLE 隐藏时序问题</a>
 </li>
 <li class="tocentry">
 <ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../../ReshadeGuidesShaderguides.htm">Shader guides</a></span></li>
-<li class="tocentry current"><a class="current" href="cinematicdof.htm">Cinematic DOF</a>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../../ReshadeGuidesShaderguides.htm">着色器指南</a></span></li>
+<li class="tocentry current"><a class="current" href="cinematicdof.htm">电影感景深</a>
 <ul class="currentrelative">
-<li class="tocentry"><a href="cinematicdof.htm">Focusing</a></li>
+<li class="tocentry"><a href="cinematicdof.htm">对焦</a></li>
 
-<li class="tocentry"><a href="cinematicdof.htm">Blur tweaking</a></li>
+<li class="tocentry"><a href="cinematicdof.htm">模糊调节</a></li>
 
-<li class="tocentry"><a href="cinematicdof.htm">Highlight tweaking</a></li>
+<li class="tocentry"><a href="cinematicdof.htm">高光调节</a></li>
 
-<li class="tocentry"><a href="cinematicdof.htm">Anamorphism control</a></li>
+<li class="tocentry"><a href="cinematicdof.htm">变形宽银幕控制</a></li>
 
 </ul>
-<li class="tocentry"><a href="heightfog.htm">Height Fog</a>
+<li class="tocentry"><a href="heightfog.htm">高度雾</a>
 </li>
 
 </ul>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../ReshadeGuidesAddonguides.htm">Addon guides</a></span>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../ReshadeGuidesAddonguides.htm">插件指南</a></span>
 </li>
 </ul>
 </li>
@@ -128,7 +128,7 @@
 				<div class="toc-footer">
 					<span class="text-small">
 						<hr/>
-						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">由 <i class="fa fa-github"></i> DocNet 生成</a>
 					</span>
 				</div>	
 			</div>
@@ -142,7 +142,7 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="https://framedsc.com/index.htm">Home</a></li> / <li><a href="../index.htm">Reshade guides</a></li> / <li><a href="../../ReshadeGuidesShaderguides.htm">Shader guides</a></li> / <li><a href="cinematicdof.htm">Cinematic DOF</a></li></ul>
+<ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="../index.htm">ReShade 指南</a></li> / <li><a href="../../ReshadeGuidesShaderguides.htm">着色器指南</a></li> / <li><a href="cinematicdof.htm">电影感景深</a></li></ul>
 					
                     </div>
                     <hr />
@@ -151,187 +151,160 @@
                     <div class="section">
 <div class="figure">
 <img src="../../Images/cinematicDOF_header.png" alt="Cinematic Depth of Field" title="Shot by Jim2point0" class="shadowed autosize" width="896" height="180" />
-<p>Shot by Jim2point0</p>
+<p>Jim2point0 拍摄</p>
 </div>
-<p>Cinematic Depth of Field, or 'Cinematic DOF' is a <em>state of the art</em> Depth of Field shader for Reshade and is available in the 
-<a href="https://github.com/FransBouma/OtisFX" target="_blank">OtisFX</a> repository. The OtisFX repository always contains the latest version. </p>
-<p>This guide assumes you have <a href="../setupreshade.htm">properly set up the depth buffer in Reshade</a>.
-Cinematic DOF is a depth of field shader which works with lens aspects for focusing and blur control. This might at first be confusing 
-and this guide should help you understand what the various values mean and what to adjust to get the most out of this shader. </p>
-<p>All settings in the Cinematic DOF shader are drag sliders, which means you can click them, hold the left-mousebutton and drag the mouse
-left or right to resp. decrease and increase the value. By holding <code>shift</code> while dragging the increase/decrease will go faster. When holding
-<code>ctrl</code> while clicking gives you the ability to type in the value you want. </p>
-<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>The screenshots below are taken with Cinematic DOF v1.2.5, released on March 28th, 2022.</p>
-</div><h2 id="focusing">Focusing<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>One of the most important parts of a depth of field shader is to focus on the right element in the 3D world. By default, the 
-shader has its focusing mode set to <em>auto-focus</em> and <em>mouse-driven auto-focus</em>. This means that if you mouse the mouse over the scene, the 
-element that's below the mouse pointer will be the element the shader will focus on. Everything in front of it and behind it will be blurred.</p>
-<p>This works for some situations, however if you want to set up the shot and alt-tab to a tool to increase the resolution of the screen for instance,
-you'll lose your focus point. For those situations it's better to switch to <em>manual focusing</em>. To do so, simply <strong>uncheck</strong> the <em>Use auto-focus</em>
-option in the Cinematic DOF settings in the Reshade menu. </p>
-<p>When you switch to <em>manual focusing</em>, the shader will focus on a certain <em>distance</em> away from the camera. What that distance is, is specified in the
-<strong>Manual-focus plane</strong> slider. To change the value, simply drag in the textbox till it has the value you want. </p>
-<h3 id="distance-to-the-camera">Distance to the camera<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>The element you have in-focus has a certain distance to the camera. The closer it is to the camera, so the closer the <em>focus plane</em> is to the camera, 
-the stronger the blur will be in the out-of-focus areas. </p>
-<h3 id="focusing-overlay">Focusing overlay<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>Cinematic DOF has an important focus helper, its <em>out-of-focus plane overlay</em>. When the <strong>Show out-of-focus plane overlay on mouse down</strong> is checked,
-the shader will show an overlay every time the left-mousebutton is pressed and held down. The overlay consists of three colors: white for far plane 
-(the area behind what's in focus) out of focus elements, red for near plane (the area in front of what's in focus) out of focus elements and a blue
-line for what's exact in focus. </p>
-<p>It also displays the <em>hyperfocal</em> area without any color, right next to the blue line. This area is considered 'in focus' 
-but transitions slowly to 'out of focus'. When <em>auto-focus</em> is enabled, it will display a crosshair when the left-mouse button is pressed, with the auto-focus
-point at the center of the crosshair. </p>
-<p>It's recommended you use this option when setting up what to focus on. </p>
-<h3 id="focal-length-and-aperture">Focal length and aperture<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>Cinematic DOF's focusing system is based on three elements: distance of focused element (focus plane) to the camera, the lens length (focal length) and the 
-aperture. The distance to the camera is controllable by moving the camera closer to the subject (and with that re-focusing on the element in the 3D world 
-you want to focus on). That leaves the focal length and the aperture. </p>
-<p>For lens length, it in general means the longer the lens, the narrower the Field of View (FoV) and the more blur you'll get in out-of-focus areas. For aperture
-in general it means the lower the value, the more open the lens will be, so the more light will come into the lens/camera, and with that the more blur you'll 
-get in out-of-focus areas. For the Cinematic DOF shader, the two parameters are basically doing the same thing, as the shader itself doesn't control the amount of
-light coming into the camera. </p>
-<p>So what values should you pick? To get started, let's look at the defaults the shader comes with: 100mm for Focal length and 2.8 for aperture. If you'd use
-a 100mm lens on a modern camera with aperture 2.8 you'd get nice portrait shots with a nice shallow depth of field and nice background blur. </p>
-<p>Here's the default setting in action:</p>
+<p>电影感景深（Cinematic Depth of Field）是一款用于 ReShade 的<em>顶尖</em>景深着色器，可在
+<a href="https://github.com/FransBouma/OtisFX" target="_blank">OtisFX</a> 仓库中获取，该仓库始终包含最新版本。</p>
+<p>本指南假定你已<a href="../setupreshade.htm">在 ReShade 中正确设置了深度缓冲</a>。
+电影感景深是一个基于镜头参数进行对焦和模糊控制的景深着色器。初次使用可能会感到困惑，
+本指南将帮助你理解各参数的含义，并指导你如何充分发挥这个着色器的潜力。</p>
+<p>电影感景深着色器中的所有设置均为拖动滑块，即点击后按住鼠标左键向左或向右拖动，分别对应减小和增大数值。按住 <code>shift</code> 键拖动可加快调整速度。按住
+<code>ctrl</code> 键点击可直接输入所需数值。</p>
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>以下截图使用电影感景深 v1.2.5 拍摄，发布于 2022 年 3 月 28 日。</p>
+</div><h2 id="focusing">对焦<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>景深着色器最重要的功能之一，就是聚焦于三维世界中的正确元素。默认情况下，
+着色器的对焦模式设置为<em>自动对焦</em>和<em>鼠标驱动自动对焦</em>。这意味着当你在场景中移动鼠标时，
+鼠标指针下方的元素将成为着色器的焦点，其前方和后方的一切都将被模糊处理。</p>
+<p>这种方式适用于某些情况，但如果你想构图后切换到工具提高屏幕分辨率，
+就会失去焦点。在这种情况下，最好切换到<em>手动对焦</em>。只需在 Reshade 菜单的电影感景深设置中<strong>取消勾选</strong> <em>Use auto-focus</em>（使用自动对焦）选项即可。</p>
+<p>切换到<em>手动对焦</em>后，着色器将聚焦于距摄像机一定<em>距离</em>的位置。该距离由
+<strong>Manual-focus plane</strong>（手动对焦平面）滑块指定。拖动文本框直至达到所需数值。</p>
+<h3 id="distance-to-the-camera">与摄像机的距离<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>焦点元素与摄像机之间有一定距离。<em>对焦平面</em>距摄像机越近，
+焦外区域的模糊效果就越强。</p>
+<h3 id="focusing-overlay">对焦辅助覆盖层<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>电影感景深具有一个重要的对焦辅助功能——<em>焦外平面覆盖层</em>。勾选 <strong>Show out-of-focus plane overlay on mouse down</strong>（按下鼠标时显示焦外平面覆盖层）后，
+每次按住鼠标左键时着色器都会显示覆盖层。覆盖层由三种颜色组成：白色表示远景平面
+（焦点后方区域）的焦外元素，红色表示近景平面（焦点前方区域）的焦外元素，
+蓝色线条表示精确对焦的位置。</p>
+<p>它还会以无色显示<em>超焦距</em>区域，紧邻蓝色线条。该区域被视为"合焦"状态，
+但会逐渐过渡到"焦外"状态。启用<em>自动对焦</em>时，按下鼠标左键会显示准星，
+自动对焦点位于准星中心。</p>
+<p>建议在设置对焦内容时使用此选项。</p>
+<h3 id="focal-length-and-aperture">焦距与光圈<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>电影感景深的对焦系统基于三个要素：焦点元素（对焦平面）到摄像机的距离、镜头长度（焦距）和
+光圈。摄像机与被摄体的距离可以通过移动摄像机靠近被摄体来控制（同时需要重新聚焦三维世界中要对焦的元素）。剩下的就是焦距和光圈。</p>
+<p>就镜头长度而言，通常镜头越长，视野（FoV）越窄，焦外区域的模糊效果越强。就光圈而言，
+通常数值越低，镜头开口越大，进入镜头/摄像机的光线越多，焦外区域的模糊效果也越强。对于电影感景深着色器来说，这两个参数的作用基本相同，因为着色器本身不控制进入摄像机的光量。</p>
+<p>那么应该选择什么数值？先看看着色器的默认值：焦距 100mm，光圈 2.8。如果在现代相机上使用焦距 100mm、光圈 2.8 的镜头，可以拍出漂亮的人像，具有浅景深和优美的背景虚化效果。</p>
+<p>以下是默认设置的效果：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm.jpg" alt="100mm/2.8" title="100mm with 2.8 aperture" class="shadowed autosize" width="1024" height="576" />
-<p>100mm with 2.8 aperture</p>
+<p>焦距 100mm，光圈 2.8</p>
 </div>
-<p>Look carefully at the blurring on the wings of the statue, and the thick blurring in the background. </p>
-<p>If we change the lens and aperture to the values of a lens that's often sold with a modern camera, a 50mm lens with aperture 5.6, the results are a bit different:</p>
+<p>仔细观察雕像翅膀上的模糊效果，以及背景中浓郁的虚化效果。</p>
+<p>如果将镜头和光圈改为现代相机常见套机镜头的参数——焦距 50mm、光圈 5.6，效果会有所不同：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/50mm.jpg" alt="50mm/5.6" title="50mm with 5.6 aperture" class="shadowed autosize" width="1024" height="573" />
-<p>50mm with 5.6 aperture</p>
+<p>焦距 50mm，光圈 5.6</p>
 </div>
-<p>You can clearly see there's way less blur in the background. The focus is still on the statue, camera is still on the same distance. Also the blurring on the wings is gone, 
-they're cleanly in focus.</p>
-<p>Here's the same scene with a lens of 100mm and aperture of 5.6:</p>
+<p>可以明显看到背景的模糊程度大幅降低。焦点仍在雕像上，摄像机距离不变。雕像翅膀上的模糊也消失了，呈现清晰的合焦状态。</p>
+<p>以下是同一场景使用焦距 100mm、光圈 5.6 的效果：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm56.jpg" alt="100mm/5.6" title="100mm with 5.6 aperture" class="shadowed autosize" width="1024" height="577" />
-<p>100mm with 5.6 aperture</p>
+<p>焦距 100mm，光圈 5.6</p>
 </div>
-<p>And with a 50mm lens with aperture 2.8:</p>
+<p>以及焦距 50mm、光圈 2.8 的效果：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/50mm28.jpg" alt="50mm/5.6" title="50mm with 2.8 aperture" class="shadowed autosize" width="1024" height="574" />
-<p>50mm with 2.8 aperture</p>
+<p>焦距 50mm，光圈 2.8</p>
 </div>
-<p>There's subtle more blur than with a 5.6 aperture. You're free to choose what will give you the right blur factor. It's often only necessary to change one the 
-two, either lens length <em>or</em> aperture, but not both. To get started, leave the aperture on 2.8 for now and only change the lens length to a lower value for less blur 
-and a higher value for more blur. </p>
-<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> Tip</span><p>Moving the camera closer to the focused element also makes the blur be more prominent (and you have to change the manual focus plane if you're using manual focusing)</p>
-</div><h2 id="blur-tweaking">Blur tweaking<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>After you've set up the focus, the lens length and aperture, you can now tweak the blur of the near plane (in front of what's in focus) and the far plane (what's behind
-what's in focus). Additionally you can change the quality of the blur and apply a post-blur smoothing factor to iron out any undersampling artifacts you might see. </p>
-<p>Let's see what these look like. We'll use the defaults of 100mm and aperture of 2.8</p>
-<h3 id="far-plane-blur">Far plane blur<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>First we have <em>Far plane max blur</em>. Here you can tweak the blur strength given by the lens length + aperture + distance combination. A value of 1.0 gives the 
-default blur for that combination. A value of 0 totally switches off bluring for the far plane. If you set the value to a high value, e.g. 3.0, you get excessive
-blurring as seen in the shot below.</p>
-<p>Far plane max blur set to 3.0:</p>
+<p>与光圈 5.6 相比，模糊效果略微更明显。你可以自由选择合适的模糊系数。通常只需调整焦距<em>或</em>光圈其中一个即可，无需同时调整两者。建议先将光圈保持在 2.8，仅调整焦距——数值越小模糊越少，数值越大模糊越多。</p>
+<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>将摄像机移近焦点元素也会使模糊效果更加明显（使用手动对焦时还需调整手动对焦平面数值）</p>
+</div><h2 id="blur-tweaking">模糊调节<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>设置好对焦、焦距和光圈后，你可以进一步调节近景平面（焦点前方）和远景平面（焦点后方）的模糊效果。此外，还可以更改模糊质量并应用后处理模糊平滑系数，以消除可能出现的欠采样瑕疵。</p>
+<p>让我们来看看这些效果。以下使用默认的焦距 100mm 和光圈 2.8。</p>
+<h3 id="far-plane-blur">远景平面模糊<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>首先是<em>远景平面最大模糊值</em>（Far plane max blur）。在此可以调节由焦距 + 光圈 + 距离组合产生的模糊强度。值为 1.0 时产生该组合的默认模糊效果；值为 0 时完全关闭远景平面的模糊。若设置为较高的值（如 3.0），将产生如下所示的过度模糊效果。</p>
+<p>远景平面最大模糊值设为 3.0：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_fp30.jpg" alt="far plane blur 3.0" title="Far plane blur with blur set to 3.0" class="shadowed autosize" width="1024" height="578" />
-<p>Far plane blur with blur set to 3.0</p>
+<p>远景平面模糊值为 3.0</p>
 </div>
-<p>If we change the blur to a lower value, e.g. 0.5, we'll get the result below:</p>
+<p>将模糊值改为较低的值（如 0.5），结果如下：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_fp05.jpg" alt="far plane blur 0.5" title="Far plane blur with blur set to 0.5" class="shadowed autosize" width="1024" height="576" />
-<p>Far plane blur with blur set to 0.5</p>
+<p>远景平面模糊值为 0.5</p>
 </div>
-<p>This might look the same as using a shorter lens, like 50mm, but that's not the case: with a 50mm lens the blur starts later, deeper into the 3D world, farther away from 
-the focus plane. With 100mm the blur starts already on the wings of the statue. Because the blur factor is set to a lower value, the blur is very subtle. </p>
-<h3 id="near-plane-blur">Near plane blur<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>Additionally you can tweak the blur for the <em>near plane</em>. The near plane is blurred with a soft edge to make it realistic. The same applies to the near plane blur as 
-for the far plane blur: setting it to 0 switches it off, setting it to a high value makes the blur extremely prominent. </p>
-<p>Below an example shot where the focus is on the statue and far blur has been disabled, using the default near plane blur factor of 1.0.</p>
+<p>这看起来可能与使用更短焦距（如 50mm）的效果相似，但实际并非如此：使用 50mm 镜头时，模糊从三维世界更深处、距对焦平面更远的地方开始；而使用 100mm 时，模糊从雕像翅膀处就已开始。由于模糊系数设置较低，模糊效果非常细腻。</p>
+<h3 id="near-plane-blur">近景平面模糊<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>此外，还可以调节<em>近景平面</em>的模糊效果。近景平面的模糊带有柔和边缘以增强真实感。近景平面模糊的规则与远景平面相同：设为 0 则关闭，设为较高值则使模糊效果极为突出。</p>
+<p>以下示例中，焦点在雕像上，远景模糊已禁用，使用默认近景平面模糊系数 1.0。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_np.jpg" alt="near plane blur 1.0" title="Near plane blur with blur set to 1.0" class="shadowed autosize" width="1024" height="576" />
-<p>Near plane blur with blur set to 1.0</p>
+<p>近景平面模糊值为 1.0</p>
 </div>
-<h3 id="overall-blur-quality-and-smoothing-factor.">Overall blur quality and smoothing factor.<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>The overall blur quality is by default set to 5. This is the # of rings the shader will use per pixel to produce the disc-based blur. The higher the number, the more
-rings and therefore the more samples it will take per pixel to blur the areas in the near and far plane. The value 5 gives overall good quality results and high performance
-but if you want higher quality, you can, the range goes to 12. The higher the number, the more performance the shader will take. </p>
-<p>A high quality number is in general only needed for highlights. In normal blurred areas without <em>bokeh</em> highlights, you won't notice much difference between e.g. 4 or 9.
-However with a scene with a lot of bokeh highlights, you'll notice <em>dots</em> with low quality settings in highlights, if the blur factor is high enough. This is a side effect
-from a phenomenon that's called <em>undersampling</em>. </p>
-<p>See the following scene: </p>
+<h3 id="overall-blur-quality-and-smoothing-factor.">整体模糊质量与平滑系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>整体模糊质量默认设为 5。这是着色器为每个像素生成基于圆盘模糊时使用的光环数量。数值越高，光环越多，对近景和远景区域进行模糊处理时每个像素的采样数越多。默认值 5 在质量和性能之间取得了良好平衡，但如果需要更高质量，最高可调至 12。数值越高，着色器消耗的性能越多。</p>
+<p>较高的质量值通常只在处理高光时才有必要。在没有焦外（散景）高光的普通模糊区域中，4 和 9 之间的差异并不明显。
+然而在含有大量焦外/散景高光的场景中，如果模糊系数足够高，低质量设置下会在高光处出现<em>点状</em>瑕疵。这是一种被称为<em>欠采样</em>的现象所导致的副作用。</p>
+<p>请看以下场景：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_us1.jpg" alt="Blur quality 5" title="Blur quality set to 5" class="shadowed autosize" width="1024" height="576" />
-<p>Blur quality set to 5</p>
+<p>模糊质量设为 5</p>
 </div>
-<p>It has the quality set to the default, 5, and a high blur factor and no undersampling mitigation. The focus is on the metal pillar in the from right. 
-You can see some dots in the bokeh highlights in the middle-left, so the highlights are <em>undersampled</em> here. 
-We can increase the blur quality to a higher value to get rid of this side effect, or check the 'Mitigate undersampling' checkbox in the <em>Advanced</em> section. </p>
+<p>此处质量设为默认值 5，模糊系数较高，未采用欠采样缓解措施。焦点在右前方的金属柱上。
+可以看到中左侧的焦外/散景高光中出现了一些点状瑕疵，说明高光存在<em>欠采样</em>现象。
+可以将模糊质量调高以消除此副作用，或者勾选<em>高级</em>选项中的"缓解欠采样"复选框。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_us2.jpg" alt="Blur quality 5 with undersampling mitigation enabled" title="Blur quality set to 5 with undersampling mitigation enabled" class="shadowed autosize" width="1024" height="576" />
-<p>Blur quality set to 5 with undersampling mitigation enabled</p>
+<p>模糊质量设为 5，启用欠采样缓解</p>
 </div>
-<p>We can also achieve that with another option, the <strong>Post-blur smoothing factor</strong>. This setting applies a gaussian blur on the near and far plane to smooth out the 
-highlights. It's a less subtle option than the quality setting, but the performance is better. </p>
-<p>In the shot below the undersampling mitigation is switched off, and the smoothing factor is used to get rid of the undersampling artifacts instead.</p>
+<p>也可以通过另一个选项——<strong>后处理模糊平滑系数</strong>（Post-blur smoothing factor）来实现。该设置对近景和远景平面应用高斯模糊，以平滑高光效果。与质量设置相比，这个选项效果不够精细，但性能更好。</p>
+<p>下图中关闭了欠采样缓解，改用平滑系数来消除欠采样瑕疵。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_us3.jpg" alt="Blur quality 5 smooth" title="Blur quality set to 5 with smoothing enabled" class="shadowed autosize" width="1024" height="574" />
-<p>Blur quality set to 5 with smoothing enabled</p>
+<p>模糊质量设为 5，启用平滑处理</p>
 </div>
-<p>Not all artifacts are gone though: bokehs with low brightness are skipped to avoid blurring non-highlight areas. It's a trade-off and it's up to you what to use
-in a particular scene.</p>
-<h2 id="highlight-tweaking">Highlight tweaking<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>A depth of field effect creates <em>bokeh</em> highlights, of which we've seen an example of in the previous section. 
-To help the shader get proper bokeh highlights, Cinematic DOF has a variety of settings which can help you create the bokehs you want. </p>
-<h3 id="busy-bokeh-factor">Busy Bokeh factor<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>A bokeh highlight is a typical round highlight with an even color. However you can change the round highlight to be a circle which is more transparent in the center
-than it is on the edges. To do this, increase the <strong>Busy bokeh factor</strong> to a value bigger than 0. The example below shows the highlights with a factor of 0.5.</p>
+<p>并非所有瑕疵都能消除：亮度较低的焦外/散景效果会被跳过，以避免模糊非高光区域。这是一种权衡，具体使用哪种方案取决于特定场景的需求。</p>
+<h2 id="highlight-tweaking">高光调节<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>景深效果会产生焦外（散景）高光，前一章节中我们已见过示例。
+电影感景深提供了多种设置，帮助着色器生成理想的焦外/散景高光。</p>
+<h3 id="busy-bokeh-factor">繁忙散景系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>散景高光通常是颜色均匀的圆形高光。然而，你可以将圆形高光改为中心比边缘更透明的圆环形状。为此，将<strong>繁忙散景系数</strong>（Busy bokeh factor）调高至大于 0 的值。下图展示了系数为 0.5 时的高光效果。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_bf.jpg" alt="Busy bokey factor 0.5" title="Busy bokey factor of 0.5" class="shadowed autosize" width="1024" height="574" />
-<p>Busy bokey factor of 0.5</p>
+<p>繁忙散景系数为 0.5</p>
 </div>
-<h3 id="highlight-boost-factor">Highlight boost factor<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>There's a <strong>Highlight boost factor</strong> setting for boosting the highlights a bit. </p>
+<h3 id="highlight-boost-factor">高光增益系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>还有一个<strong>高光增益系数</strong>（Highlight boost factor）设置，可以稍微增强高光效果。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_hg0.jpg" alt="Highlight boost factor off" title="Highlight boost factor of 0.0" class="shadowed autosize" width="1024" height="575" />
-<p>Highlight boost factor of 0.0</p>
+<p>高光增益系数为 0.0</p>
 </div>
-<p>However if we crank the Highlight boost factor to 1.0, we get a totally different scene:</p>
+<p>然而将高光增益系数调至 1.0，场景会呈现截然不同的效果：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_hg1.jpg" alt="Highlight gain 1.0" title="Highlight boost factor of 1.0" class="shadowed autosize" width="1024" height="576" />
-<p>Highlight boost factor of 1.0</p>
+<p>高光增益系数为 1.0</p>
 </div>
-<p>There's also a gamma factor which boosts all pixels a bit. In general you should leave it at its default value, 2.2, but it could help in dark scenes. </p>
-<h2 id="anamorphism-control">Anamorphism control<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>There are various lens effects known from cinema, one of them is anamorphic bokeh shapes, which means the bokeh shapes don't form perfect round circles around edges but
-ellipses. This effect is caused by using a lens to project a wider image onto a narrower lens opening, resulting in vertical ellipses. Cinematic DoF offers 
-this feature and adds additional options to distort the ellipses to mimic edge distortion as well. These three settings are combined in the Anamorphism control section
-in the shader controls. </p>
-<h3 id="anamorphic-factor">Anamorphic factor<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>The first factor is the factor to control the amount of the anamorphism of the bokeh shapes, the <strong>Anamorphic factor</strong>. By default it's 1.0, which means all bokeh shapes are 
-fine round circles. Moving the value down to 0.0 will make them appear more and more like elipses. Below is an example of a scene with an anamorphic factor of 0.7. 
-It shows slight deformation around the edges, but close to the center the shapes are still round. This can be used to mimic edge distortion in fisheye lenses.</p>
+<p>此外还有一个伽马系数，可以稍微提亮所有像素。通常保持默认值 2.2 即可，但在较暗的场景中可能有所帮助。</p>
+<h2 id="anamorphism-control">变形宽银幕控制<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>电影中有多种镜头效果，其中之一是变形宽银幕散景形状——散景不形成完美的圆形，而是呈椭圆形。这种效果是由使用镜头将较宽的图像投影到较窄的镜头开口上造成的，结果形成垂直椭圆形。电影感景深支持这一特性，并提供了额外选项来扭曲椭圆形以模拟边缘畸变。这三个设置集中在着色器控制面板的"变形宽银幕控制"部分。</p>
+<h3 id="anamorphic-factor">变形宽银幕系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>第一个系数是控制散景形状变形程度的<strong>变形宽银幕系数</strong>（Anamorphic factor）。默认值为 1.0，即所有散景形状均为标准圆形。将数值降低至 0.0，圆形会逐渐变为椭圆形。下图展示了变形宽银幕系数为 0.7 时的场景效果。
+边缘处可见轻微形变，但靠近中心的形状仍保持圆形。这可用于模拟鱼眼镜头的边缘畸变效果。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana07.jpg" alt="Anamorphic factor" title="Anamorphic factor of 0.7" class="shadowed autosize" width="1024" height="575" />
-<p>Anamorphic factor of 0.7</p>
+<p>变形宽银幕系数为 0.7</p>
 </div>
-<h3 id="anamorphic-spread-factor">Anamorphic spread factor<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>The default spread factor makes the anamorphism appear to the edges, not in the center. To make it show up evenly everywhere, you can increase the <strong>Anamorphic spread factor</strong>
-to a value higher than 0.0, with 1.0 being the factor where the anamorphism is applied everywhere evenly. An example of that is given below.</p>
+<h3 id="anamorphic-spread-factor">变形宽银幕扩散系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>默认的扩散系数使变形宽银幕效果仅出现在边缘而非中心。要使其在画面各处均匀显示，可以将<strong>变形宽银幕扩散系数</strong>（Anamorphic spread factor）调高至大于 0.0 的值，1.0 表示变形宽银幕效果均匀应用于整个画面。以下是相应示例。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana07sp1.jpg" alt="Anamorphic spread factor" title="Anamorphic factor of 0.7 with spread factor of 1.0" class="shadowed autosize" width="1024" height="576" />
-<p>Anamorphic factor of 0.7 with spread factor of 1.0</p>
+<p>变形宽银幕系数为 0.7，扩散系数为 1.0</p>
 </div>
-<h3 id="anamorphic-alignment-factor">Anamorphic alignment factor<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>The <strong>Anamorphic alignment factor</strong> is the factor that gives us the classic anamorphic effect of vertical ellipses: using a value of 1.0 the ellipses are aligned
-vertically like with a classic anamorphic lens. If you use a value lower than 1.0, the ellipses are rotated around the center, 
-with a value of 0.0 being the alignment we've seen in the previous shots. An example of having the setting set to 1.0 to get the classic anamorphic lens behavior 
-can be seen below.</p>
+<h3 id="anamorphic-alignment-factor">变形宽银幕对齐系数<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><strong>变形宽银幕对齐系数</strong>（Anamorphic alignment factor）可实现经典变形宽银幕效果——垂直椭圆形：将值设为 1.0 时，椭圆形像经典变形宽银幕镜头一样垂直排列。若使用小于 1.0 的值，椭圆形会绕中心旋转，
+值为 0.0 时呈现前几张截图中的排列方式。以下是将设置调至 1.0 以获得经典变形宽银幕镜头效果的示例。</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana06sp1al1.jpg" alt="Anamorphic spread factor" title="Anamorphic factor of 0.6 with spread factor of 1.0 and alignment factor of 1.0" class="shadowed autosize" width="1024" height="575" />
-<p>Anamorphic factor of 0.6 with spread factor of 1.0 and alignment factor of 1.0</p>
+<p>变形宽银幕系数为 0.6，扩散系数为 1.0，对齐系数为 1.0</p>
 </div>
-<h3 id="go-wild">Go wild<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>You can get vortex swirlies if you want:</p>
+<h3 id="go-wild">尽情发挥<a class="headerlink" href="cinematicdof.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>你甚至可以创造出漩涡效果：</p>
 <div class="figure">
 <img src="../../Images/ShaderGuides/CinematicDOF/100mm_ana01sp1.jpg" alt="Go wild" title="Anamorphic factor of 0.01 with spread factor of 1.0" class="shadowed autosize" width="1024" height="576" />
-<p>Anamorphic factor of 0.01 with spread factor of 1.0</p>
+<p>变形宽银幕系数为 0.01，扩散系数为 1.0</p>
 </div>
 
                     </div>
@@ -339,7 +312,7 @@ can be seen below.</p>
                 <footer>
                     <hr />
                     <div role="contentinfo">
-&copy 2019-2026 FRAMED. All rights reserved.
+&copy 2019-2026 FRAMED. 保留所有权利。
                     </div>
                 </footer>
             </div>
