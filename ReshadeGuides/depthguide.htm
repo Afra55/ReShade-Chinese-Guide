@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="zh-CN">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Exporting Depth Buffers with Reshade - FRAMED. Screenshot Community</title>
+    <title>使用 ReShade 导出深度缓冲 - FRAMED. Screenshot Community</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/theme_20250102.css" type="text/css" />
     <link rel="stylesheet" href="../css/theme_colors_20220814.css" type="text/css" />
@@ -28,13 +28,13 @@
                 <a href="https://framedsc.com/index.htm"><i class="fa fa-home"></i> FRAMED. Screenshot Community</a>
                 <div role="search">
                     <form id="search-form" class="form" action="https://framedsc.com/Docnet_search.htm" method="get">
-                        <input type="text" name="q" placeholder="Search docs" />
+                        <input type="text" name="q" placeholder="搜索文档" />
                     </form>
                 </div>
             </div>
             <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 <ul>
-<li class="tocentry"><a href="https://framedsc.com/index.htm">Home</a>
+<li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
 
 <li class="tocentry"><a href="https://framedsc.com/basics.htm">The Basics</a>
@@ -50,17 +50,17 @@
 </li>
 <li class="tocentry">
 <ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="index.htm">Reshade guides</a></span></li>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="index.htm">ReShade 指南</a></span></li>
 
-<li class="tocentry"><a href="setupreshade.htm">Setting up reshade</a>
+<li class="tocentry"><a href="setupreshade.htm">安装与配置 ReShade</a>
 </li>
-<li class="tocentry"><a href="shaderscatalogue.htm">Shaders Catalogue</a>
+<li class="tocentry"><a href="shaderscatalogue.htm">着色器目录</a>
 </li>
-<li class="tocentry"><a href="lutgenguide.htm">LUT Generation</a>
+<li class="tocentry"><a href="lutgenguide.htm">LUT 生成</a>
 </li>
-<li class="tocentry"><a href="reshadeuwp.htm">Injecting ReShade in UWP games</a>
+<li class="tocentry"><a href="reshadeuwp.htm">向 UWP 游戏注入 ReShade</a>
 </li>
-<li class="tocentry current"><a class="current" href="depthguide.htm">Exporting Depth Buffers with Reshade</a>
+<li class="tocentry current"><a class="current" href="depthguide.htm">使用 ReShade 导出深度缓冲</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="depthguide.htm">Depth Slice</a></li>
 
@@ -71,13 +71,13 @@
 <li class="tocentry"><a href="depthguide.htm">Tutorial: Adding fog using a depth map</a></li>
 
 </ul>
-<li class="tocentry"><a href="RealLongExposure.htm">Using RLE to hide temporal issues</a>
+<li class="tocentry"><a href="RealLongExposure.htm">使用 RLE 隐藏时序问题</a>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesShaderguides.htm">Shader guides</a></span>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesShaderguides.htm">着色器指南</a></span>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesAddonguides.htm">Addon guides</a></span>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesAddonguides.htm">插件指南</a></span>
 </li>
 </ul>
 </li>
@@ -121,7 +121,7 @@
 				<div class="toc-footer">
 					<span class="text-small">
 						<hr/>
-						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">由 <i class="fa fa-github"></i> DocNet 生成</a>
 					</span>
 				</div>	
 			</div>
@@ -135,24 +135,24 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="https://framedsc.com/index.htm">Home</a></li> / <li><a href="index.htm">Reshade guides</a></li> / <li><a href="depthguide.htm">Exporting Depth Buffers with Reshade</a></li></ul>
+<ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="depthguide.htm">使用 ReShade 导出深度缓冲</a></li></ul>
 					
                     </div>
                     <hr />
                 </div>
                 <div role="main">
                     <div class="section">
-<p><img src="../Images/depthguide/depth_header.png" alt="ddeeepth" class="shadowed autosize" width="896" height="180" /></p>
-<p>Exporting depth buffers gives you much greater control over any post-work you might want to do on a shot, in Photoshop or other similar image editors. Exported depth buffers, or simply depth maps, can be used as mattes for background replacements, masks for depth-based colour grades, adding effects like fog, or even simulating complex effects like depth of field in post.</p>
-<p>While Reshade does offer all this functionality through its <a href="shaderscatalogue.htm">extensive catalogue of shaders</a>, some may prefer to make these changes in post. It gives the stability of working 'offline' (can't crash your game if it isn't running!), access to tools one might be more comfortable with, as well as effects that aren't possible in Reshade right now.</p>
-<p>This guide will cover the export of depth buffers 3 different ways, all using Reshade but with the use of different shaders. It fundamentally relies on capturing a screenshot of the Reshade effect. Additionally, a short tutorial on how to use an exported depth buffer to add a very simple fog effect is included at the end.</p>
+<p><img src="../Images/depthguide/depth_header.png" alt="深度缓冲导出" class="shadowed autosize" width="896" height="180" /></p>
+<p>导出深度缓冲可以让你在 Photoshop 或其他类似图像编辑器中对截图进行更精细的后期处理。导出的深度缓冲（即深度图）可用作背景替换的遮罩、基于深度的色彩调整蒙版，也可用来添加雾效，甚至在后期模拟复杂的景深效果。</p>
+<p>虽然 ReShade 通过其<a href="shaderscatalogue.htm">丰富的着色器目录</a>提供了上述所有功能，但部分用户更倾向于在后期制作中完成这些调整。后期处理的优势在于：可以在"离线"状态下稳定工作（游戏不运行就不会崩溃！），使用自己更熟悉的工具，以及实现 ReShade 目前尚不支持的效果。</p>
+<p>本指南将介绍使用 ReShade 导出深度缓冲的三种不同方式，均借助不同着色器实现，其核心原理是对 ReShade 效果进行截图。此外，指南末尾还附有一个简短的教程，演示如何利用导出的深度缓冲添加简单的雾效。</p>
 <hr />
-<h2 id="depth-slice">Depth Slice<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>If all you need is a simple slice of the depth buffer prod80's <a href="https://github.com/prod80/prod80-ReShade-Repository/blob/master/Shaders/" target="_blank">Depth Slicer</a> is the shader you want. <strong>prod80's shaders require the 4 FXH files listed at the top of the repository to be downloaded and added to your shaders.</strong> You will also need any colour-modifying shader that can turn the entire scene black, such as <a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_lightroom.fx" target="_blank">qUINT_Lightroom</a> with the black level set to max. The goal is to capture a black-on-white image we can easily use as a mask.</p>
-<p>With your scene turned black, make sure Depth Slicer is placed <strong>below</strong> Lightroom / the shader you're using in the Reshade GUI. We want Depth Slicer to be able to affect the black image. Set Depth Slicer up like shown below.</p>
+<h2 id="depth-slice">深度切片<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>如果你只需要对深度缓冲进行简单切片，prod80 的 <a href="https://github.com/prod80/prod80-ReShade-Repository/blob/master/Shaders/" target="_blank">Depth Slicer</a> 就是你需要的着色器。<strong>使用 prod80 的着色器需要先下载仓库顶部列出的 4 个 FXH 文件并添加到你的着色器目录中。</strong>你还需要一个能将整个场景变为纯黑的颜色调整着色器，例如将黑色色阶拉满的 <a href="https://github.com/martymcmodding/qUINT/blob/master/Shaders/qUINT_lightroom.fx" target="_blank">qUINT_Lightroom</a>。目标是生成一张黑白图像，方便用作蒙版。</p>
+<p>将场景变为纯黑后，确保 Depth Slicer 在 ReShade 界面中排列在 Lightroom（或你所使用的着色器）<strong>下方</strong>，以便 Depth Slicer 能够作用于纯黑图像。按下图所示配置 Depth Slicer。</p>
 <p><img src="../Images/depthguide/ds_depthslicer1.png" alt="1" class="shadowed autosize" width="568" height="263" /></p>
-<p>Your scene should now be white, with maybe a slice of black visible. The only settings you need to adjust now are <em>Depth Position</em> and <em>Depth Near Plane</em>. Adjust <em>Depth Position</em> until all of your subject is in black, with the background entirely white. Next, reduce <em>Depth Near Plane</em> until any foreground objects are now white too. I recommend using the arrows to make these adjustments as the sliders can get difficult to work with at such small values.</p>
-<p>If set up right, you should get something like this.  
+<p>此时场景应变为全白，可能带有一片黑色切片。你现在只需调整 <em>Depth Position</em>（深度位置）和 <em>Depth Near Plane</em>（深度近平面）两个参数。调整 <em>Depth Position</em> 直到主体完全变为黑色，背景完全变为白色；然后减小 <em>Depth Near Plane</em> 直到前景物体也变为白色。建议使用方向键进行微调，因为在如此小的数值下滑块很难精确控制。</p>
+<p>正确设置后，效果应如下所示。  
 </p>
 <div class="slider container" style="aspect-ratio: 64/27">
   <div class="slider__img slider__img-after">
@@ -169,43 +169,43 @@
   />
 </div>
 <div class="figure"><p><i><a href="https://framedsc.com/ReshadeGuides/GameGuides/Bugsnax.htm">Bugsnax</a></i></p></div>  
-<p>You can now capture this and use it as a mask in your image editor of choice. This method is very similar to what you can achieve with <code>Chromakey.fx</code>. A matte is likely to produce a cleaner result than a greenscreen key and is best for still images. </p>
+<p>你现在可以截取这张图，并在你喜欢的图像编辑器中将其用作蒙版。此方法与 <code>Chromakey.fx</code> 的效果非常相似。遮罩通常比绿幕抠图的结果更干净，最适合用于静态图像。</p>
 <hr />
-<h2 id="graded-depth-range">Graded Depth Range<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>This method exports a specific range of the depth buffer. Given the 8-bit greyscale limitation of a .png/.bmp capture, there's only a maximum of 256 depth layers that can be used. This can expose banding issues when these 256 layers are stretched too thin. By using <code>DisplayDepth.fx</code>'s debug features, we can highlight a specific slice of the depth buffer containing only the depth layers we want to work with. This requires that you do know what you want to do with the depth map, since it cannot be modified extensively once captured.</p>
-<p>With <code>DisplayDepth.fx</code> active, set <em>Present type</em> to <em>Depth map</em> and enter the Advanced settings. The two settings that are relevant here are <em>Far Plane</em> and <em>Multiplier</em>. <em>Far Plane</em> brings the far plane, the white point, closer to the camera. <em>Multiplier</em> acts sort of like the near plane, bringing the black point further from the camera.</p>
+<h2 id="graded-depth-range">分级深度范围<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>此方法可以导出深度缓冲的特定范围。由于 .png/.bmp 格式的截图存在 8 位灰度限制，最多只能使用 256 个深度层。当这 256 层被拉伸得过于分散时，可能会出现色带问题。通过使用 <code>DisplayDepth.fx</code> 的调试功能，我们可以高亮显示深度缓冲中仅包含我们所需深度层的特定切片。由于深度图一旦截取便难以进行大幅调整，因此使用此方法前需明确用途。</p>
+<p>启用 <code>DisplayDepth.fx</code> 后，将 <em>Present type</em>（呈现类型）设置为 <em>Depth map</em>（深度图），然后进入高级设置。这里有两个关键参数：<em>Far Plane</em>（远平面）和 <em>Multiplier</em>（倍增器）。<em>Far Plane</em> 将远平面（白点）向镜头方向靠近；<em>Multiplier</em> 则类似近平面，将黑点向远离镜头的方向推移。</p>
 <div class="figure">
 <img src="../Images/depthguide/gdr_grading.png" class="autosize" />
 <p><i><a href="https://framedsc.com/ReshadeGuides/GameGuides/Cyberpunk_2077_Guide.htm">Cyberpunk 2077</a></i></p>
 </div>
-<p>Above is an example of a graded depth map following the above. <em>Far Plane</em> was set to a very small number, 1.0, and <em>Multiplier</em> was increased until the subject (in black) was well separated from the background. </p>
-<p>This tiny range of the depth buffer is handy for effects like shallow depth of field portraiture, where the focal plane needs to be only so wide but defocusing of the subject's ears, neck and other features is still desired.</p>
-<p>Once set up, screenshot it with your favourite screenshotting tool.</p>
-<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> Tip</span><p><code>DisplayDepth.fx</code> dithers its depth layers together so that its output isn't full of banding. This dithering can appear as artifacts in some depth effects. A modified version of <code>DisplayDepth.fx</code> that includes a dither toggle can be downloaded <a href="../Images/depthguide/DisplayDepth.fx">here</a>.</p>
+<p>上图是按照上述步骤调整后的分级深度图示例。<em>Far Plane</em> 被设置为极小的数值 1.0，并逐渐增大 <em>Multiplier</em>，直到主体（黑色部分）与背景明显分离。</p>
+<p>这种较窄的深度缓冲范围非常适合浅景深人像等效果，此类场景需要焦平面较窄，但仍希望对主体的耳朵、颈部等部位进行虚化处理。</p>
+<p>设置完成后，使用你喜欢的截图工具截图即可。</p>
+<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p><code>DisplayDepth.fx</code> 会对其深度层进行抖动混合，以避免输出结果出现色带。这种抖动在某些深度效果中可能表现为瑕疵。可在<a href="../Images/depthguide/DisplayDepth.fx">此处</a>下载包含抖动开关的修改版 <code>DisplayDepth.fx</code>。</p>
 </div><hr />
-<h2 id="high-range-depth-export">High-range Depth Export<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>This method has mostly been deprecated with the release of ReShade 5.0 and <a href="https://github.com/murchalloo/reshade-addons" target="_blank">murchalloo's Frame Capture</a> addon. The addon captures and processes 32-bit depth .EXRs with <code>F10</code>, also capturing color and normal buffers in the process.</p>
-</div><p>This last method gets you as close as we can to the full-range, raw depth buffer Reshade depth effects work with. By capturing depth that's been packed into all three RGB channels, it can be unpacked and merged into a 24-bit channel that has many more depth layers than the 8-bit alternative. This relies on <a href="https://github.com/BlueSkyDefender" target="_blank">BlueSkyDefender</a>'s <code>Depth_Tool.fx</code> and a tool written by <a href="https://twitter.com/murchalloo" target="_blank">murchalloo</a> to convert the capture into a 32-bit EXR file, both of which can be downloaded <a href="https://github.com/stillseven/depth_converter" target="_blank">here</a>. </p>
-<p>After adding <code>Depth_Tool.fx</code> to your shaders folder and setting up a shot, all you have to do is enable the shader and ensure Reshade is set to capture BMPs. The shader does not need to be adjusted.</p>
-<p>The capture should look like this:
-<img src="../Images/depthguide/hrd_goodeg.png" alt="example" class="shadowed autosize" width="1640" height="775" /></p>
-<p>If it looks like a gentle green-blue gradient, <em>Custom Depth Map</em> has to be reversed.</p>
-<p>Once saved as a BMP, open the depth converter EXE and follow its GUI. It will output an EXR file into a folder named &quot;output&quot; in the same directory the EXE was placed in.</p>
-<p>You now have a perfectly usable high bit-depth depth map to use in any program that supports EXRs!</p>
-<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> Tip</span><p>If converting PNGs to BMPs, <strong>ensure that the conversion is to 24 bits per pixel</strong>. BMPs support a wide range of bit depths and converters may default to other bit depths. </p>
+<h2 id="high-range-depth-export">高范围深度导出<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> 重要！</span><p>此方法已基本被 ReShade 5.0 发布后的 <a href="https://github.com/murchalloo/reshade-addons" target="_blank">murchalloo 的 Frame Capture 插件</a>所取代。该插件可通过 <code>F10</code> 键捕获并处理 32 位深度 .EXR 文件，同时还会捕获颜色缓冲和法线缓冲。</p>
+</div><p>这最后一种方法可以让我们尽可能地还原 ReShade 深度效果所使用的全范围原始深度缓冲。通过将深度信息打包进三个 RGB 通道，可以将其解包并合并为一个 24 位通道，其深度层数远多于 8 位方案。此方法依赖 <a href="https://github.com/BlueSkyDefender" target="_blank">BlueSkyDefender</a> 的 <code>Depth_Tool.fx</code> 以及 <a href="https://twitter.com/murchalloo" target="_blank">murchalloo</a> 编写的工具（用于将截图转换为 32 位 EXR 文件），两者均可在<a href="https://github.com/stillseven/depth_converter" target="_blank">此处</a>下载。</p>
+<p>将 <code>Depth_Tool.fx</code> 添加到着色器目录并构图完成后，只需启用该着色器并确保 ReShade 的截图格式设置为 BMP 即可，无需对着色器进行任何调整。</p>
+<p>截图效果应如下所示：
+<img src="../Images/depthguide/hrd_goodeg.png" alt="示例" class="shadowed autosize" width="1640" height="775" /></p>
+<p>如果图像呈现为淡绿蓝色渐变，则需要将 <em>Custom Depth Map</em> 反转。</p>
+<p>以 BMP 格式保存后，打开深度转换器 EXE 并按照其 GUI 操作，它将在 EXE 所在目录下名为"output"的文件夹中输出一个 EXR 文件。</p>
+<p>你现在就拥有了一张完美可用的高位深深度图，可在任何支持 EXR 格式的程序中使用！</p>
+<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>如果要将 PNG 转换为 BMP，<strong>请确保转换为每像素 24 位</strong>。BMP 支持多种位深度，转换工具可能默认使用其他位深度。</p>
 </div><hr />
-<h2 id="tutorial-adding-fog-using-a-depth-map">Tutorial: Adding fog using a depth map<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>In this final section of the guide, we'll go through how you can use one of these exported depth buffers with this simple Photoshop tutorial. By duplicating our original image, editing it in a way we see fit, then masking it with the depth map, we can mimic the appearance of thick fog in a scene.</p>
-<p>You'll want Photoshop CS4 or higher to follow along, but this tutorial can be easily adapted to work with other image editors. I'll be working with a screenshot from <em>Left 4 Dead 2</em>.</p>
-<p><strong>Step 1</strong><br />
-With your image loaded in Photoshop, unlock it as a background and duplicate it (CTRL+J). This will be the layer we'll work with. Create a new folder/group and place this duplicated layer in it. Rename the folder as &quot;Fog&quot; to keep things organised.</p>
-<p><img src="../Images/depthguide/fog_1.png" alt="start" class="shadowed autosize" width="1280" height="480" /></p>
-<p><strong>Step 2</strong><br />
-Going over to the Adjustments tab, add a Levels adjustment layer. This will control the bulk of the effect. Drag the left arrow on the second slider towards the middle, this washes out the image considerably but is what we're looking for since we want that grey, foggy look. Next, we can take the middle arrow of the first slider and drag it towards the right. This further flattens out our image. Our last colour adjustment to make is taking the right arrow of the second slider and moving it slightly left. This mimics light falling off in intensity as it travels through the fog.</p>
-<p><img src="../Images/depthguide/fog_2.png" alt="levels" class="shadowed autosize" width="1280" height="480" /></p>
-<p><strong>Step 3</strong><br />
-Create a mask on your Fog folder. We'll now import the depth map so that we can use it for the fog effect. Ctrl+Click on the depth map layer to select all its contents and copy (CTRL+C) it. Alt+click on the <em>mask</em> of the Fog folder to enter it. We can then paste (CTRL+V) the depth map into the mask. Clicking on another layer, we should now see a gradual transition to the fog. It's not as intense as I'd like it, so now we'll emphasise the fog by grading the mask. </p>
-<p>Alt+clicking back into the mask, we can now use Levels (CTRL+L) to grade it. Levels has some handy eyedroppers we'll be using to simplify this process, they're the three buttons above the Preview tickbox. With the leftmost eyedropper selected, we'll set our black point. This determines where fog isn't visible. In my case, I want Coach to be visible, so I'll click on him. The rightmost eyedropper sets our white point, where fog will be strongest. I'll click somewhere in the trees.</p>
+<h2 id="tutorial-adding-fog-using-a-depth-map">教程：使用深度图添加雾效<a class="headerlink" href="depthguide.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>在本指南的最后一部分，我们将介绍如何在 Photoshop 中利用导出的深度缓冲完成一个简单的后期处理教程。通过复制原始图像、进行适当的编辑，再以深度图作为蒙版，我们可以模拟出场景中浓厚雾气的视觉效果。</p>
+<p>本教程需要 Photoshop CS4 或更高版本，但也可以轻松移植到其他图像编辑器中。我将以《求生之路 2》的一张截图为例进行演示。</p>
+<p><strong>第一步</strong><br />
+在 Photoshop 中载入图像，将其从背景层解锁并复制（CTRL+J）。这将是我们要处理的图层。新建一个文件夹/组，将这个复制的图层放入其中，并将文件夹重命名为"Fog"以便整理。</p>
+<p><img src="../Images/depthguide/fog_1.png" alt="起始状态" class="shadowed autosize" width="1280" height="480" /></p>
+<p><strong>第二步</strong><br />
+进入"调整"选项卡，添加"色阶"调整图层，它将控制效果的主体部分。将第二个滑块的左箭头向中间拖动，这会大幅提亮图像，正是我们想要的灰蒙蒙的雾感。然后将第一个滑块的中间箭头向右拖动，进一步压平图像。最后，将第二个滑块的右箭头稍微向左移动，以模拟光线穿越雾气时强度衰减的效果。</p>
+<p><img src="../Images/depthguide/fog_2.png" alt="色阶调整" class="shadowed autosize" width="1280" height="480" /></p>
+<p><strong>第三步</strong><br />
+为 Fog 文件夹创建蒙版。现在导入深度图，以便将其用于雾效。Ctrl+单击深度图层以选中所有内容，然后复制（CTRL+C）。Alt+单击 Fog 文件夹的<em>蒙版</em>进入编辑状态，然后粘贴（CTRL+V）深度图。点击其他图层后，应该能看到雾效的渐变过渡。效果不够强烈，因此我们来为蒙版进行调色以增强雾效。</p>
+<p>再次 Alt+单击蒙版，可以使用色阶（CTRL+L）对其进行调色。色阶有几个很实用的吸管工具，它们位于"预览"复选框上方，共三个按钮。选择最左侧的吸管，设置黑点——即雾效不可见的区域。在本例中，我希望角色保持清晰可见，所以点击他。最右侧的吸管设置白点，即雾效最浓的区域，我点击树林中的某处。</p>
 <div class="slider container" style="aspect-ratio: 8/3">
   <div class="slider__img slider__img-after">
     <p></p>
@@ -221,14 +221,14 @@ Create a mask on your Fog folder. We'll now import the depth map so that we can 
   />
 </div>
 <div class="figure"><p></p></div> 
-<p>Unfortunately, as masks don't do adjustment layers, <strong>this grade will be permanent</strong>. Click out of the mask, undo and retry until you get the result you're looking for. </p>
+<p>遗憾的是，由于蒙版不支持调整图层，<strong>此次调色将是永久性的</strong>。可以点击退出蒙版，撤销并重试，直到获得满意的结果。</p>
 <div class="slider container" style="aspect-ratio: 8/3">
   <div class="slider__img slider__img-after">
-    <p>Graded</p>
+    <p>已调色</p>
     <img src="../Images/depthguide/fog_3b-after.png" />
   </div>
   <div class="slider__img slider__img-before">
-    <p>Ungraded</p>
+    <p>未调色</p>
     <img src="../Images/depthguide/fog_3b-before.png" />
   </div>
   <input type="range" min="0" max="100" value="50" step="0.01" 
@@ -237,16 +237,16 @@ Create a mask on your Fog folder. We'll now import the depth map so that we can 
   />
 </div>
 <div class="figure"><p></p></div> 
-<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> Tip</span><p>A high-range depth map is highly recommended for this process. A regular capture of <code>DisplayDepth.fx</code> will definitely introduce banding when you try to grade it like the above. Alternatively, you can grade the depth map before exporting it (Graded Depth Range), but that won't have the full flexibility of grading in post.</p>
-</div><p><strong>Step 4</strong><br />
-Lastly, we can return to our Fog folder and adjust our adjustment layers until we get the look we want. I've tweaked my Layers adjustment to darken the fog more, and added a Color Balance adjustment on the midtones to tint the fog. </p>
+<div class="alert alert-tip"><span class="alert-title"><i class="fa fa-info-circle"></i> 提示</span><p>强烈建议在此流程中使用高范围深度图。直接截取 <code>DisplayDepth.fx</code> 的普通深度图在按上述方式调色时，必然会出现色带问题。或者，你也可以在导出前对深度图进行调色（分级深度范围），但这样就无法在后期进行完整的调色灵活度了。</p>
+</div><p><strong>第四步</strong><br />
+最后，回到 Fog 文件夹，调整调整图层直到获得满意的效果。我微调了色阶使雾效更暗，并在中间调添加了色彩平衡调整图层为雾气上色。</p>
 <div class="slider container" style="aspect-ratio: 8/3">
   <div class="slider__img slider__img-after">
-    <p>Tinted</p>
+    <p>已染色</p>
     <img src="../Images/depthguide/fog_4-after.png" />
   </div>
   <div class="slider__img slider__img-before">
-    <p>Untinted</p>
+    <p>未染色</p>
     <img src="../Images/depthguide/fog_4-before.png" />
   </div>
   <input type="range" min="0" max="100" value="50" step="0.01" 
@@ -255,18 +255,18 @@ Lastly, we can return to our Fog folder and adjust our adjustment layers until w
   />
 </div>
 <div class="figure"><p></p></div> 
-<p><a href="https://mega.nz/file/zVlA1QgJ#nFBFGrkauSs8_tOJVbYeidsCbFk_aQuHcILMVRlrjgA" target="_blank">Download the PSD</a>. </p>
-<p>The point of this tutorial is to provide you with a starting point for all that can be done with an image and its depth map. I hope this has given you some ideas!</p>
+<p><a href="https://mega.nz/file/zVlA1QgJ#nFBFGrkauSs8_tOJVbYeidsCbFk_aQuHcILMVRlrjgA" target="_blank">下载 PSD 文件</a>。</p>
+<p>本教程的目的是为你提供一个探索图像与深度图无限可能性的起点，希望能给你带来灵感！</p>
 <hr />
-<p><em>last updated 26th August 2021</em><br />
-<em>written by <a href="https://twitter.com/moyevka" target="_blank">moyevka</a></em>  </p>
+<p><em>最后更新于 2021 年 8 月 26 日</em><br />
+<em>作者：<a href="https://twitter.com/moyevka" target="_blank">moyevka</a></em>  </p>
 
                     </div>
                 </div>
                 <footer>
                     <hr />
                     <div role="contentinfo">
-&copy 2019-2026 FRAMED. All rights reserved.
+&copy 2019-2026 FRAMED. 保留所有权利。
                     </div>
                 </footer>
             </div>

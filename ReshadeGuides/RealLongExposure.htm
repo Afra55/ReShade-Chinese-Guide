@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="zh-CN">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Using RLE to hide temporal issues - FRAMED. Screenshot Community</title>
+    <title>使用 RLE 隐藏时序问题 - FRAMED. Screenshot Community</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/theme_20250102.css" type="text/css" />
     <link rel="stylesheet" href="../css/theme_colors_20220814.css" type="text/css" />
@@ -28,13 +28,13 @@
                 <a href="https://framedsc.com/index.htm"><i class="fa fa-home"></i> FRAMED. Screenshot Community</a>
                 <div role="search">
                     <form id="search-form" class="form" action="https://framedsc.com/Docnet_search.htm" method="get">
-                        <input type="text" name="q" placeholder="Search docs" />
+                        <input type="text" name="q" placeholder="搜索文档" />
                     </form>
                 </div>
             </div>
             <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 <ul>
-<li class="tocentry"><a href="https://framedsc.com/index.htm">Home</a>
+<li class="tocentry"><a href="https://framedsc.com/index.htm">首页</a>
 </li>
 
 <li class="tocentry"><a href="https://framedsc.com/basics.htm">The Basics</a>
@@ -50,19 +50,19 @@
 </li>
 <li class="tocentry">
 <ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="index.htm">Reshade guides</a></span></li>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="index.htm">ReShade 指南</a></span></li>
 
-<li class="tocentry"><a href="setupreshade.htm">Setting up reshade</a>
+<li class="tocentry"><a href="setupreshade.htm">安装与配置 ReShade</a>
 </li>
-<li class="tocentry"><a href="shaderscatalogue.htm">Shaders Catalogue</a>
+<li class="tocentry"><a href="shaderscatalogue.htm">着色器目录</a>
 </li>
-<li class="tocentry"><a href="lutgenguide.htm">LUT Generation</a>
+<li class="tocentry"><a href="lutgenguide.htm">LUT 生成</a>
 </li>
-<li class="tocentry"><a href="reshadeuwp.htm">Injecting ReShade in UWP games</a>
+<li class="tocentry"><a href="reshadeuwp.htm">向 UWP 游戏注入 ReShade</a>
 </li>
-<li class="tocentry"><a href="depthguide.htm">Exporting Depth Buffers with Reshade</a>
+<li class="tocentry"><a href="depthguide.htm">使用 ReShade 导出深度缓冲</a>
 </li>
-<li class="tocentry current"><a class="current" href="RealLongExposure.htm">Using RLE to hide temporal issues</a>
+<li class="tocentry current"><a class="current" href="RealLongExposure.htm">使用 RLE 隐藏时序问题</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="RealLongExposure.htm">Recommended Shader Settings</a></li>
 
@@ -74,10 +74,10 @@
 
 </ul>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesShaderguides.htm">Shader guides</a></span>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesShaderguides.htm">着色器指南</a></span>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesAddonguides.htm">Addon guides</a></span>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../ReshadeGuidesAddonguides.htm">插件指南</a></span>
 </li>
 </ul>
 </li>
@@ -121,7 +121,7 @@
 				<div class="toc-footer">
 					<span class="text-small">
 						<hr/>
-						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">由 <i class="fa fa-github"></i> DocNet 生成</a>
 					</span>
 				</div>	
 			</div>
@@ -135,7 +135,7 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="https://framedsc.com/index.htm">Home</a></li> / <li><a href="index.htm">Reshade guides</a></li> / <li><a href="RealLongExposure.htm">Using RLE to hide temporal issues</a></li></ul>
+<ul><li><a href="https://framedsc.com/index.htm">首页</a></li> / <li><a href="index.htm">ReShade 指南</a></li> / <li><a href="RealLongExposure.htm">使用 RLE 隐藏时序问题</a></li></ul>
 					
                     </div>
                     <hr />
@@ -143,37 +143,37 @@
                 <div role="main">
                     <div class="section">
 <div class="figure">
-<img src="../Images/reallongexposure_header.png" alt="RealLongExposure.fx" title="Shot by barkar_b" class="shadowed autosize" width="896" height="180" />
-<p>Shot by barkar_b</p>
+<img src="../Images/reallongexposure_header.png" alt="RealLongExposure.fx" title="由 barkar_b 拍摄" class="shadowed autosize" width="896" height="180" />
+<p>由 barkar_b 拍摄</p>
 </div>
-<h1 id="using-reallongexposure.fx-to-hide-temporal-issues-in-games">Using RealLongExposure.fx to hide temporal issues in games<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p><a href="https://github.com/LordKobra/CobraFX/blob/master/Shaders/RealLongExposure.fx" target="_blank">RealLongExposure.fx</a> (RLE) by LordKobra is a ReShade shader designed to create long exposure effects by blending frames together. However, it can also be used to blend out artifacts and issues caused by temporal &quot;jitter&quot; effects such as TAA (temporal antialiasing) and some modern hair shaders. It can also be used to hide other distractions, like particle effects (see example #3).</p>
-<p>The goal of this guide is to capture a still frame, meaning you need a static camera angle and for your game to probably be timestopped. </p>
-<h2 id="recommended-shader-settings">Recommended Shader Settings<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h1 id="using-reallongexposure.fx-to-hide-temporal-issues-in-games">使用 RealLongExposure.fx 隐藏游戏中的时序问题<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p><a href="https://github.com/LordKobra/CobraFX/blob/master/Shaders/RealLongExposure.fx" target="_blank">RealLongExposure.fx</a>（RLE）由 LordKobra 创作，是一款 ReShade 着色器，通过混合多帧画面来实现长曝光效果。此外，它也可用于消除由 TAA（时域抗锯齿）等时序"抖动"效果以及一些现代毛发着色器所产生的瑕疵，还可以用来遮盖其他令人分心的元素，例如粒子特效（参见示例 #3）。</p>
+<p>本指南的目标是捕获一帧静止画面，因此你需要固定镜头角度，并且游戏通常需要处于时停状态。</p>
+<h2 id="recommended-shader-settings">推荐着色器设置<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <pre class="nocode">Exposure Time: 3-5+ Seconds¹
 ShowGreenOnFinish: Off
 
 ISO: Default
 Gamma: Default
 Delay: Default
-</pre><p>¹ - Exposure time can be set to anything that's not too short, as the capture only needs to occur after the issues have been blended away.</p>
-<p>It's highly recommended to bind <code>StartExposure</code> to a hotkey to make it easier to activate when hotsampling. </p>
-<h2 id="example-usage">Example Usage<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p><strong>Scenario 1: TAA Subpixels</strong>  
+</pre><p>¹ - 曝光时间可以设置为任意不过短的时长，因为拍摄只需在问题被混合消除后进行即可。</p>
+<p>强烈建议将 <code>StartExposure</code> 绑定到快捷键，以便在热采样时更方便地激活。</p>
+<h2 id="example-usage">使用示例<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><strong>场景 1：TAA 次像素</strong>  
 </p>
-<p><img src="../Images/RealLongExposure/eg1-taa.png" alt="eg1" class="shadowed autosize" width="800" height="400" /></p>
-<p>RLE can help to average out the 'subpixel crawl' caused by jittering temporal antialiasing in modern games, resulting in a much cleaner image. </p>
-<p><strong>Scenario 2: Temporal Hair Shading</strong>  
+<p><img src="../Images/RealLongExposure/eg1-taa.png" alt="示例1" class="shadowed autosize" width="800" height="400" /></p>
+<p>RLE 可以帮助平均化现代游戏中时域抗锯齿抖动所造成的"次像素爬行"，从而获得更加清晰的图像。</p>
+<p><strong>场景 2：时域毛发渲染</strong>  
 </p>
-<p><img src="../Images/RealLongExposure/eg2-hair.png" alt="eg2" class="shadowed autosize" width="800" height="400" /></p>
-<p>Some modern titles (e.g. <em>Cyberpunk 2077</em>, <em>Marvel's GOTG</em>, <em>FFVIIR</em>) employ temporal hair shading, that is to say that while hair looks great in motion, it can suffer from obvious artifacts when the image is still. RLE can help to average these artifacts out to give cleaner looking hair. </p>
-<p>RLE is recommended when shooting with ReShade depth effects like DoF, as the depth buffer jitter caused by TAA can create blocky artifacts with depth effects.</p>
-<p><img src="../Images/RealLongExposure/eg4-hair2.png" alt="eg4" class="shadowed autosize" width="800" height="400" /></p>
-<p><strong>Scenario 3: Particle Effects</strong>  
+<p><img src="../Images/RealLongExposure/eg2-hair.png" alt="示例2" class="shadowed autosize" width="800" height="400" /></p>
+<p>部分现代游戏（如《赛博朋克 2077》、《漫威银河护卫队》、《最终幻想 VII：重制版》）采用了时域毛发渲染技术——毛发在运动时效果出众，但在画面静止时会出现明显瑕疵。RLE 可以将这些瑕疵平均化，从而呈现更为干净的毛发效果。</p>
+<p>在使用 ReShade 深度缓冲效果（如景深）进行拍摄时，推荐搭配 RLE 使用，因为 TAA 导致的深度缓冲抖动会在深度效果中产生块状瑕疵。</p>
+<p><img src="../Images/RealLongExposure/eg4-hair2.png" alt="示例4" class="shadowed autosize" width="800" height="400" /></p>
+<p><strong>场景 3：粒子特效</strong>  
 </p>
-<p><img src="../Images/RealLongExposure/eg3-particles.png" alt="eg3" class="shadowed autosize" width="800" height="400" /></p>
-<p>RLE can average out subtle particle effects like dust that remain animated while timestopped. Watch the video below for a clearer example of this in action.</p>
-<h2 id="video-example">Video Example<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><img src="../Images/RealLongExposure/eg3-particles.png" alt="示例3" class="shadowed autosize" width="800" height="400" /></p>
+<p>RLE 可以平均化时停状态下仍在运动的细微粒子特效（如尘埃）。请观看下方视频，以获取更直观的效果演示。</p>
+<h2 id="video-example">视频示例<a class="headerlink" href="RealLongExposure.htm" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p align="left">
 <a href="https://www.youtube.com/watch?v=np7rKbDEphs" target="_blank">
   <img src="https://i.ytimg.com/vi_webp/np7rKbDEphs/maxresdefault.webp" width="800">
@@ -184,7 +184,7 @@ Delay: Default
                 <footer>
                     <hr />
                     <div role="contentinfo">
-&copy 2019-2026 FRAMED. All rights reserved.
+&copy 2019-2026 FRAMED. 保留所有权利。
                     </div>
                 </footer>
             </div>
