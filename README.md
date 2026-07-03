@@ -70,8 +70,12 @@ scripts/mirror_assets.py            # 资源镜像脚本
 python3 scripts/mirror_assets.py
 ```
 
-## 汉化计划
+## 汉化进度
 
-- [ ] 翻译各指南正文
-- [ ] 保留原有 HTML 结构与图片路径
-- [ ] 在页面中标注原文链接
+- [x] 13 篇 ReShade 指南页面正文汉化
+- [x] 侧栏导航与面包屑汉化
+- [x] 图片说明与提示框汉化
+- [ ] 着色器目录内个别着色器名称保留英文（专有名词）
+- [ ] 持续校对与术语统一
+
+在线阅读（GitHub Pages）：https://afra55.github.io/ReShade-Chinese-Guide/ReshadeGuides/index.htm
